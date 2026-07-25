@@ -1,0 +1,149 @@
+/* HTML Components */
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+    background-image: url("login-page-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    color: rgb(28, 60, 101);
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+/* HTML Classes */ 
+.container {
+    width: 327px;
+    height: 900px;
+    background-color: white;
+    border-radius: 20px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation-name: borderEffect;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+/* HTML IDs */
+#why-container {
+    width: 310px;
+    height: 100px;
+    background-color: #F5F7F9;
+    border-radius: 16px;
+    border: none;
+}
+
+#username-details {
+    margin-top: 10px;
+}
+
+#location-details {
+    margin-top: -10px;
+}
+
+#footer-details, h1:hover, h4:hover, h3:hover, #days-swum-word:hover, #total-distance-word:hover, #goal-word:hover, #age-word:hover, #gender-word:hover, #my-why-word:hover {
+    text-decoration-line: underline;
+}
+
+#footer-details:hover {
+    transform: scale(1.050);
+}
+
+#profile-picture:hover {
+    transform: scale(1.1);
+}
+
+#footer-details {
+    justify-content: center;
+    color: rgb(28, 60, 101);
+    display: flex;
+    text-align: center;
+}
+
+#gender, #age, #goal, #total-distance, #days-swum {
+    width: 310px;
+    height: 30px;
+    background-color: #F5F7F9;
+    border: none;
+    border-radius: 16px;
+}
+
+#back {
+    height: 56px;
+    width: 324px;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgb(15, 192, 252);
+    border-radius: 28px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+#back:hover {
+    background-color: rgb(28, 60, 101);
+}
+
+/* HTML Pseudo-Element Notation */ 
+input[type="text"], input[type="number"] {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* HTML @keyframes Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes borderEffect {
+    0% {
+        border: 5px solid rgb(28, 60, 101);
+    }
+    25% {
+        border: 5px solid rgb(15, 192, 252);
+    }   
+    50% {
+        border: 5px solid rgb(178, 58, 58);
+    }
+    75% {
+        border: 5px solid rgb(0, 0, 0);
+    }
+    100% {
+        border: 5px solid #F5F7F9;
+    }
+}

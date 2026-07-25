@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-profile-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>Profile Page: The Great Canadian Swim App - 2026</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="profile-word">Profile</h1>
+      <img
+        src="profile-picture.png"
+        height="125"
+        width="125"
+        id="profile-picture"
+        alt="Picture of profile"
+      />
+      <h3 id="username-details">Amanjot</h3>
+      <h4 id="location-details">Ontario, Canada</h4>
+      <label id="my-why-word">My Why</label>
+      <input
+        type="text"
+        id="why-container"
+        alt="Textbox of reason why"
+        readonly
+      />
+      <br />
+      <div class="user-information">
+        <label id="days-swum-word">Days Swum</label>
+        <br />
+        <input
+          type="number"
+          id="days-swum"
+          readonly
+          alt="Textbox of days swum"
+          value="0"
+        />
+        <br />
+        <br />
+        <label id="total-distance-word">Total Distance</label>
+        <br />
+        <input
+          type="number"
+          id="total-distance"
+          readonly
+          alt="Textbox of total distance"
+          value="0"
+        />
+        <br />
+        <br />
+        <label id="goal-word">Goal</label>
+        <br />
+        <input
+          type="text"
+          id="goal"
+          readonly
+          alt="Textbox of goal"
+          value="N/A"
+        />
+        <br />
+        <br />
+        <label id="age-word">Age</label>
+        <br />
+        <input
+          type="number"
+          id="age"
+          readonly
+          alt="Textbox of age"
+          value="N/A"
+        />
+        <br />
+        <br />
+        <label id="gender-word">Gender</label>
+        <br />
+        <input
+          type="text"
+          id="gender"
+          readonly
+          alt="Textbox of gender"
+          value="N/A"
+        />
+      </div>
+      <br />
+      <br />
+      <input type="button" id="back" value="Back" />
+    </div>
+    <br />
+    <a href="app-terms-of-use.pdf" target="_blank">
+      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
+    </a>
+    <script src="function-profile-page.js"></script>
+  </body>
+</html>

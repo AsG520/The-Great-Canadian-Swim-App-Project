@@ -41,18 +41,18 @@ const submit = document.getElementById("submit");
 submit.addEventListener("click", async () => {
     const username = document.getElementById("username").value.trim();
     const age = document.getElementById("age-number").value.trim();
-    const gender = document.getElementById("gender-details").value.trim();
+    const location = document.getElementById("location-details").value;
+    const gender = document.getElementById("gender-details").value;
     const height = document.getElementById("height-details").value.trim();
     const weight = document.getElementById("weight-details").value.trim();
 
     // Make sure every field is filled in
-    if (username === "" || age === "" || gender === "" || height === "" || weight === "") {
+    if (username === "" || age === "" || height === "" || weight === "" || !gender || !location) {
         customAlert("Please fill out all information before continuing.");
         return;
     }
-
     //const userID = localStorage.getItem("loggedInUserId");
-    const userData = {username: username, age: age, gender: gender, height: height, weight: weight, credentialsCompleted: true};
+    const userData = {username: username, age: age, location: location, gender: gender, height: height, weight: weight, credentialsCompleted: true};
     const user = currentUser;
 
 if (!user) {

@@ -80,27 +80,21 @@ h4 {
 }
 
 .alertBox {
-  /* Add this */
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  text-align: center;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .title {
     font-size: 17px;
     font-weight: 700;
-}
-
-.subtitle {
-    font-size: 12px;
-    font-weight: 500;
 }
 
 /* HTML IDs */
@@ -110,6 +104,16 @@ h4 {
 
 #footer-details:hover, h1:hover, h4:hover {
     text-decoration-line: underline;
+}
+
+#subtitle {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#your-Reason-Text {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 #gotohome {
