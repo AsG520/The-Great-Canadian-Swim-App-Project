@@ -1,5 +1,9 @@
 # iPOTS Swimming Reminder App
 
+Visual of App
+<br>
+<img width="505" height="1027" alt="Image" src="https://github.com/user-attachments/assets/0e1c9c39-6d11-4c35-84ce-241b61f4207d" />
+
 Features in App
 
 How it Works
