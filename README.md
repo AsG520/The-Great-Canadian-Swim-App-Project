@@ -19,3 +19,14 @@ How to Run
 - Run the program using your Live Reloading or Hot Reloading downloaded extension.
 
 References
+- GitHub Branches Tutorial (Beginner Friendly) - https://www.youtube.com/watch?v=0vzYWyHmcY8&t=623s
+- Simple Login & Register with Firebase Authentication & Firestore using JavaScript | HTML | CSS - https://youtu.be/_Xczf06n6x0?si=irFb-LWgykuAcHPE
+- Flaticon - https://www.flaticon.com/free-icons/favicon
+- uiGradients - https://uigradients.com/#Bluelagoo
+- Google Fonts - https://fonts.google.com/
+- GitHub Pages - https://www.youtube.com/watch?v=e5AwNU3Y2es
+- SilkTide - https://silktide.com/
+- Google Cloud Console - https://console.cloud.google.com/getting-started?authuser=1
+- Build Infinite Carousel Animations in 4 Minutes - https://www.youtube.com/watch?v=KD1Yo8a_Qis
+- Emojipedia - https://emojipedia.org/
+- How to Add a Smart AI Agent to Your Website in 2025 - https://youtu.be/ASjITM7lVC8?si=WF4e5n4vXzE4q1hr
