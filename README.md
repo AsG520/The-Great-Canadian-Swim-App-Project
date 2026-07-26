@@ -3,6 +3,12 @@
 Features in App
 
 How it Works
+- User must create an account and sign in, to be apart of the The Great Canadian Swim community.
+- User credentials page must be completed out for the profile details (e.g., username, location, age, gender, height, and weight).
+- User must select an option under the tell us about you page (e.g., I live with a Disability, I am a Parent/Caregiver, I am a Supporter, Swim Club/Coach, School/Student, and Corporate/Organization).
+- User must write a reason within the textbox and select if they want to display this on their profile. 
+- User must select a option for their goal (e.g., show up, improve my health, support my community, and other).
+- User will view the you're all set page, which gives a summary of your reason and goals.
 
 Requirements
 - IDE (e.g., VS Code, Eclipse, or IntelliJ).
