@@ -26,7 +26,7 @@ body {
 /* HTML Classes */ 
 .container {
     width: 327px;
-    height: 900px;
+    height: 990px;
     background-color: white;
     border-radius: 20px;
     border-top: none;
@@ -62,7 +62,7 @@ body {
     margin-top: -10px;
 }
 
-#footer-details, h1:hover, h4:hover, h3:hover, #days-swum-word:hover, #total-distance-word:hover, #goal-word:hover, #age-word:hover, #gender-word:hover, #my-why-word:hover {
+#footer-details, h1:hover, h4:hover, h3:hover, #days-swum-word:hover, #total-distance-word:hover, #goal-word:hover, #age-word:hover, #gender-word:hover, #my-why-word:hover, #total-hours-word:hover {
     text-decoration-line: underline;
 }
 
@@ -81,8 +81,8 @@ body {
     text-align: center;
 }
 
-#gender, #age, #goal, #total-distance, #days-swum {
-    width: 310px;
+#gender, #age, #goal, #total-distance, #days-swum, #total-hours {
+    width: 324px;
     height: 30px;
     background-color: #F5F7F9;
     border: none;

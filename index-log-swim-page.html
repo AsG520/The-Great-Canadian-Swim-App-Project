@@ -1,0 +1,104 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-log-swim-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>Log Swim Page: The Great Canadian Swim App - 2026</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Log Your Swim</h1>
+      <img
+        src="loader-logo.png"
+        width="120"
+        height="100"
+        id="log-swim-logo"
+        alt="Picture of Great Canadian Swim logo."
+      />
+      <br />
+      <label>How was your swim?</label>
+      <div class="face-pictures-top">
+        <figure>
+          <img
+            src="great-face.png"
+            height="50"
+            width="50"
+            id="great-picture"
+            alt="Picture of great face."
+          />
+          <figcaption>Great</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="good-face.png"
+            height="50"
+            width="50"
+            id="good-picture"
+            alt="Picture of good face."
+          />
+          <figcaption>Good</figcaption>
+        </figure>
+      </div>
+      <div class="face-pictures-bottom">
+        <figure>
+          <img
+            src="okay-face.png"
+            height="50"
+            width="50"
+            id="okay-picture"
+            alt="Picture of okay face."
+          />
+          <figcaption>Okay</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="tough-face.png"
+            height="50"
+            width="50"
+            id="tough-picture"
+            alt="Picture of tough face."
+          />
+          <figcaption>Tough</figcaption>
+        </figure>
+      </div>
+      <br />
+      <label>Distance</label>
+      <input
+        type="number"
+        id="distance"
+        oninput="this.value = Math.abs(this.value)"
+        min="0"
+        placeholder="Enter distance swam in meters"
+        alt="Textbox of distance."
+      />
+      <br />
+      <label>Where did you swim?</label>
+      <div class="button-layout">
+        <input type="button" id="pool" value="Pool" />
+        <input type="button" id="open-water" value="Open Water" />
+      </div>
+      <br />
+      <label>Notes (optional)</label>
+      <input
+        type="text"
+        id="notes"
+        placeholder="Enter your notes"
+        maxlength="30"
+        alt="Textbox of notes."
+      />
+      <br />
+      <input type="button" value="Save Swim" id="save-swim" />
+    </div>
+    <br />
+    <a href="app-terms-of-use.pdf" target="_blank">
+      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
+    </a>
+    <script type="module" src="function-log-swim-page.js"></script>
+  </body>
+</html>
