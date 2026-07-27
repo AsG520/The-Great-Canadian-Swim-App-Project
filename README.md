@@ -42,3 +42,4 @@ References
 - Build Infinite Carousel Animations in 4 Minutes - https://www.youtube.com/watch?v=KD1Yo8a_Qis
 - Emojipedia - https://emojipedia.org/
 - How to Add a Smart AI Agent to Your Website in 2025 - https://youtu.be/ASjITM7lVC8?si=WF4e5n4vXzE4q1hr
+- How to Create and Display a Loading Spinner on Page Load (without JQuery): HTML, CSS & JavaScript - https://youtu.be/q76TexbMXJg?si=JitXE3aN7-c0wNuS
