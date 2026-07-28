@@ -5,6 +5,17 @@ Visual of App
 <img width="253" height="514" alt="Image" src="https://github.com/user-attachments/assets/0e1c9c39-6d11-4c35-84ce-241b61f4207d" />
 
 Features in App
+- Secure User Authentication - Users can create an account, sign in and access their data using Firebase Authentication.
+- Personal Profile - Users can enter in their own username, location, age, gender, height and weight.
+- Personalized User Categories - User can express themselves as a person living with a disability, supporter, parent/caregiver, swim club/coach or corporate/organization.
+- Reasons for Swimming - Users can share their reason behind participating and choose to display their reason on their public profile.
+- Goal Selection - Users can select one or more goal, including consistence through showing up, improving their health, supporting their community or stating that they have other reasons.
+- Profile Summary - A setup summary page displaying the user's written reason and goals entered in previously.
+- Homepage Navigation Footer: Displays options for users to view log swim, date tracker, contact us, badges, and profile pages. 
+- Swim Log - Allows users to document their swimming activity, such as their distance and hours.
+- Progress Tracker - Showcases users swim history (e.g., day, week, month and year).
+- Achievement Badges - Holds milestones that the users can obtain during their swimming journey, to boost user motivation.
+- Profile Page - Showcases users data that they want to share such as total distance, hours, username and reason for swimming if desired.
 
 How it Works
 - User must create an account and sign in, to be apart of the Great Canadian Swim community.
@@ -43,3 +54,4 @@ References
 - Emojipedia - https://emojipedia.org/
 - How to Add a Smart AI Agent to Your Website in 2025 - https://youtu.be/ASjITM7lVC8?si=WF4e5n4vXzE4q1hr
 - How to Create and Display a Loading Spinner on Page Load (without JQuery): HTML, CSS & JavaScript - https://youtu.be/q76TexbMXJg?si=JitXE3aN7-c0wNuS
+- Prettier: Opinionated Code Formatter - https://prettier.io/
