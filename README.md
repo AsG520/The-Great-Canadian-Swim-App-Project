@@ -11,6 +11,7 @@ Features in App
 - Reasons for Swimming - Users can share their reason behind participating and choose to display their reason on their public profile.
 - Goal Selection - Users can select one or more goal, including consistence through showing up, improving their health, supporting their community or stating that they have other reasons.
 - Profile Summary - A setup summary page displaying the user's written reason and goals entered in previously.
+- Home Screen - Showcases welcome message, positive quote, your effort today, challenges, community progress, and weekly snapshot. 
 - Homepage Navigation Footer: Displays options for users to view log swim, date tracker, contact us, badges, and profile pages. 
 - Swim Log - Allows users to document their swimming activity, such as their distance and hours.
 - Progress Tracker - Showcases users swim history (e.g., day, week, month and year).
