@@ -57,3 +57,7 @@ References
 - How to Create and Display a Loading Spinner on Page Load (without JQuery): HTML, CSS & JavaScript - https://youtu.be/q76TexbMXJg?si=JitXE3aN7-c0wNuS
 - Prettier: Opinionated Code Formatter - https://prettier.io/
 - Custom Radio Buttons CSS | Pure CSS Tutorial: https://youtu.be/sSF0bXFUFGM?si=eG4m0C1piUI-BQny
+
+Developers
+- <a href="https://github.com/AsG520" target="_blank">Amanjot.S</a>: Front-End Developer
+- <a href="https://github.com/JF032109" target="_blank">Jonathan.F</a>: Back-End Developer
