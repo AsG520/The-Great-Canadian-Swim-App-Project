@@ -58,6 +58,7 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 - How to Add a Smart AI Agent to Your Website in 2025 - https://youtu.be/ASjITM7lVC8?si=WF4e5n4vXzE4q1hr
 - How to Create and Display a Loading Spinner on Page Load (without JQuery): HTML, CSS & JavaScript - https://youtu.be/q76TexbMXJg?si=JitXE3aN7-c0wNuS
 - Prettier: Opinionated Code Formatter - https://prettier.io/
+- Code Formatter | Code Beautifier - https://formatter.org/
 - Custom Radio Buttons CSS | Pure CSS Tutorial: https://youtu.be/sSF0bXFUFGM?si=eG4m0C1piUI-BQny
 
 ## Team
