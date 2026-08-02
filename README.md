@@ -47,6 +47,7 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 ## References
 - GitHub Branches Tutorial (Beginner Friendly) - https://www.youtube.com/watch?v=0vzYWyHmcY8&t=623s
 - Simple Login & Register with Firebase Authentication & Firestore using JavaScript | HTML | CSS - https://youtu.be/_Xczf06n6x0?si=irFb-LWgykuAcHPE
+- Firebase - https://firebase.google.com/
 - Flaticon - https://www.flaticon.com/free-icons/favicon
 - uiGradients - https://uigradients.com/#Bluelagoo
 - Google Fonts - https://fonts.google.com/
