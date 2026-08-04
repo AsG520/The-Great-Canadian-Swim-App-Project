@@ -31,10 +31,10 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 <img width="416" height="863" alt="Image" src="https://github.com/user-attachments/assets/638e59ac-b86b-4a59-a071-4f0d06fc33be" />
 
 ## Visual of Reason Swimming Page - The Great Canadian Swim App
-<img width="415" height="777" alt="Image" src="https://github.com/user-attachments/assets/322d6371-bde8-4667-99e8-eb8fbda40669" />
+- Coming Soon!
 
 ## Visual of Goal Page - The Great Canadian Swim App
-<img width="411" height="862" alt="Image" src="https://github.com/user-attachments/assets/be7f2ebf-fe2b-4ba3-bf2b-f8824a627eb4" />
+- Coming Soon!
 
 ## Visual of All Set Page - The Great Canadian Swim App
 <img width="410" height="637" alt="Image" src="https://github.com/user-attachments/assets/61a7a048-bdfa-4aab-a56d-774e3e876c92" />
