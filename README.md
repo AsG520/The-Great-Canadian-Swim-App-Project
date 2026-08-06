@@ -123,7 +123,8 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 - How to Create and Display a Loading Spinner on Page Load (without JQuery): HTML, CSS & JavaScript - https://youtu.be/q76TexbMXJg?si=JitXE3aN7-c0wNuS
 - Prettier: Opinionated Code Formatter - https://prettier.io/
 - Code Formatter | Code Beautifier - https://formatter.org/
-- Custom Radio Buttons CSS | Pure CSS Tutorial: https://youtu.be/sSF0bXFUFGM?si=eG4m0C1piUI-BQny
+- Custom Radio Buttons CSS | Pure CSS Tutorial - https://youtu.be/sSF0bXFUFGM?si=eG4m0C1piUI-BQny
+- How to Send Email from HTML Contact Form Easily (2026) | EmailJS - https://youtu.be/-O5Nlvh2c8s?si=mJr4qKJ-rV2P5kBn
 
 ## Team
 - <a href="https://github.com/AsG520" target="_blank">Amanjot.S</a>: Front-End Developer
