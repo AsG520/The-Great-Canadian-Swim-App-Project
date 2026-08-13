@@ -15,31 +15,31 @@
 Track your swims, watch your progress move across the country, unlock inspiring stories, learn about Canada's communities, and discover the impact of resilience one swim at a time. Whether you swim 25 meters or 5 kilometers, every swim moves you forward. Because every meter matters. The Great Canadian Swim is a community of people choosing to show up for themselves and for one another. Connect with friends, join a team, celebrate milestones, encourage fellow swimmers, and share your journey with people across Canada who believe that every effort deserves recognition. Together, we prove that trying counts. Every swim helps raise awareness of chronic illnesses, invisible disabilities, and the power of perseverance. Support fundraising campaigns, thank sponsors, share inspiring stories, and help building a more understanding and inclusive Canada. Small actions create lasting change. Together, we can make every stroke count.
 
 ## 🎨 Visual of Home Page - The Great Canadian Swim App
-<img width="431" height="757" alt="Image" src="https://github.com/user-attachments/assets/b7e8e51f-3750-4311-b068-1b63836883f2" />
+- Coming Soon!
 
 ## 🎨 Visual of Welcome Page - The Great Canadian Swim App
-<img width="427" height="752" alt="Image" src="https://github.com/user-attachments/assets/5906dc10-39b7-47c2-a457-e5d7078c962c" />
+- Coming Soon!
 
 ## 🎨 Visual of Swim Across Canada Page - The Great Canadian Swim App
-<img width="423" height="755" alt="Image" src="https://github.com/user-attachments/assets/8df29d45-8606-4533-847e-ed042d29c3b3" />
+- Coming Soon!
 
 ## 🎨 Visual of Build Community Page - The Great Canadian Swim App
-<img width="417" height="693" alt="Image" src="https://github.com/user-attachments/assets/039b990c-c8aa-4fb2-bb10-1939df5cf3e8" />
-
+- Coming Soon!
+  
 ## 🎨 Visual of Make a Difference Page - The Great Canadian Swim App
-<img width="417" height="757" alt="Image" src="https://github.com/user-attachments/assets/bd728dd0-ca34-4b07-b4a2-71fcd9792255" />
+- Coming Soon!
 
 ## 🎨 Visual of Login Page - The Great Canadian Swim App
-<img width="416" height="775" alt="Image" src="https://github.com/user-attachments/assets/89dd1e6e-07e7-44ec-a8c8-d16a6d7f0f09" />
+- Coming Soon!
 
 ## 🎨 Visual of Account Registration Page - The Great Canadian Swim App
-<img width="417" height="776" alt="Image" src="https://github.com/user-attachments/assets/4c0de5d8-37c6-4fe6-afcd-c14e5277b07a" />
+- Coming Soon!
 
 ## 🎨 Visual of User Credentials Page - The Great Canadian Swim App
-<img width="415" height="848" alt="Image" src="https://github.com/user-attachments/assets/4fd4f6b3-24e5-4648-9ee6-8f1a56bfe3a9" />
+- Coming Soon!
 
 ## 🎨 Visual of About You Page - The Great Canadian Swim App
-<img width="416" height="863" alt="Image" src="https://github.com/user-attachments/assets/638e59ac-b86b-4a59-a071-4f0d06fc33be" />
+- Coming Soon!
 
 ## 🎨 Visual of Reason Swimming Page - The Great Canadian Swim App
 - Coming Soon!
@@ -48,34 +48,34 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 - Coming Soon!
 
 ## 🎨 Visual of All Set Page - The Great Canadian Swim App
-<img width="410" height="637" alt="Image" src="https://github.com/user-attachments/assets/61a7a048-bdfa-4aab-a56d-774e3e876c92" />
+- Coming Soon!
 
 ## 🎨 Visual of Main Page - The Great Canadian Swim App 
 - Coming Soon!
 
 ## 🎨 Visual of Log Swim Page - The Great Canadian Swim App
-<img width="410" height="838" alt="Image" src="https://github.com/user-attachments/assets/22384354-f5d2-44f0-941e-c9f1b5ec704e" />
+- Coming Soon!
 
 ## 🎨 Visual of Great Swim Page - The Great Canadian Swim App
-<img width="411" height="570" alt="Image" src="https://github.com/user-attachments/assets/46cfe26e-eba6-4f6b-9988-055a8d6e3ef0" />
+- Coming Soon!
 
 ## 🎨 Visual of Date Tracker Distance Page - The Great Canadian Swim App
-<img width="411" height="875" alt="Image" src="https://github.com/user-attachments/assets/381218b0-7959-4b23-8aad-3912024cd4f2" />
+- Coming Soon!
 
 ## 🎨 Visual of Date Tracker Duration Page - The Great Canadian Swim App
-<img width="406" height="859" alt="Image" src="https://github.com/user-attachments/assets/7a4c67df-1a58-4757-946c-71263988dfff" />
+- Coming Soon!
 
 ## 🎨 Visual of Date Tracker Session Page - The Great Canadian Swim App
-<img width="402" height="867" alt="Image" src="https://github.com/user-attachments/assets/669bae23-e1d3-43b8-9007-7ce30b5de779" />
+- Coming Soon!
 
 ## 🎨 Visual of Badge Page - The Great Canadian Swim App
-<img width="401" height="633" alt="Image" src="https://github.com/user-attachments/assets/359d2486-9c02-4197-af54-64e7bdb80f01" />
+- Coming Soon!
 
 ## 🎨 Visual of Contact Us Page - The Great Canadian Swim App
-<img width="401" height="683" alt="Image" src="https://github.com/user-attachments/assets/cd2cea24-b47d-46ab-9d0f-591ae04250e8" />
+- Coming Soon!
 
 ## 🎨 Visual of Profile Page - The Great Canadian Swim App
-<img width="398" height="885" alt="Image" src="https://github.com/user-attachments/assets/186d9b69-4bec-4954-a2d0-1497f90408c5" />
+- Coming Soon!
 
 ## 📹 Walkthrough Video
 - Coming Soon!
