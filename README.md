@@ -1,86 +1,86 @@
-# 🌊 iPOTS Swimming Reminder App
+# iPOTS Swimming Reminder App
 
-## 📘 Table of Contents
-- 📘 Summary of App
-- 📝 Visuals of App
-- 📹 Walkthrough Video
-- 🔥 Features in App
-- 🛠️ How it Works
-- 🎯 Requirements
-- 💻 How to Run
-- 🌐 References
-- 🤝 Team
+## Table of Contents
+- Summary of App
+- Visuals of App
+- Walkthrough Video
+- Features in App
+- How it Works
+- Requirements
+- How to Run
+- References
+- Team
 
-## 📝 Summary of App
+## Summary of App
 Track your swims, watch your progress move across the country, unlock inspiring stories, learn about Canada's communities, and discover the impact of resilience one swim at a time. Whether you swim 25 meters or 5 kilometers, every swim moves you forward. Because every meter matters. The Great Canadian Swim is a community of people choosing to show up for themselves and for one another. Connect with friends, join a team, celebrate milestones, encourage fellow swimmers, and share your journey with people across Canada who believe that every effort deserves recognition. Together, we prove that trying counts. Every swim helps raise awareness of chronic illnesses, invisible disabilities, and the power of perseverance. Support fundraising campaigns, thank sponsors, share inspiring stories, and help building a more understanding and inclusive Canada. Small actions create lasting change. Together, we can make every stroke count.
 
-## 🎨 Visual of Home Page - The Great Canadian Swim App
+## Visual of Home Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Welcome Page - The Great Canadian Swim App
+## Visual of Welcome Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Swim Across Canada Page - The Great Canadian Swim App
+## Visual of Swim Across Canada Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Build Community Page - The Great Canadian Swim App
+## Visual of Build Community Page - The Great Canadian Swim App
 - Coming Soon!
   
-## 🎨 Visual of Make a Difference Page - The Great Canadian Swim App
+## Visual of Make a Difference Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Login Page - The Great Canadian Swim App
+## Visual of Login Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Account Registration Page - The Great Canadian Swim App
+## Visual of Account Registration Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of User Credentials Page - The Great Canadian Swim App
+## Visual of User Credentials Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of About You Page - The Great Canadian Swim App
+## Visual of About You Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Reason Swimming Page - The Great Canadian Swim App
+## Visual of Reason Swimming Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Goal Page - The Great Canadian Swim App
+## Visual of Goal Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of All Set Page - The Great Canadian Swim App
+## Visual of All Set Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Main Page - The Great Canadian Swim App 
+## Visual of Main Page - The Great Canadian Swim App 
 - Coming Soon!
 
-## 🎨 Visual of Log Swim Page - The Great Canadian Swim App
+## Visual of Log Swim Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Great Swim Page - The Great Canadian Swim App
+## Visual of Great Swim Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Date Tracker Distance Page - The Great Canadian Swim App
+## Visual of Date Tracker Distance Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Date Tracker Duration Page - The Great Canadian Swim App
+## Visual of Date Tracker Duration Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Date Tracker Session Page - The Great Canadian Swim App
+## Visual of Date Tracker Session Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Badge Page - The Great Canadian Swim App
+## Visual of Badge Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Contact Us Page - The Great Canadian Swim App
+## Visual of Contact Us Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 🎨 Visual of Profile Page - The Great Canadian Swim App
+## Visual of Profile Page - The Great Canadian Swim App
 - Coming Soon!
 
-## 📹 Walkthrough Video
+## Walkthrough Video
 - Coming Soon!
 
-## 🔥 Features in App
+## Features in App
 - Secure User Authentication - Users can create an account, sign in and access their data using Firebase Authentication.
 - Personal Profile - Users can enter in their own username, location, age, gender, height and weight.
 - Personalized User Categories - User can express themselves as a person living with a disability, supporter, parent/caregiver, swim club/coach or corporate/organization.
@@ -94,7 +94,7 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 - Achievement Badges - Holds milestones that the users can obtain during their swimming journey, to boost user motivation.
 - Profile Page - Showcases users data that they want to share such as total distance, hours, username and reason for swimming if desired.
 
-## 🛠️ How it Works
+## How it Works
 - User must create an account and sign in, to be apart of the Great Canadian Swim community.
 - User credentials page must be completed for profile details (e.g., username, location, age, gender, height, and weight).
 - User must select an option under the tell us about you page (e.g., I live with a Disability, I am a Parent/Caregiver, I am a Supporter, Swim Club/Coach, School/Student, and Corporate/Organization).
@@ -104,21 +104,21 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 - User will get directed to the home page, which displays challenges, weekly snapshot, today's effort, positive quote, and a footer that brings users to different pages.  
 - The footer at the bottom of home page, will showcase options for user to view the contact, log swim, badge, tracker, and profile pages. 
 
-## 🎯 Requirements
+## Requirements
 - IDE (e.g., VS Code, Eclipse, or IntelliJ).
 - HTML (HyperText Markup Language).
 - CSS (Cascading Style Sheets).
 - JS (JavaScript).
 - Live Reloading or Hot Reloading (e.g., Live Server, and etc).
 
-## 💻 How to Run
+## How to Run
 - Copy all the HTML code into HTML files named with their corresponding file name.
 - Copy all the CSS code into CSS files named with their corresponding file name.
 - Copy all the JS code into JS files named with their corresponding file name.
 - Make sure the files and images are in the same directory, or else program will fail to operate.
 - Run the program using your Live Reloading or Hot Reloading downloaded extension.
 
-## 🌐 References
+## References
 - GitHub Branches Tutorial (Beginner Friendly) - https://www.youtube.com/watch?v=0vzYWyHmcY8&t=623s
 - Simple Login & Register with Firebase Authentication & Firestore using JavaScript | HTML | CSS - https://youtu.be/_Xczf06n6x0?si=irFb-LWgykuAcHPE
 - Firebase - https://firebase.google.com/
@@ -137,6 +137,6 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 - Custom Radio Buttons CSS | Pure CSS Tutorial - https://youtu.be/sSF0bXFUFGM?si=eG4m0C1piUI-BQny
 - How to Send Email from HTML Contact Form Easily (2026) | EmailJS - https://youtu.be/-O5Nlvh2c8s?si=mJr4qKJ-rV2P5kBn
 
-## 🤝 Team
+## Team
 - <a href="https://github.com/AsG520" target="_blank">Amanjot.S</a>: Front-End Developer
 - <a href="https://github.com/JF032109" target="_blank">Jonathan.F</a>: Back-End Developer
