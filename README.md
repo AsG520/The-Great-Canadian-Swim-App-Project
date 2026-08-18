@@ -1,4 +1,4 @@
-# iPOTS Swimming Reminder App
+# The Great Canadian Swim App Project
 
 ## Table of Contents
 - Summary of App
