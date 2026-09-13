@@ -2,18 +2,15 @@
 body {
     justify-content: center;
     align-items: center;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    background-image: url("login-page-background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: 'Montserrat';
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
     animation-name: fadeIn;
     animation-duration: 1s;
-    color: rgb(28, 60, 101);
+    color: white;
     animation-delay: 0s;
     animation-fill-mode: forwards;
     animation-play-state: running;
@@ -33,11 +30,12 @@ h4 {
     font-weight: 600;
 }
 
-/* HTML Classes */ 
+/* HTML Classes */
 .container {
     width: 327px;
-    height: 610px;
-    background-color: white;
+    height: 665px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     border-top: none;
     border-bottom: none;
@@ -47,12 +45,6 @@ h4 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 5s;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
 .alertBox {
@@ -60,8 +52,9 @@ h4 {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 200%);
     background: white;
+    color: rgb(28, 60, 101);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -80,7 +73,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     width: 260px;
 }
 
@@ -93,19 +86,27 @@ h4 {
 }
 
 #footer-details:hover {
-    transform: scale(1.050);
+    transform: scale(1.05);
 }
 
 #footer-details {
     justify-content: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     text-align: center;
 }
 
-#profile-checkbox {
-    width: 25px;
-    height: 25px;
+#private-checkbox {
+    width: 50px;
+    height: 50px;
+}
+
+#private-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
 }
 
 #continue {
@@ -116,7 +117,7 @@ h4 {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
+    background-color: rgba(15, 192, 252, 0.5);
     border-radius: 28px;
     border-top: none;
     border-bottom: none;
@@ -125,11 +126,17 @@ h4 {
 }
 
 #continue:hover {
-    background-color: rgb(28, 60, 101);
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 #reason-swimming-logo:hover {
     transform: scale(1.1);
+}
+
+#reason-swimming-logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
 }
 
 #reason {
@@ -144,7 +151,7 @@ h4 {
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background: #eff0f2;
+    background: rgba(239, 240, 242, 0.5);
     color: rgb(28, 60, 101);
     font-weight: 600;
     border-radius: 16px;
@@ -157,7 +164,11 @@ h4 {
     font-weight: 700;
 }
 
-#footer-details:hover, h1:hover, h4:hover, #profile-choose:hover, #write-your-reason-word:hover {
+#footer-details:hover,
+h1:hover,
+h4:hover,
+#profile-choose:hover,
+#write-your-reason-word:hover {
     text-decoration-line: underline;
 }
 
@@ -165,7 +176,7 @@ h4 {
     transform: translateY(1px);
 }
 
-/* HTML Pseudo-Element Notation */ 
+/* HTML Pseudo-Element Notation */
 input::placeholder {
     color: rgb(28, 60, 101);
     font-weight: 600;
@@ -183,28 +194,12 @@ input[type="text"] {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes borderEffect {
-    0% {
-        border: 5px solid rgb(28, 60, 101);
-    }
-    25% {
-        border: 5px solid rgb(15, 192, 252);
-    }   
-    50% {
-        border: 5px solid rgb(178, 58, 58);
-    }
-    75% {
-        border: 5px solid rgb(0, 0, 0);
-    }
-    100% {
-        border: 5px solid #F5F7F9;
     }
 }

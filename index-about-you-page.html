@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +14,9 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="about-you-word">Tell Us About You</h1>
+      <h1 id="about-you-word">
+        <span aria-hidden="true">💭</span> Tell Us About You
+      </h1>
       <h4 id="description">
         This helps us personalize<br />
         your experience.
@@ -30,65 +33,96 @@
       </div>
       <br />
       <div class="disability-details">
-        <input type="checkbox" id="disability-checkbox" />
+        <input
+          type="checkbox"
+          id="disability-checkbox"
+          aria-label="I live with a disability."
+        />
         <input
           type="button"
           value="♿ I live with a Disability"
           id="disability-option"
+          aria-label="I live with a disability."
         />
       </div>
       <br />
       <div class="parent-caregiver-details">
-        <input type="checkbox" id="parent-caregiver-checkbox" />
+        <input
+          type="checkbox"
+          id="parent-caregiver-checkbox"
+          aria-label="I am a parent / caregiver."
+        />
         <input
           type="button"
           value="👪 I am a Parent / Caregiver"
           id="parent-caregiver-option"
+          aria-label="I am a parent / caregiver."
         />
       </div>
       <br />
       <div class="supporter-details">
-        <input type="checkbox" id="supporter-checkbox" />
+        <input
+          type="checkbox"
+          id="supporter-checkbox"
+          aria-label="I am a supporter."
+        />
         <input
           type="button"
-          value="👏 I am a Supporter"
+          value="🤝 I am a Supporter"
           id="supporter-option"
+          aria-label="I am a supporter."
         />
       </div>
       <br />
       <div class="club-coach-details">
-        <input type="checkbox" id="club-coach-checkbox" />
+        <input
+          type="checkbox"
+          id="club-coach-checkbox"
+          aria-label="Swim club / coach."
+        />
         <input
           type="button"
           value="🏊‍♂️ Swim Club / Coach"
           id="club-coach-option"
+          aria-label="Swim club / coach."
         />
       </div>
       <br />
       <div class="education-details">
-        <input type="checkbox" id="education-checkbox" />
+        <input
+          type="checkbox"
+          id="education-checkbox"
+          aria-label="School / student."
+        />
         <input
           type="button"
-          value="🎒 School / Student"
+          value="🎓 School / Student"
           id="education-option"
+          aria-label="School / student."
         />
       </div>
       <br />
       <div class="organization-details">
-        <input type="checkbox" id="organization-checkbox" />
+        <input
+          type="checkbox"
+          id="organization-checkbox"
+          aria-label="Corporate / organization."
+        />
         <input
           type="button"
           value="🏢 Corporate / Organization"
           id="organization-option"
+          aria-label="Corporate / organization."
         />
       </div>
       <br />
-      <input type="button" value="Continue" id="continue" />
+      <input
+        type="button"
+        value="➡️ Continue"
+        id="continue"
+        aria-label="Continue."
+      />
     </div>
-    <br />
-    <a href="app-terms-of-use.pdf" target="_blank">
-      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
-    </a>
     <script type="module" src="function-about-you-page.js"></script>
     <script src="chatbase.js"></script>
   </body>

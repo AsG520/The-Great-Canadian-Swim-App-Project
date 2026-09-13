@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-settings-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>Settings Page: The Great Canadian Swim App - 2026</title>
+  </head>
+  <body>
+    <div class="container-profile">
+      <h1 id="profile-word"><span aria-hidden="true">👤</span> Profile</h1>
+      <div class="profile">
+        <img
+          src="profile-picture.png"
+          alt="Picture of profile."
+          id="img-profile"
+          class="image-profile"
+          height="125"
+          width="125"
+        />
+        <br />
+        <i class="bx bx-pencil" id="pencile-icon"></i>
+        <input
+          type="file"
+          name=""
+          id="select-file"
+          class="file"
+          aria-label="Select a profile picture."
+        />
+      </div>
+      <h3 id="username-details">Anonymous</h3>
+      <h4 id="location-details">N/A</h4>
+      <div id="follow-system">
+        <div id="followers-layout">
+          <div id="followers-count">0</div>
+          <label id="followers-label">Followers</label>
+        </div>
+        <div id="following-layout">
+          <div id="following-count">0</div>
+          <label id="following-label">Following</label>
+        </div>
+      </div>
+      <br />
+      <div id="user-stats-details">
+        <div id="exp-details">
+          <label id="exp-word"><span aria-hidden="true">⚡</span> Exp</label>
+          <input
+            type="text"
+            id="exp"
+            value="0"
+            readonly
+            aria-label="Experience points."
+          />
+        </div>
+        <div id="level-details">
+          <label id="level-word"
+            ><span aria-hidden="true">💎</span> Level</label
+          >
+          <input
+            type="text"
+            id="level"
+            value="0"
+            readonly
+            aria-label="Level."
+          />
+        </div>
+        <div id="streak-details">
+          <label id="streak-word"
+            ><span aria-hidden="true">🔥</span> Streak</label
+          >
+          <input
+            type="text"
+            id="streak"
+            value="0"
+            readonly
+            aria-label="Streak."
+          />
+        </div>
+      </div>
+      <br />
+      <br />
+      <label id="my-why-word"><span aria-hidden="true">💭</span> My Why?</label>
+      <input type="text" id="why-container" aria-label="My why?" readonly />
+      <br />
+      <div class="user-information">
+        <label id="days-swum-word"
+          ><span aria-hidden="true">📅</span> Days Swum (#)</label
+        >
+        <br />
+        <input
+          type="number"
+          id="days-swum"
+          readonly
+          aria-label="Days swum."
+          value="0"
+        />
+        <br />
+        <label id="total-distance-word"
+          ><span aria-hidden="true">📏</span> Total Distance (km)</label
+        >
+        <br />
+        <input
+          type="number"
+          id="total-distance"
+          readonly
+          aria-label="Total distance."
+          value="0"
+        />
+        <br />
+        <label id="total-hours-word"
+          ><span aria-hidden="true">⏱️</span> Total Duration (h)</label
+        >
+        <input
+          type="number"
+          id="total-hours"
+          readonly
+          aria-label="Total minutes."
+          value="0"
+        />
+        <br />
+        <label id="goal-word"><span aria-hidden="true">🎯</span> Goal</label>
+        <br />
+        <input
+          type="text"
+          id="goal"
+          readonly
+          aria-label="Goal."
+          placeholder="N/A"
+        />
+        <br />
+        <label id="age-word"><span aria-hidden="true">⏳</span> Age</label>
+        <br />
+        <input type="number" id="age" readonly aria-label="Age." value="0" />
+        <br />
+        <label id="gender-word"
+          ><span aria-hidden="true">👪</span> Gender</label
+        >
+        <br />
+        <input
+          type="text"
+          id="gender"
+          readonly
+          aria-label="Gender."
+          value="N/A"
+        />
+      </div>
+    </div>
+    <br />
+    <div id="control-panel-layout">
+      <select id="control-panel" aria-label="Control panel.">
+        <option disabled selected>
+          <span aria-hidden="true">🎛️</span> Control Panel
+        </option>
+        <option>Logout</option>
+        <option>Delete Account</option>
+      </select>
+    </div>
+    <br />
+    <br />
+    <div id="information-details">
+      <div id="social-details">
+        <div id="socials-word"><span aria-hidden="true">📱</span> Socials</div>
+        <a href="https://www.tiktok.com/improvingpots" title="TikTok">
+          <img
+            src="tiktok-logo.png"
+            width="45"
+            height="45"
+            id="tiktok-picture"
+            alt="Picture of TikTok logo."
+          />
+        </a>
+        <a href="https://www.instagram.com/improvingpots" title="Instagram">
+          <img
+            src="instagram-logo.png"
+            width="45"
+            height="45"
+            id="instagram-picture"
+            alt="Picture of Instagram logo."
+          />
+        </a>
+        <a href="https://www.twitter.com/improvingpots" title="Twitter">
+          <img
+            src="twitter-logo.png"
+            width="45"
+            height="45"
+            id="twitter-picture"
+            alt="Picture of Twitter logo."
+          />
+        </a>
+      </div>
+      <div id="phone-details">
+        <div id="phone-word"><span aria-hidden="true">📞</span> Phone</div>
+        <br />
+        <a href="wa.me/4165509762" id="phone-number"> +1 (416) 550 - 9762 </a>
+      </div>
+      <div id="email-details">
+        <div id="email-word-box"><span aria-hidden="true">📧</span> Email</div>
+        <br />
+        <a href="mailto:steffmanica@gmail.com" id="email-address">
+          steffimanica@gmail.com
+        </a>
+      </div>
+    </div>
+    <br />
+    <div class="container-contact-us">
+      <h1 id="contact-us-word">
+        <span aria-hidden="true">☎️</span> Contact Us
+      </h1>
+      <img
+        src="loader-logo.png"
+        width="120"
+        height="100"
+        id="contact-us-page-logo"
+        alt="Picture of Great Canadian Swim logo."
+      />
+      <br />
+      <form>
+        <label id="name-word"><span aria-hidden="true">👋</span> Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          aria-label="Enter your name."
+        />
+        <br />
+        <label id="email-word"><span aria-hidden="true">📩</span> Email</label>
+        <input
+          type="text"
+          id="email"
+          placeholder="Enter your email address"
+          aria-label="Enter your email address."
+        />
+        <br />
+        <label id="subject-word"
+          ><span aria-hidden="true">📝</span> Subject</label
+        >
+        <input
+          type="text"
+          id="subject"
+          placeholder="Enter a subject for your message"
+          aria-label="Enter a subject for your message."
+        />
+        <br />
+        <label id="message-word"
+          ><span aria-hidden="true">✏️</span> Message</label
+        >
+        <input
+          type="text"
+          id="message"
+          placeholder="Enter your message"
+          aria-label="Enter your message."
+        />
+        <br />
+        <button id="send" aria-label="Send.">
+          <span aria-hidden="true">📤</span> Send
+        </button>
+      </form>
+    </div>
+    <br />
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="index-main-page.html" title="Home"
+            ><span aria-hidden="true">🏠</span></a
+          >
+        </li>
+        <li>
+          <a href="index-log-swim-page.html" title="Log Swim"
+            ><span aria-hidden="true">✏️</span></a
+          >
+        </li>
+        <li>
+          <a href="index-date-tracker-distance-daily.html" title="Date Trackers"
+            ><span aria-hidden="true">⏳</span></a
+          >
+        </li>
+        <li>
+          <a href="index-badge-page.html" title="Badges"
+            ><span aria-hidden="true">🏆</span></a
+          >
+        </li>
+        <li>
+          <a href="index-join-server-page.html" title="Server"
+            ><span aria-hidden="true">💬</span></a
+          >
+        </li>
+        <li>
+          <a href="index-search-page.html" title="Search"
+            ><span aria-hidden="true">🔍</span></a
+          >
+        </li>
+        <li>
+          <a href="index-weather-page.html" title="Weather"
+            ><span aria-hidden="true">☀️</span></a
+          >
+        </li>
+        <li></li>
+      </ul>
+    </nav>
+    <br />
+    <a href="index-terms-of-use-page.html" target="_blank" title="Terms of Use">
+      <div id="footer-details">
+        <span aria-hidden="true">🔨</span> Privacy Policy / Terms of Use /
+        Disclaimer <span aria-hidden="true">🏛️</span>
+      </div>
+    </a>
+    <script type="module" src="function-settings-page.js"></script>
+    <script src="chatbase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="mail.js"></script>
+  </body>
+</html>

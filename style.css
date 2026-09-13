@@ -2,14 +2,11 @@
 body {
     justify-content: center;
     align-items: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     flex-direction: column;
-    background-image: url("login-page-background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: 'Montserrat';
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
     animation-name: fadeIn;
@@ -34,68 +31,110 @@ h4 {
     font-weight: 600;
 }
 
-/* HTML Classes */ 
+/* HTML Classes */
 .container {
     width: 327px;
     height: 695px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation-name: borderEffect;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition:
+        opacity 0.75,
+        visibility 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #eff0f2;
+    border-top-color: rgb(28, 60, 101);
+    border-radius: 50%;
+    animation-name: loading;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
-    animation-delay: 7s;
-    animation-duration: 15s;
     animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
 /* HTML IDs */
 #every-try-counts {
-    color: rgb(178, 58, 58);
+    color: white;
 }
 
 #get-started {
     height: 56px;
     width: 324px;
-    color: white; /* #FFFFFF */ 
+    color: white;
     font-style: normal;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
+    background-color: rgba(15, 192, 252, 0.5);
     border-radius: 28px;
     border: none;
 }
 
-#welcome-page-logo:hover {
+#main-logo:hover {
     transform: scale(1.1);
 }
 
-#map-of-canada-picture:hover {
-    transform: scale(1.050);
+#main-logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
 }
 
-#the-great-canadian-swim-word:hover, #every-try-counts:hover, #every-ripple-matters:hover, #footer-details:hover {
+#map-of-canada-picture:hover {
+    transform: scale(1.05);
+}
+
+#map-of-canada-picture {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+}
+
+#the-great-canadian-swim-word:hover,
+#every-try-counts:hover,
+#every-ripple-matters:hover,
+#footer-details:hover {
     text-decoration-line: underline;
 }
 
 #footer-details:hover {
-    transform: scale(1.050);
+    transform: scale(1.05);
 }
 
 #footer-details {
     justify-content: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     text-align: center;
 }
 
 #get-started:hover {
-    background-color: rgb(28, 60, 101);
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 #get-stated:active {
@@ -107,28 +146,22 @@ h4 {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
 }
 
-@keyframes borderEffect {
-    0% {
-        border: 5px solid rgb(28, 60, 101);
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
     }
-    25% {
-        border: 5px solid rgb(15, 192, 252);
-    }   
-    50% {
-        border: 5px solid rgb(178, 58, 58);
-    }
-    75% {
-        border: 5px solid rgb(0, 0, 0);
-    }
-    100% {
-        border: 5px solid #F5F7F9;
+
+    to {
+        transform: rotate(1turn);
     }
 }

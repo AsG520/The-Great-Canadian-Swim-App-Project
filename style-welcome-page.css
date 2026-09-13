@@ -2,14 +2,11 @@
 body {
     justify-content: center;
     align-items: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     flex-direction: column;
-    background-image: url("login-page-background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: 'Montserrat';
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
     animation-name: fadeIn;
@@ -30,14 +27,15 @@ h4 {
 }
 
 h1 {
-    margin-bottom: -10px; 
+    margin-bottom: -10px;
 }
 
-/* HTML Classes */ 
+/* HTML Classes */
 .container {
     width: 327px;
     height: 735px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     border-top: none;
     border-bottom: none;
@@ -47,12 +45,6 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 7s;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
 .header-pictures {
@@ -61,10 +53,12 @@ h1 {
     align-items: center;
     flex-direction: row;
     margin-top: -15px;
+    gap: 5px;
 }
 
 /* HTML IDs */
-#sign-in, #create-an-account {
+#sign-in,
+#create-an-account {
     height: 56px;
     width: 324px;
     color: white;
@@ -72,7 +66,7 @@ h1 {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
+    background: rgba(15, 192, 252, 0.5);
     border-radius: 28px;
     border-top: none;
     border-bottom: none;
@@ -80,7 +74,9 @@ h1 {
     border-right: none;
 }
 
-#swim-across-canada-option, #build-community-option, #make-a-difference-option {
+#swim-across-canada-option,
+#build-community-option,
+#make-a-difference-option {
     width: 324px;
     height: 56px;
     font-size: 18px;
@@ -92,37 +88,51 @@ h1 {
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background: #eff0f2;
+    background: rgba(239, 240, 242, 0.5);
     color: rgb(28, 60, 101);
     font-weight: 600;
     border-radius: 16px;
 }
 
 #footer-details:hover {
-    transform: scale(1.050);
-}
-
-#map-of-canada-picture:hover, #welcome-page-logo:hover {
     transform: scale(1.05);
 }
 
-#swim-across-canada-option:hover, #build-community-option:hover, #make-a-difference-option:hover {
-    background: rgba(0, 0, 0, 0.3);
+#map-of-canada-picture:hover,
+#welcome-page-logo:hover {
+    transform: scale(1.05);
 }
 
-h1:hover, h4:hover, #footer-details:hover {
+#welcome-page-logo,
+#map-of-canada-picture {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+}
+
+#swim-across-canada-option:hover,
+#build-community-option:hover,
+#make-a-difference-option:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+h1:hover,
+h4:hover,
+#footer-details:hover {
     text-decoration-line: underline;
 }
 
 #footer-details {
     justify-content: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     text-align: center;
 }
 
-#create-an-account:hover, #sign-in:hover {
-    background-color: rgb(28, 60, 101);
+#create-an-account:hover,
+#sign-in:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 /* HTML @keyframes Animations */
@@ -130,28 +140,12 @@ h1:hover, h4:hover, #footer-details:hover {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes borderEffect {
-    0% {
-        border: 5px solid rgb(28, 60, 101);
-    }
-    25% {
-        border: 5px solid rgb(15, 192, 252);
-    }   
-    50% {
-        border: 5px solid rgb(178, 58, 58);
-    }
-    75% {
-        border: 5px solid rgb(0, 0, 0);
-    }
-    100% {
-        border: 5px solid #F5F7F9;
     }
 }

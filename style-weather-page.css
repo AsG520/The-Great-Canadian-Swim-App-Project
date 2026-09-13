@@ -1,0 +1,332 @@
+/* HTML Components */
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    color: white;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    overflow-x: hidden;
+    overflow-y: visible;
+    height: 100vh;
+}
+
+figcaption:hover,
+h1:hover {
+    text-decoration-line: underline;
+}
+
+h1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HTML Classes */
+#settings-box {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    position: sticky;
+    top: 50%;
+    right: 100%;
+    text-align: center;
+    border-radius: 16px;
+    z-index: 999;
+}
+
+#settings-box:hover {
+    background-color: rgb(28, 60, 101);
+}
+
+.container {
+    width: 360px;
+    height: 670px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+
+    padding: 20px 0 10px;
+    position: sticky;
+    bottom: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #eff0f2;
+    color: black;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.header-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.search-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 125px;
+}
+
+.bottom-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -100px;
+    gap: 20px;
+}
+
+#footer-details:hover {
+    transform: scale(1.05);
+}
+
+#footer-details {
+    justify-content: center;
+    color: white;
+    display: flex;
+    text-align: center;
+}
+
+#footer-details:hover {
+    text-decoration-line: underline;
+}
+
+#search-picture {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+#celsius-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#search-picture:hover {
+    transform: scale(1.1);
+}
+
+#weather-emoji:hover {
+    animation-play-state: paused;
+}
+
+#search-picture:active {
+    transform: translateY(1px);
+}
+
+#weather-emoji {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 100px;
+    animation-name: rotateX;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+#input-bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -400px;
+}
+
+#input-top-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#input-row-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 200px;
+}
+
+#humidity-percentage,
+#wind-kilometers-per-hour,
+#pressure-value,
+#wind-angle-value {
+    width: 100px;
+    height: 20px;
+    border-radius: 20px;
+    border: none;
+    background: none;
+    text-align: center;
+    font-weight: 750;
+    color: white;
+}
+
+#wind-details,
+#humidity-details,
+#pressure-details,
+#wind-angle-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 350px;
+}
+
+#temperature-and-description-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#temperature-display {
+    background: none;
+    border: none;
+    text-align: center;
+    color: white;
+    font-weight: 750;
+    font-size: 25px;
+    width: 120px;
+}
+
+#wind-picture-and-label,
+#humidity-picture-and-label,
+#pressure-picture-and-label,
+#wind-angle-picture-and-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#wind-picture:hover,
+#humidity-picture:hover,
+#location-picture:hover,
+#pressure-picture:hover,
+#wind-angle-picture:hover {
+    transform: scale(1.1);
+}
+
+#wind-picture,
+#humidity-picture,
+#location-picture,
+#pressure-picture,
+#wind-angle-picture {
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#search {
+    width: 280px;
+    height: 35px;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    font-family: "Montserrat";
+}
+
+#search::placeholder,
+input[type="search"] {
+    color: black;
+    font-weight: 750;
+    font-size: 15px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    filter: brightness(0);
+}
+
+#submit {
+    width: 200px;
+    height: 25px;
+    border-radius: 20px;
+    border: none;
+}
+
+@keyframes rotateX {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(180deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

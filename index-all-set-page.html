@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +14,9 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="whats-your-reason-for-swimming-word">You're all set!</h1>
+      <h1 id="whats-your-reason-for-swimming-word">
+        <span aria-hidden="true">✨</span> You're all set!
+      </h1>
       <h4 id="description">Let's make waves together.</h4>
       <img
         src="loader-logo.png"
@@ -26,24 +29,28 @@
         <label id="alertText"></label>
       </div>
       <div class="area">
-        <div class="summary-card">
+        <div class="summary-card-reason">
           <br />
-          <label class="title"> Your Reason</label>
+          <label class="title"
+            ><span aria-hidden="true">💭</span> Your Reason</label
+          >
           <br />
-          <label id="your-Reason-Text"> "Text"</label>
+          <label id="your-Reason-Text">N/A</label>
         </div>
         <br />
-        <div class="summary-card">
-          <label class="title"> Goal </label> <br />
-          <label id="subtitle"> </label>
+        <div class="summary-card-goal">
+          <label class="title"><span aria-hidden="true">🎯</span> Goal</label
+          ><br />
+          <label id="subtitle">N/A</label>
         </div>
       </div>
-      <input type="button" id="gotohome" value="Go to Home" />
+      <input
+        type="button"
+        id="gotohome"
+        value="🏘️ Go to Home"
+        aria-label="Go to home."
+      />
     </div>
-    <br />
-    <a href="app-terms-of-use.pdf" target="_blank">
-      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
-    </a>
     <script type="module" src="function-all-set-page.js"></script>
     <script src="chatbase.js"></script>
   </body>

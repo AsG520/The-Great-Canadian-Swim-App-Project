@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-weather-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>Weather Page: The Great Canadian Swim App - 2026</title>
+  </head>
+  <body>
+    <div id="settings-box" title="Settings">
+      <span aria-hidden="true" style="font-size: 35px">⚙️</span>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container">
+      <form class="weatherForm">
+        <div class="search-details">
+          <br />
+          <input
+            type="search"
+            id="search"
+            placeholder="Enter your location"
+            aria-label="Enter your location."
+          />
+          <img
+            src="search.png"
+            height="25"
+            width="25"
+            id="search-picture"
+            alt="Picture of search icon."
+          />
+        </div>
+        <div class="header-details">
+          <img
+            src="location.png"
+            height="45"
+            width="50"
+            id="location-picture"
+            alt="Picture of location icon."
+          />
+          <h1 id="location-display">Location</h1>
+        </div>
+        <div id="temperature-and-description-details">
+          <div id="celsius-input">
+            <label id="temperature-display">0 °C</label>
+          </div>
+          <label id="description"
+            ><span aria-hidden="true">📄</span> Description of weather!</label
+          >
+        </div>
+        <br />
+        <label id="weather-emoji"><span aria-hidden="true">🌏</span></label>
+        <div class="bottom-layout">
+          <div id="input-row-details">
+            <div id="input-top-row">
+              <div id="humidity-details">
+                <div id="humidity-picture-and-label">
+                  <figure>
+                    <img
+                      src="humidity.png"
+                      height="50"
+                      width="50"
+                      id="humidity-picture"
+                      alt="Picture of humidity icon."
+                    />
+                  </figure>
+                  <figcaption>Humidity (%)</figcaption>
+                  <input
+                    type="number"
+                    id="humidity-percentage"
+                    readonly
+                    value="0"
+                    aria-label="Humidity percentage."
+                  />
+                </div>
+              </div>
+              <div id="wind-details">
+                <div id="wind-picture-and-label">
+                  <figure>
+                    <img
+                      src="wind.png"
+                      height="50"
+                      width="50"
+                      id="wind-picture"
+                      alt="Picture of wind icon."
+                    />
+                  </figure>
+                  <figcaption>Wind Speed (km/h)</figcaption>
+                  <input
+                    type="number"
+                    id="wind-kilometers-per-hour"
+                    readonly
+                    value="0"
+                    aria-label="Wind speed in kilometers per hour."
+                  />
+                </div>
+              </div>
+            </div>
+            <div id="input-bottom-row">
+              <div id="pressure-details">
+                <div id="pressure-picture-and-label">
+                  <figure>
+                    <img
+                      src="pressure.png"
+                      height="50"
+                      width="50"
+                      id="pressure-picture"
+                      alt="Picture of pressure icon."
+                    />
+                  </figure>
+                  <figcaption>Pressure (kPa)</figcaption>
+                  <input
+                    type="number"
+                    id="pressure-value"
+                    readonly
+                    value="0"
+                    aria-label="Pressure in kilopascals."
+                  />
+                </div>
+                <div id="wind-angle-details">
+                  <div id="wind-angle-picture-and-label">
+                    <figure>
+                      <img
+                        src="wind-angle.png"
+                        height="50"
+                        width="50"
+                        id="wind-angle-picture"
+                        alt="Picture of wind angle icon."
+                      />
+                    </figure>
+                    <figcaption>Wind Angle (θ)</figcaption>
+                    <input
+                      type="number"
+                      id="wind-angle-value"
+                      readonly
+                      value="0"
+                      aria-label="Wind angle."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="index-main-page.html" title="Home"
+            ><span aria-hidden="true">🏠</span></a
+          >
+        </li>
+        <li>
+          <a href="index-log-swim-page.html" title="Log Swim"
+            ><span aria-hidden="true">✏️</span></a
+          >
+        </li>
+        <li>
+          <a href="index-date-tracker-distance-daily.html" title="Date Trackers"
+            ><span aria-hidden="true">⏳</span></a
+          >
+        </li>
+        <li>
+          <a href="index-badge-page.html" title="Badges"
+            ><span aria-hidden="true">🏆</span></a
+          >
+        </li>
+        <li>
+          <a href="index-join-server-page.html" title="Server"
+            ><span aria-hidden="true">💬</span></a
+          >
+        </li>
+        <li>
+          <a href="index-search-page.html" title="Search"
+            ><span aria-hidden="true">🔍</span></a
+          >
+        </li>
+        <li>
+          <a href="index-weather-page.html" title="Weather"
+            ><span aria-hidden="true">☀️</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <script src="function-weather-page.js"></script>
+    <script src="chatbase.js"></script>
+  </body>
+</html>

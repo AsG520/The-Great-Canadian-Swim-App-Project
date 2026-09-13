@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,8 +13,11 @@
     <title>Log Swim Page: The Great Canadian Swim App - 2026</title>
   </head>
   <body>
+    <div id="settings-box" title="Settings">
+      <span aria-hidden="true" style="font-size: 35px">⚙️</span>
+    </div>
     <div class="container">
-      <h1>Log Your Swim</h1>
+      <h1><span aria-hidden="true">📃</span> Log Your<br />Swim</h1>
       <img
         src="loader-logo.png"
         width="120"
@@ -22,83 +26,198 @@
         alt="Picture of Great Canadian Swim logo."
       />
       <br />
-      <label>How was your swim?</label>
+      <label><span aria-hidden="true">❤️</span> How was your swim?</label>
       <div class="face-pictures-top">
         <figure>
-          <img
-            src="great-face.png"
-            height="50"
-            width="50"
-            id="great-picture"
-            alt="Picture of great face."
+          <input
+            type="radio"
+            name="face"
+            id="great"
+            value="Great"
+            aria-label="Great."
           />
-          <figcaption>Great</figcaption>
+          <label for="great" class="face-label">
+            <img
+              src="great-face.png"
+              height="50"
+              width="50"
+              id="great-picture"
+              alt="Picture of great face."
+            />
+            <figcaption>Great</figcaption>
+          </label>
         </figure>
         <figure>
-          <img
-            src="good-face.png"
-            height="50"
-            width="50"
-            id="good-picture"
-            alt="Picture of good face."
+          <input
+            type="radio"
+            name="face"
+            id="good"
+            value="Good"
+            aria-label="Good."
           />
-          <figcaption>Good</figcaption>
+          <label for="good" class="face-label">
+            <img
+              src="good-face.png"
+              height="50"
+              width="50"
+              id="good-pict ure"
+              alt="Picture of good face."
+            />
+            <figcaption>Good</figcaption>
+          </label>
         </figure>
       </div>
       <div class="face-pictures-bottom">
         <figure>
-          <img
-            src="okay-face.png"
-            height="50"
-            width="50"
-            id="okay-picture"
-            alt="Picture of okay face."
+          <input
+            type="radio"
+            name="face"
+            id="okay"
+            value="Okay"
+            aria-label="Okay."
           />
-          <figcaption>Okay</figcaption>
+          <label for="okay" class="face-label">
+            <img
+              src="okay-face.png"
+              height="50"
+              width="50"
+              id="okay-picture"
+              alt="Picture of okay face."
+            />
+            <figcaption>Okay</figcaption>
+          </label>
         </figure>
         <figure>
-          <img
-            src="tough-face.png"
-            height="50"
-            width="50"
-            id="tough-picture"
-            alt="Picture of tough face."
+          <input
+            type="radio"
+            name="face"
+            id="tough"
+            value="Tough"
+            aria-label="Tough."
           />
-          <figcaption>Tough</figcaption>
+          <label for="tough" class="face-label">
+            <img
+              src="tough-face.png"
+              height="50"
+              width="50"
+              id="tough-picture"
+              alt="Picture of tough face."
+            />
+            <figcaption>Tough</figcaption>
+          </label>
         </figure>
       </div>
       <br />
-      <label>Distance</label>
-      <input
-        type="number"
-        id="distance"
-        oninput="this.value = Math.abs(this.value)"
-        min="0"
-        placeholder="Enter distance swam in meters"
-        alt="Textbox of distance."
-      />
-      <br />
-      <label>Where did you swim?</label>
-      <div class="button-layout">
-        <input type="button" id="pool" value="Pool" />
-        <input type="button" id="open-water" value="Open Water" />
+      <label><span aria-hidden="true">🏁</span> Distance</label>
+      <div id="distance-details">
+        <input
+          type="number"
+          id="distance"
+          oninput="this.value = Math.abs(this.value)"
+          min="0"
+          placeholder="Enter distance swam"
+          aria-label="Enter distance swam."
+        />
+        <select id="unit-details">
+          <option value="Meters" id="meters-option">m</option>
+          <option selected value="Kilometers" id="kilometers-option">km</option>
+        </select>
       </div>
       <br />
-      <label>Notes (optional)</label>
+      <label><span aria-hidden="true">⌚</span> Time</label>
+      <div id="time-details">
+        <input
+          type="number"
+          id="time"
+          oninput="this.value = Math.abs(this.value)"
+          min="0"
+          placeholder="Enter time swam"
+          aria-label="Enter time swam."
+        />
+        <select id="unit-details">
+          <option value="Minutes" id="minutes-option">min</option>
+          <option selected value="Hours" id="hours-option">hrs</option>
+        </select>
+      </div>
+      <br />
+      <label><span aria-hidden="true">📍</span> Where did you swim?</label>
+      <div class="button-layout">
+        <input
+          type="radio"
+          name="whereswam"
+          id="pool"
+          value="Pool"
+          aria-label="Button - Pool."
+        />
+        <label for="pool" class="whereswamlabel"
+          ><span aria-hidden="true">🏊</span> Pool</label
+        >
+        <input
+          type="radio"
+          name="whereswam"
+          id="open-water"
+          value="Open Water"
+          aria-label="Button - Open water."
+        />
+        <label for="open-water" class="whereswamlabel"
+          ><span aria-hidden="true">💦</span> Open Water</label
+        >
+      </div>
+      <br />
+      <label><span aria-hidden="true">📓</span> Notes (optional)</label>
       <input
         type="text"
         id="notes"
         placeholder="Enter your notes"
         maxlength="30"
-        alt="Textbox of notes."
+        aria-label="Enter your notes."
       />
       <br />
-      <input type="button" value="Save Swim" id="save-swim" />
+      <button type="button" id="save-swim" aria-label="Save swim.">
+        <span aria-hidden="true">📥</span> Save Swim
+      </button>
     </div>
     <br />
-    <a href="app-terms-of-use.pdf" target="_blank">
-      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
-    </a>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="index-main-page.html" title="Home"
+            ><span aria-hidden="true">🏠</span></a
+          >
+        </li>
+        <li>
+          <a href="index-log-swim-page.html" title="Log Swim"
+            ><span aria-hidden="true">✏️</span></a
+          >
+        </li>
+        <li>
+          <a href="index-date-tracker-distance-daily.html" title="Date Trackers"
+            ><span aria-hidden="true">⏳</span></a
+          >
+        </li>
+        <li>
+          <a href="index-badge-page.html" title="Badges"
+            ><span aria-hidden="true">🏆</span></a
+          >
+        </li>
+        <li>
+          <a href="index-join-server-page.html" title="Server"
+            ><span aria-hidden="true">💬</span></a
+          >
+        </li>
+        <li>
+          <a href="index-search-page.html" title="Search"
+            ><span aria-hidden="true">🔍</span></a
+          >
+        </li>
+        <li>
+          <a href="index-weather-page.html" title="Weather"
+            ><span aria-hidden="true">☀️</span></a
+          >
+        </li>
+      </ul>
+    </nav>
     <script type="module" src="function-log-swim-page.js"></script>
+    <script src="chatbase.js"></script>
   </body>
 </html>

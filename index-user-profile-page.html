@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-user-profile-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>User Profile Page: The Great Canadian Swim App - 2026</title>
+  </head>
+  <body>
+    <div id="settings-box" title="Settings">
+      <span aria-hidden="true" style="font-size: 35px">⚙️</span>
+    </div>
+    <div class="container">
+      <div class="profile">
+        <img
+          src="profile-picture.png"
+          alt="Picture of profile."
+          id="img-profile"
+          height="125"
+          width="125"
+        />
+      </div>
+      <h3 id="username-details">Anonymous</h3>
+      <h4 id="location-details">N/A</h4>
+      <div id="follow-system">
+        <div id="followers-layout">
+          <div id="followers-count">0</div>
+          <label id="followers-label">Followers</label>
+        </div>
+        <div id="following-layout">
+          <div id="following-count">0</div>
+          <label id="following-label">Following</label>
+        </div>
+      </div>
+      <br />
+      <select
+        id="follow-and-unfollow-selection"
+        aria-label="Follow or unfollow user."
+      >
+        <option id="follow-selection">Follow</option>
+        <option selected id="unfollow-selection">Unfollow</option>
+      </select>
+      <br />
+      <div id="user-stats-details">
+        <div id="exp-details">
+          <label id="exp-word"><span aria-hidden="true">⚡</span> Exp</label>
+          <input
+            type="text"
+            id="exp"
+            value="0"
+            readonly
+            aria-label="Experience points."
+          />
+        </div>
+        <div id="level-details">
+          <label id="level-word"
+            ><span aria-hidden="true">💎</span> Level</label
+          >
+          <input
+            type="text"
+            id="level"
+            value="0"
+            readonly
+            aria-label="Level."
+          />
+        </div>
+        <div id="streak-details">
+          <label id="streak-word"
+            ><span aria-hidden="true">🔥</span> Streak</label
+          >
+          <input
+            type="text"
+            id="streak"
+            value="0"
+            readonly
+            aria-label="Streak."
+          />
+        </div>
+      </div>
+      <br />
+      <br />
+      <label id="their-why-word"
+        ><span aria-hidden="true">💭</span> Their Why?</label
+      >
+      <input type="text" id="why-container" aria-label="Their why?" readonly />
+      <br />
+      <div class="user-information">
+        <label id="days-swum-word"
+          ><span aria-hidden="true">📅</span> Days Swum (#)</label
+        >
+        <br />
+        <input
+          type="number"
+          id="days-swum"
+          readonly
+          aria-label="Days swum."
+          value="0"
+        />
+        <br />
+        <label id="total-distance-word"
+          ><span aria-hidden="true">📏</span> Total Distance (km)</label
+        >
+        <br />
+        <input
+          type="number"
+          id="total-distance"
+          readonly
+          aria-label="Total distance."
+          value="0"
+        />
+        <br />
+        <label id="total-hours-word"
+          ><span aria-hidden="true">⏱️</span> Total Duration (h)</label
+        >
+        <input
+          type="number"
+          id="total-hours"
+          readonly
+          aria-label="Total minutes."
+          value="0"
+        />
+        <br />
+        <label id="goal-word"><span aria-hidden="true">🎯</span> Goal</label>
+        <br />
+        <input
+          type="text"
+          id="goal"
+          readonly
+          aria-label="Goal."
+          placeholder="N/A"
+        />
+        <br />
+        <label id="age-word"><span aria-hidden="true">⏳</span> Age</label>
+        <br />
+        <input type="number" id="age" readonly aria-label="Age." value="0" />
+        <br />
+        <label id="gender-word"
+          ><span aria-hidden="true">👪</span> Gender</label
+        >
+        <br />
+        <input
+          type="text"
+          id="gender"
+          readonly
+          aria-label="Gender."
+          value="N/A"
+        />
+      </div>
+      <br />
+      <br />
+      <input type="button" id="back" value="⬅️ Back" aria-label="Back." />
+    </div>
+  </body>
+  <script type="module" src="function-user-profile-page.js"></script>
+  <script src="chatbase.js"></script>
+</html>

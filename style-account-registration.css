@@ -2,14 +2,14 @@
 body {
     justify-content: center;
     align-items: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     flex-direction: column;
-    background-image: url("login-page-background.png");
+    background-image: url("login-and-registration-account-page-background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
     animation-name: fadeIn;
@@ -29,11 +29,12 @@ h4 {
     font-weight: 600;
 }
 
-/* HTML Classes */ 
-.container {    
+/* HTML Classes */
+.container {
     width: 327px;
     height: 765px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     border-top: none;
     border-bottom: none;
@@ -43,15 +44,11 @@ h4 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 5s;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
-.password-details, .email-details, .first-name-details {
+.password-details,
+.email-details,
+.first-name-details {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,20 +59,23 @@ h4 {
     text-align: left;
 }
 
-.alertBox { 
+.alertBox {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, 200%);
     background: white;
+    color: rgb(28, 60, 101);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
-#first-name-word, #email-word, #password-word {
+#first-name-word,
+#email-word,
+#password-word {
     width: 324px;
     text-align: left;
     margin-bottom: 6px;
@@ -87,7 +87,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row; 
+    flex-direction: row;
     gap: 30px;
     margin-top: 20px;
 }
@@ -100,7 +100,7 @@ h4 {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
+    background-color: rgba(15, 192, 252, 0.5);
     border-radius: 28px;
     border-top: none;
     border-bottom: none;
@@ -110,12 +110,14 @@ h4 {
 
 #footer-details {
     justify-content: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     text-align: center;
 }
 
-#fName, #rEmail, #rPassword{
+#fName,
+#rEmail,
+#rPassword {
     width: 324px;
     height: 56px;
     font-size: 18px;
@@ -127,38 +129,50 @@ h4 {
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background: #eff0f2;
+    background: rgba(239, 240, 242, 0.5);
     color: rgb(28, 60, 101);
     font-weight: 600;
     border-radius: 16px;
 }
 
 #submitSignUp:hover {
-    background-color: rgb(28, 60, 101);
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 #googleSignIn {
     margin-bottom: -30px;
     cursor: pointer;
-}
-
-#footer-details:hover {
-    transform: scale(1.050);
-}
-
-#submitSignUp:active, #googleSignIn:active {
-    transform: translateY(1px);
-}
-
-#account-registration-logo:hover, #googleSignIn:hover {
-    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 8px;
+    border-radius: 16px;
 }
 
 #account-registration-logo {
-    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
 }
 
-#account-registration-word:hover, #first-name-word:hover, #email-word:hover, #password-word:hover, #login-word, #footer-details:hover {
+#footer-details:hover {
+    transform: scale(1.05);
+}
+
+#submitSignUp:active,
+#googleSignIn:active {
+    transform: translateY(1px);
+}
+
+#account-registration-logo:hover,
+#googleSignIn:hover {
+    transform: scale(1.1);
+}
+
+#account-registration-word:hover,
+#first-name-word:hover,
+#email-word:hover,
+#password-word:hover,
+#login-word,
+#footer-details:hover {
     text-decoration-line: underline;
 }
 
@@ -178,7 +192,7 @@ h4 {
     font-weight: 800;
 }
 
-/* HTML Pseudo-Element Notation */ 
+/* HTML Pseudo-Element Notation */
 input::placeholder {
     color: rgb(28, 60, 101);
     font-weight: 600;
@@ -186,7 +200,8 @@ input::placeholder {
     text-align: left;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"],
+input[type="password"] {
     color: rgb(28, 60, 101);
     text-align: center;
 }
@@ -196,9 +211,11 @@ input[type="text"], input[type="password"] {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
@@ -208,16 +225,20 @@ input[type="text"], input[type="password"] {
     0% {
         border: 5px solid rgb(28, 60, 101);
     }
+
     25% {
         border: 5px solid rgb(15, 192, 252);
-    }   
+    }
+
     50% {
         border: 5px solid rgb(178, 58, 58);
     }
+
     75% {
         border: 5px solid rgb(0, 0, 0);
     }
+
     100% {
-        border: 5px solid #F5F7F9;
+        border: 5px solid #f5f7f9;
     }
 }

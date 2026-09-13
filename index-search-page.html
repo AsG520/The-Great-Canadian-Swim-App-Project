@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-search-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>Search Page: The Great Canadian Swim App - 2026</title>
+  </head>
+  <body>
+    <div id="settings-box" title="Settings">
+      <span aria-hidden="true" style="font-size: 35px">⚙️</span>
+    </div>
+    <div class="container">
+      <br />
+      <div id="search-details">
+        <input
+          type="search"
+          id="search-bar"
+          placeholder="⌨️ Enter a username!"
+          aria-label="Enter a username."
+        />
+        <img
+          src="search.png"
+          height="25"
+          width="25"
+          id="search-picture"
+          alt="Picture of search icon."
+          autoplay
+        />
+      </div>
+      <br />
+      <div id="row-one-videos">
+        <video height="300" width="300" autoplay muted loop id="video1">
+          <source src="great-canadian-swim-clips-v2.mp4" type="video/mp4" />
+        </video>
+        <video height="300" width="300" autoplay muted loop id="video2">
+          <source
+            src="great-canadian-swim-clips-v1.mp4#t=20"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <video height="350" width="350" autoplay muted loop id="video3">
+        <source src="clip-1.mp4" type="video/mp4" />
+      </video>
+      <video height="350" width="350" autoplay muted loop id="video4">
+        <source src="clip-2.mp4" type="video/mp4" />
+      </video>
+      <template id="profile-template">
+        <a class="profile-card">
+          <img
+            class="profile-pfp"
+            src="profile-picture.png"
+            alt="Profile picture"
+          />
+
+          <div class="profile-info">
+            <div class="profile-username"></div>
+
+            <div class="profile-details"></div>
+          </div>
+
+          <div class="profile-arrow">›</div>
+        </a>
+      </template>
+      <div id="profiles"></div>
+      <!-- Where the card/s are put inside -->
+    </div>
+    <br />
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="index-main-page.html" title="Home"
+            ><span aria-hidden="true">🏠</span></a
+          >
+        </li>
+        <li>
+          <a href="index-log-swim-page.html" title="Log Swim"
+            ><span aria-hidden="true">✏️</span></a
+          >
+        </li>
+        <li>
+          <a href="index-date-tracker-distance-daily.html" title="Date Trackers"
+            ><span aria-hidden="true">⏳</span></a
+          >
+        </li>
+        <li>
+          <a href="index-badge-page.html" title="Badges"
+            ><span aria-hidden="true">🏆</span></a
+          >
+        </li>
+        <li>
+          <a href="index-join-server-page.html" title="Server"
+            ><span aria-hidden="true">💬</span></a
+          >
+        </li>
+        <li>
+          <a href="index-search-page.html" title="Search"
+            ><span aria-hidden="true">🔍</span></a
+          >
+        </li>
+        <li>
+          <a href="index-weather-page.html" title="Weather"
+            ><span aria-hidden="true">☀️</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <script type="module" src="function-search-page.js"></script>
+    <script src="chatbase.js"></script>
+  </body>
+</html>

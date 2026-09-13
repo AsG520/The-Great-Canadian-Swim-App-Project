@@ -1,0 +1,60 @@
+/* HTML Components */
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    color: white;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+/* HTML Classes */
+.container {
+    width: 327px;
+    height: 925px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* HTML IDs */
+#back {
+    height: 56px;
+    width: 324px;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgb(15, 192, 252, 0.5);
+    border-radius: 28px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+#back:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}

@@ -4,11 +4,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("login-page-background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: 'Montserrat';
+    /*
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    */
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
     overflow-x: visible;
@@ -20,14 +20,15 @@ body {
     animation-play-state: running;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
-    color: rgb(28, 60, 101);
+    color: white;
 }
 
-/* HTML Classes */ 
+/* HTML Classes */
 .container {
     width: 327px;
     height: 705px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     border-top: none;
     border-bottom: none;
@@ -38,33 +39,51 @@ body {
     align-items: center;
     flex-direction: column;
     margin-top: 30px;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 5s;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-} 
-
-/* HTML IDs */
-#name, #email, #subject {
-    width: 324px;
-    height: 56px;
-    font-size: 18px;
-    display: flex;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background: #eff0f2;
-    color: rgb(28, 60, 101);
-    font-weight: 600;
-    border-radius: 16px;
 }
 
+.navbar {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+
+    padding: 20px 0 10px;
+    position: sticky;
+    bottom: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #eff0f2;
+    color: black;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+/* HTML IDs */
+#name,
+#email,
+#subject,
 #message {
     width: 324px;
     height: 56px;
@@ -77,29 +96,24 @@ body {
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background: #eff0f2;
+    background: rgba(239, 240, 242, 0.5);
     color: rgb(28, 60, 101);
     font-weight: 600;
     border-radius: 16px;
 }
 
-#phone-details, #email-details {
+#phone-details,
+#email-details {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     color: rgb(28, 60, 101);
-    background-color: white;
+    background: rgba(239, 240, 242, 0.5);
     border-radius: 20px;
     width: 230px;
     height: 70px;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 5s;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
 #social-details {
@@ -109,16 +123,10 @@ body {
     flex-direction: row;
     text-align: center;
     color: rgb(28, 60, 101);
-    background-color: white;
+    background: rgba(239, 240, 242, 0.5);
     border-radius: 20px;
     width: 230px;
     height: 70px;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 5s;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
 #send {
@@ -129,7 +137,7 @@ body {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
+    background-color: rgba(15, 192, 252, 0.5);
     border-radius: 28px;
     border-top: none;
     border-bottom: none;
@@ -139,54 +147,85 @@ body {
 
 #information-details {
     display: flex;
-    flex-direction: row;
-    gap: 50px;
+    flex-direction: column;
+    gap: 25px;
     margin-top: 30px;
 }
 
 #footer-details {
     justify-content: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     text-align: center;
 }
 
-#name-word, #email-word, #subject-word, #message-word {
+#name-word,
+#email-word,
+#subject-word,
+#message-word {
     text-align: left;
     width: 324px;
     margin-bottom: 6px;
 }
 
-#name-word:hover, #email-word-box:hover, #email-word:hover, #subject-word:hover, #message-word:hover, #contact-us-word:hover, #socials-word:hover, #phone-word:hover, #email-word:hover, #privacy-policy-word:hover, #terms-of-use-word:hover, #disclaimer-word:hover, #footer-details:hover {
+#name-word:hover,
+#email-word-box:hover,
+#email-word:hover,
+#subject-word:hover,
+#message-word:hover,
+#contact-us-word:hover,
+#socials-word:hover,
+#phone-word:hover,
+#email-word:hover,
+#privacy-policy-word:hover,
+#terms-of-use-word:hover,
+#disclaimer-word:hover,
+#footer-details:hover {
     text-decoration-line: underline;
 }
 
-#contact-us-page-logo:hover, #instagram-picture:hover, #tiktok-picture:hover, #twitter-picture:hover {
+#contact-us-page-logo:hover,
+#instagram-picture:hover,
+#tiktok-picture:hover,
+#twitter-picture:hover {
     transform: scale(1.1);
 }
 
-#footer-details:hover {
-    transform: scale(1.050);
+#contact-us-page-logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
 }
 
-#phone-number:hover, #email-address:hover {
+#footer-details:hover {
+    transform: scale(1.05);
+}
+
+#phone-number:hover,
+#email-address:hover {
     transform: scale(1.025);
 }
 
-#email-address, #phone-number {
+#email-address,
+#phone-number {
     text-decoration-line: none;
     color: rgb(28, 60, 101);
 }
 
-#send:active, #instagram-picture:active, #twitter-picture:active, #tiktok-picture:active, #phone-number:active, #email-address:active {
+#send:active,
+#instagram-picture:active,
+#twitter-picture:active,
+#tiktok-picture:active,
+#phone-number:active,
+#email-address:active {
     transform: translateY(1px);
 }
 
 #send:hover {
-    background-color: rgb(28, 60, 101);
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
-/* HTML Pseudo-Element Notation */ 
+/* HTML Pseudo-Element Notation */
 input::placeholder {
     color: rgb(28, 60, 101);
     font-weight: 600;
@@ -204,9 +243,11 @@ input[type="text"] {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
@@ -216,16 +257,20 @@ input[type="text"] {
     0% {
         border: 5px solid rgb(28, 60, 101);
     }
+
     25% {
         border: 5px solid rgb(15, 192, 252);
-    }   
+    }
+
     50% {
         border: 5px solid rgb(178, 58, 58);
     }
+
     75% {
         border: 5px solid rgb(0, 0, 0);
     }
+
     100% {
-        border: 5px solid #F5F7F9;
+        border: 5px solid #f5f7f9;
     }
 }

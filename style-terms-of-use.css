@@ -1,0 +1,122 @@
+/* HTML Components */
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    color: white;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+h3,
+p,
+li,
+h1 {
+    text-align: left;
+    width: 327px;
+}
+
+h1:hover,
+h3:hover,
+p:hover,
+li:hover {
+    text-decoration-line: underline;
+}
+
+/* HTML IDs */
+#terms-of-use-logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    transform: translateX(-100px);
+}
+
+#agree {
+    height: 56px;
+    width: 324px;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(15, 192, 252, 0.5);
+    border-radius: 28px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+#agree:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#agree:active {
+    transform: translateY(1px);
+}
+
+/* HTML Classes */
+.container {
+    width: 370px;
+    height: 15890px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* HTML @keyframes Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes borderEffect {
+    0% {
+        border: 5px solid rgb(28, 60, 101);
+    }
+
+    25% {
+        border: 5px solid rgb(15, 192, 252);
+    }
+
+    50% {
+        border: 5px solid rgb(178, 58, 58);
+    }
+
+    75% {
+        border: 5px solid rgb(0, 0, 0);
+    }
+
+    100% {
+        border: 5px solid #f5f7f9;
+    }
+}

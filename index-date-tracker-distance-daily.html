@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["bar"] });
+      /* google.charts.setOnLoadCallback(drawStuff); */
+
+      function drawStuff(distanceDisplay) {
+        var data = new google.visualization.arrayToDataTable([
+          ["", "Distance"],
+          [" ", distanceDisplay],
+        ]);
+
+        var options = {
+          width: 300,
+          legend: { position: "none" },
+          chart: {
+            title: "Daily Distance",
+            subtitle: "Your distance by hour across the day.",
+          },
+          bar: { groupWidth: "90%" },
+        };
+
+        var chart = new google.charts.Bar(document.getElementById("top_x_div"));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-date-tracker-distance-daily.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>
+      Date Tracker of Distance (Daily): The Great Canadian Swim App - 2026
+    </title>
+  </head>
+  <body>
+    <div id="settings-box" title="Settings">
+      <span aria-hidden="true" style="font-size: 35px">⚙️</span>
+    </div>
+    <div class="container">
+      <br />
+      <button id="dateButton" type="button">
+        <span id="dateText">Jul 1, 2026</span>
+        <svg
+          class="calendar-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="4" y="3" width="18" height="18" rx="3"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+      </button>
+      <br />
+      <input type="date" id="dateSelected" aria-label="Select a date." />
+      <select id="date-tracker-details">
+        <option selected disabled>
+          <span aria-hidden="true">📊</span> Select your data
+        </option>
+        <option id="distance-option" value="Distance">Distance</option>
+        <option id="duration-option" value="Duration">Duration</option>
+        <option id="session-option" value="Session">Session</option>
+      </select>
+      <nav class="navbar-data-panel">
+        <ul>
+          <li>
+            <a title="Daily" href="index-date-tracker-distance-daily.html"
+              ><span aria-hidden="true">📅</span> D</a
+            >
+          </li>
+          <li>
+            <a title="Weekly" href="index-date-tracker-distance-weekly.html"
+              ><span aria-hidden="true">📅</span> W</a
+            >
+          </li>
+          <li>
+            <a title="Monthly" href="index-date-tracker-distance-monthly.html"
+              ><span aria-hidden="true">📅</span> M</a
+            >
+          </li>
+          <li>
+            <a title="Yearly" href="index-date-tracker-distance-yearly.html"
+              ><span aria-hidden="true">📅</span> Y</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <br />
+      <div id="top_x_div" style="width: 1000px; height: 300px"></div>
+      <br />
+      <div id="forward-and-back-details">
+        <img
+          src="back.png"
+          height="25"
+          width="25"
+          id="back-picture"
+          alt="Picture of back arrow."
+        />
+        <a href="index-history-page.html"
+          ><img
+            src="plus.png"
+            height="25"
+            width="25"
+            id="plus-picture"
+            alt="Picture of plus sign."
+        /></a>
+        <img
+          src="forward.png"
+          height="25"
+          width="25"
+          id="forward-picture"
+          alt="Picture of forward arrow."
+        />
+      </div>
+      <br />
+      <label id="total-distance-word"
+        ><span aria-hidden="true">🏊🏻‍♂️</span> Total Distance</label
+      >
+      <div id="distance-details">
+        <input
+          type="number"
+          id="total-distance"
+          readonly
+          value="5"
+          aria-label="Total distance."
+        />
+        <select id="unit-details">
+          <option value="Meters" id="meters-option">m</option>
+          <option selected value="Kilometers" id="kilometers-1option">
+            km
+          </option>
+        </select>
+      </div>
+      <br />
+    </div>
+    <br />
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="index-main-page.html" title="Home"
+            ><span aria-hidden="true">🏠</span></a
+          >
+        </li>
+        <li>
+          <a href="index-log-swim-page.html" title="Log Swim"
+            ><span aria-hidden="true">✏️</span></a
+          >
+        </li>
+        <li>
+          <a href="index-date-tracker-distance-daily.html" title="Date Trackers"
+            >⏳</a
+          >
+        </li>
+        <li>
+          <a href="index-badge-page.html" title="Badges"
+            ><span aria-hidden="true">🏆</span></a
+          >
+        </li>
+        <li>
+          <a href="index-join-server-page.html" title="Server"
+            ><span aria-hidden="true">💬</span></a
+          >
+        </li>
+        <li>
+          <a href="index-search-page.html" title="Search"
+            ><span aria-hidden="true">🔍</span></a
+          >
+        </li>
+        <li>
+          <a href="index-weather-page.html" title="Weather"
+            ><span aria-hidden="true">☀️</span></a
+          >
+        </li>
+        <li></li>
+      </ul>
+    </nav>
+    <script
+      type="module"
+      src="function-date-tracker-distance-daily.js"
+    ></script>
+    <script src="chatbase.js"></script>
+  </body>
+</html>

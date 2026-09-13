@@ -2,18 +2,15 @@
 body {
     justify-content: center;
     align-items: center;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    background-image: url("login-page-background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: 'Montserrat';
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
     animation-name: fadeIn;
     animation-duration: 1s;
-    color: rgb(28, 60, 101);
+    color: white;
     animation-delay: 0s;
     animation-fill-mode: forwards;
     animation-play-state: running;
@@ -23,15 +20,49 @@ body {
     overflow-y: visible;
 }
 
-label:hover, h1:hover, figcaption:hover {
+h1 {
+    text-align: center;
+}
+
+label:hover,
+h1:hover,
+figcaption:hover,
+#footer-details:hover {
     text-decoration-line: underline;
 }
 
-/* HTML Classes */ 
+option {
+    min-width: 324px;
+    color: rgb(28, 60, 101);
+    font-weight: 700;
+}
+
+option:hover {
+    background: #eff0f2;
+}
+
+/* HTML Classes */
+#settings-box {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    position: sticky;
+    top: 50%;
+    right: 100%;
+    text-align: center;
+    border-radius: 16px;
+    z-index: 999;
+}
+
+#settings-box:hover {
+    background-color: rgb(28, 60, 101);
+}
+
 .container {
     width: 327px;
-    height: 810px;
-    background-color: white;
+    height: 975px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     border-top: none;
     border-bottom: none;
@@ -41,19 +72,54 @@ label:hover, h1:hover, figcaption:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 5s;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
-.face-pictures-top, .face-pictures-bottom, .button-layout {
+.face-pictures-top,
+.face-pictures-bottom,
+.button-layout {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+
+.navbar {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+
+    padding: 20px 0 10px;
+    position: sticky;
+    bottom: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #eff0f2;
+    color: black;
+}
+
+.navbar li {
+    display: inline-block;
 }
 
 /* HTML IDs */
@@ -65,7 +131,7 @@ label:hover, h1:hover, figcaption:hover {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
+    background-color: rgb(15, 192, 252, 0.5);
     border-radius: 28px;
     border-top: none;
     border-bottom: none;
@@ -73,7 +139,8 @@ label:hover, h1:hover, figcaption:hover {
     border-right: none;
 }
 
-#pool, #open-water {
+#pool,
+#open-water {
     height: 28px;
     width: 162px;
     color: white;
@@ -81,7 +148,6 @@ label:hover, h1:hover, figcaption:hover {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
     border-radius: 28px;
     border-top: none;
     border-bottom: none;
@@ -89,7 +155,109 @@ label:hover, h1:hover, figcaption:hover {
     border-right: none;
 }
 
-#notes, #distance {
+#distance-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#unit-details {
+    width: 80px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(239, 240, 242, 0.5);
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.whereswamlabel {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 16px;
+    background-color: rgba(15, 192, 252, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+.whereswamlabel:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+input[type="radio"]:checked + .whereswamlabel {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    color: white;
+}
+
+.face-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    padding: 2px;
+    border-radius: 16px;
+    transition: 0.2s;
+    background: rgba(239, 240, 242, 0.5);
+    color: rgb(28, 60, 101);
+}
+
+.face-label:hover {
+    background: #e6f4ff;
+}
+
+input[type="radio"]:checked + .face-label {
+    background: rgb(28, 60, 101);
+    color: white;
+    border-color: rgb(28, 60, 101);
+}
+
+#distance,
+#time {
+    height: 50px;
+    width: 230px;
+    font-size: 18px;
+    display: flex;
+    text-align: left;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(239, 240, 242, 0.5);
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+#distance-details,
+#time-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#notes {
     height: 50px;
     width: 320px;
     font-size: 18px;
@@ -101,33 +269,47 @@ label:hover, h1:hover, figcaption:hover {
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background: #eff0f2;
+    background: rgba(239, 240, 242, 0.5);
     color: rgb(28, 60, 101);
     font-weight: 600;
     border-radius: 16px;
 }
 
-#save-swim:hover, #pool:hover, #open-water:hover {
-    background-color: rgb(28, 60, 101);
+#save-swim:hover,
+#pool:hover,
+#open-water:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
-#great-picture:hover, #good-picture:hover, #okay-picture:hover, #tough-picture:hover, #log-swim-logo:hover, #footer-details:hover {
+#great-picture:hover,
+#good-picture:hover,
+#okay-picture:hover,
+#tough-picture:hover,
+#log-swim-logo:hover,
+#footer-details:hover {
     transform: scale(1.1);
+}
+
+#log-swim-logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
 }
 
 #footer-details {
     justify-content: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     text-align: center;
 }
 
 #footer-details:hover {
-    transform: scale(1.050);
+    transform: scale(1.05);
 }
 
-/* HTML Pseudo-Element Notation */ 
-input::placeholder, input[type="text"] {
+/* HTML Pseudo-Element Notation */
+input::placeholder,
+input[type="text"] {
     color: rgb(28, 60, 101);
     font-weight: 600;
     font-size: 18px;
@@ -139,28 +321,12 @@ input::placeholder, input[type="text"] {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes borderEffect {
-    0% {
-        border: 5px solid rgb(28, 60, 101);
-    }
-    25% {
-        border: 5px solid rgb(15, 192, 252);
-    }   
-    50% {
-        border: 5px solid rgb(178, 58, 58);
-    }
-    75% {
-        border: 5px solid rgb(0, 0, 0);
-    }
-    100% {
-        border: 5px solid #F5F7F9;
     }
 }

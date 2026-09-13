@@ -1,285 +1,418 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
-    <title>The Great Canadian Swim App - 2026</title>
-    <link rel="shortcut icon" href="logo.png" />
-    <link rel="stylesheet" href="style-main-page.css" />
-  </head>
-  <body>
-    <div class="quote-box">
-      <div id="word-quote-box">"Progress is not linear."</div>
+<doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" 
+        rel="stylesheet" />
+        <title>Main Page: The Great Canadian Swim App - 2026</title>
+        <link rel="icon" type="image/x-icon" href="logo.png" />
+        <link rel="stylesheet" href="style-main-page.css" />
+    </head>
+    <body>
+    <div id="settings-box" title="Settings" aria-label="Settings.">
+        <span aria-hidden="true" style="font-size: 35px">⚙️</span>
     </div>
-    <form>
-      <label id="day-number">📅 Day #1</label>
-      <input min="2026-05-25" type="date" id="calendar" value="" readonly />
-      <br />
-      <br />
-      <label id="word-total-distance">🏊🏻‍♀️ Total Distance:</label>
-      <br />
-      <input
-        type="number"
-        min="0"
-        id="total-distance"
-        maxlength="10"
-        value="Enter Distance in (km)"
-      />
-      <br />
-      <br />
-      <label id="word-my-total">📈 My Total:</label>
-      <br />
-      <input
-        type="text"
-        id="my-total"
-        value="Total Distance in (km)"
-        readonly
-      />
-      <br />
-      <br />
-      <label id="word-trips-canada">🍁 # of Trips Across Canada</label>
-      <br />
-      <input type="text" id="number-trips" readonly />
-      <br />
-      <br />
-      <input type="button" id="submit" value="✅ Submit" />
-      <input type="button" id="reset" value="🔄 Reset" onclick="alarmReset()" />
-    </form>
-    <h3 id="word-challenges">Challenges</h3>
-    <div class="challenges">
-        <div class="carousel">
-            <div class="group">
-                <div class="card"> 
-                    <div id="alberta">
-                        Alberta
-                         <br />
-                       <input type="text" id="alberta-trips" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="british-columbia">
-                        British Columbia
-                        <br />
-                        <input type="text" id="british-columbia-trips" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="manitoba">
-                        Manitoba
-                        <br />
-                        <input type="text" id="manitoba-trips" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="new-brunswick">
-                        New Brunswick
-                        <br />
-                        <input type="text" id="new-brunswick-trips" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="newfoundland-and-labrador">
-                        Newfoundland and Labrador
-                        <br />
-                        <input type="text" id="newfoundland-and-labrador-trips" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="nova-scotia">
-                        Nova Scotia
-                        <br />
-                        <input type="text" id="nova-scotia-trips" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="ontario">
-                        Ontario
-                        <br />
-                        <input type="text" id="ontario-trips" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="prince-edward-island">
-                        Prince Edward Island
-                        <br />
-                        <input type="text" id="prince-edward-island-trips" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="quebec">
-                        Quebec
-                        <br />
-                        <input type="text" id="quebec-trips" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="saskatchewan">
-                        Saskatchewan
-                        <br />
-                        <input type="text" id="saskatchewan-trips" readonly value="0" /> %
-                    </div>
-                </div>
+        <br>
+            <h3 id="effort-today-word"><span aria-hidden="true">🏅</span> Effort Today</h3>
+            <br>
+            <div id="label-and-button-layout">
+                <label><span aria-hidden="true">💪</span> Did you try today?</label>
+            <div id="yes-no-button-layout">
+            <input type="button" id="yes-button" value="Yes" aria-label="Yes." />
+            <input type="button" id="no-button" value="No" aria-label="No." />
             </div>
-         <div class="group" aria-hidden="true">               
-                <div class="card"> 
-                    <div id="alberta">
-                        Alberta    
-                         <br />
-                       <input type="text" id="alberta-trips2" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="british-columbia">
-                        British Columbia
-                        <br />
-                        <input type="text" id="british-columbia-trips2" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="manitoba">
-                        Manitoba
-                        <br />
-                        <input type="text" id="manitoba-trips2" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="new-brunswick">
-                        New Brunswick
-                        <br />
-                        <input type="text" id="new-brunswick-trips2" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="newfoundland-and-labrador">
-                        Newfoundland and Labrador
-                        <br />
-                        <input type="text" id="newfoundland-and-labrador-trips2" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="nova-scotia">
-                        Nova Scotia
-                        <br />
-                        <input type="text" id="nova-scotia-trips2" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="ontario">
-                        Ontario
-                        <br />
-                        <input type="text" id="ontario-trips2" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="prince-edward-island">
-                        Prince Edward Island
-                        <br />
-                        <input type="text" id="prince-edward-island-trips2" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="quebec">
-                        Quebec
-                        <br />
-                        <input type="text" id="quebec-trips2" readonly value="0" /> %
-                    </div>
-                </div>
-                <div class="card">
-                    <div id="saskatchewan">
-                        Saskatchewan
-                        <br />
-                        <input type="text" id="saskatchewan-trips2" readonly value="0" /> %
-                    </div>
-                    </div>
-                </div>
-            </div> 
-        </div> 
-    </div>
-    <h3 id="word-weekly-snapshot">Weekly Snapshot</h3>
-        <div class="carousel-weekly-snapshot">
-            <div class ="group-weekly-snapshot">
-                <div class ="card-weekly-snapshot">
-                    <div id="active-duration">
-                    ⏱️ Active Duration
-                    <br />
-                    <br />
-                    Total: <input type="text" id="active-duration-percentage" readonly value="0"/>h
-                    <br />
-                    <br />
-                    Total time spent in the water!
-                    </div>
-                </div> 
-                <div class ="card-weekly-snapshot">
-                    <div id="sessions">
-                    📋 Sessions
-                    <br />
-                    <br />
-                    Total: <input type="text" id="session-number" readonly value="0"/> # 
-                    <br />
-                    <br />
-                    Total number of sessions completed!
-                    </div>
-                </div>
-                <div class ="card-weekly-snapshot">
-                    <div id="calorie-burn">
-                    🔥 Calorie Burn
-                    <br />
-                    <br />
-                    Total: <input type="text" id="calorie-burnt" readonly value="0"/> cal
-                    <br />
-                    <br />
-                    Total number of calories burned!
-                    </div>
-                </div>
+            </div>  
+            <br>
+        <div class="effort-today">
+            <div id="top-row-effort-today">
+                <div class="distance-details">
+                <label><span aria-hidden="true">🌊</span> Distance (m)</label>
+                <input type="text" id="total-distance" readonly value="0" aria-label="Total distance in meters.">
             </div>
-            <div class="group-weekly-snapshot" aria-hidden="true">    
-                   <div class ="card-weekly-snapshot">
-                    <div id="active-duration">
-                    ⏱️ Active Duration
-                    <br />
-                    <br />
-                    Total: <input type="text" id="active-duration-percentage" readonly value="0"/>h
-                    <br />
-                    <br />
-                    Total time spent in the water!
+            </div>
+            <div id="bottom-row-effort-today">
+                <div class="time-details">
+                <label><span aria-hidden="true">🕰️</span> Duration (min)</label>
+                <input type="text" id="total-time" readonly value="0" aria-label="Total duration in minutes.">
+            </div>
+            <div class="session-details">
+                <label><span aria-hidden="true">📄</span> Sessions (#)</label>
+                <input type="text" id="total-sessions" readonly value="0" aria-label="Total sessions.">
+            </div>
+            </div>
+        </div>
+        <br>
+        <h3 id="todays-community-progress-word"><span aria-hidden="true">🚀</span> Today's Community Progress
+        </h3>
+        <br>
+        <div class="community-progress">
+            <div id="top-row-today-community-progress">
+            <div id="today-community-distance-details">
+                <label><span aria-hidden="true">🌊</span> Distance (km)</label>
+                <input type="text" id="today-community-distance" readonly
+                    value="0" aria-label="Today's community distance in kilometers.">
+            </div>
+            <div id="today-community-sessions-details">
+                <label><span aria-hidden="true">📄</span> Sessions (#)</label>
+                <input type="text" id="today-community-sessions" readonly
+                    value="0" aria-label="Today's community sessions.">
+            </div>
+            </div>
+            <div id="bottom-row-community-progress">
+            <div id="today-community-time-details">
+                <label><span aria-hidden="true">🕰️</span> Duration (h)</label>
+                <input type="text" id="today-community-time" readonly value="0" aria-label="Today's community duration in hours.">
+            </div>
+            <br>
+            <div id="today-trips-of-canada-details">
+                <label><span aria-hidden="true">🍁</span> Trips of Canada (#)</label>
+                <input type="text" id="today-trips-of-canada" readonly value="0" aria-label="Today's trips of Canada.">
+            </div>
+            </div>
+        </div>
+        <br>
+        <h3 id="grand-community-progress-word"><span aria-hidden="true">🤝</span> Grand Community Progress</h3>
+        <br>
+        <div class="community-progress">
+            <div id="top-row-grand-community-progress">
+            <div id="total-community-distance-details">
+                <label><span aria-hidden="true">🌊</span> Distance (km)</label>
+                <input type="text" id="total-community-distance" readonly
+                    value="0" aria-label="Total community distance in kilometers.">
+            </div>
+            <div id="total-community-sessions-details">
+                <label><span aria-hidden="true">📄</span> Sessions (#)</label>
+                <input type="text" id="total-community-sessions" readonly
+                    value="0" aria-label="Total community sessions.">
+            </div>
+            </div>
+            <div id="bottom-row-grand-community-progress">
+            <div id="total-community-hours-details">
+                <label><span aria-hidden="true">🕰️</span> Duration (h)</label>
+                <input type="text" id="total-community-time" readonly value="0" aria-label="Total community duration in hours.">
+            </div>
+            <div id="total-trips-of-canada-details">
+                <label><span aria-hidden="true">🍁</span> Trips of Canada (#)</label>
+                <input type="text" id="total-trips-of-canada" readonly value="0" aria-label="Total trips of Canada.">
+            </div>
+        </div>
+        </div>
+        <br>
+        <h3 id="word-challenges"><span aria-hidden="true">⚔️</span> Challenges</h3>
+        <br>
+        <div class="challenges">
+            <div class="carousel">
+                <div class="group">
+                    <div class="card">
+                        <div class="alberta">
+                            Alberta
+                            <br />
+                            <input type="text" class="alberta-trips" readonly
+                                value="0" aria-label="Alberta trips percentage." /> %
+                        </div>
                     </div>
-                </div> 
-                <div class ="card-weekly-snapshot">
-                    <div id="sessions">
-                    📋 Sessions
-                    <br />
-                    <br />
-                    Total: <input type="text" id="session-number2" readonly value="0"/> # 
-                    <br />
-                    <br />
-                    Total number of sessions completed!
+                    <div class="card">
+                        <div class="british-columbia">
+                            British Columbia
+                            <br />
+                            <input type="text" class="british-columbia-trips"
+                                readonly value="0" aria-label="British Columbia trips percentage." /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="manitoba">
+                            Manitoba
+                            <br />
+                            <input type="text" class="manitoba-trips" readonly
+                                value="0" aria-label="Manitoba trips percentage." /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="new-brunswick">
+                            New Brunswick
+                            <br />
+                            <input type="text" class="new-brunswick-trips"
+                                readonly value="0" aria-label="New Brunswick trips percentage." /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="newfoundland-and-labrador">
+                            Newfoundland and Labrador
+                            <br />
+                            <input type="text"
+                                class="newfoundland-and-labrador-trips" readonly
+                                value="0" aria-label="Newfoundland and Labrador trips percentage." /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="nova-scotia">
+                            Nova Scotia
+                            <br />
+                            <input type="text" class="nova-scotia-trips"
+                                readonly value="0" aria-label="Nova Scotia trips percentage." />
+                            %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="ontario">
+                            Ontario
+                            <br />
+                            <input type="text" class="ontario-trips" readonly
+                                value="0" aria-label="Ontario trips percentage." /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="prince-edward-island">
+                            Prince Edward Island
+                            <br />
+                            <input type="text"
+                                class="prince-edward-island-trips" readonly
+                                value="0" aria-label="Prince Edward Island trips percentage." /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="quebec">
+                            Quebec
+                            <br />
+                            <input type="text" class="quebec-trips" readonly
+                                value="0" aria-label="Quebec trips percentage." /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="saskatchewan">
+                            Saskatchewan
+                            <br />
+                            <input type="text" class="saskatchewan-trips"
+                                readonly value="0" aria-label="Saskatchewan trips percentage." /> %
+                        </div>
                     </div>
                 </div>
-                <div class ="card-weekly-snapshot">
-                    <div id="calorie-burn">
-                    🔥 Calorie Burn
-                    <br />
-                    <br />
-                    Total: <input type="text" id="calorie-burnt" readonly value="0"/> cal
-                    <br />
-                    <br />
-                    Total number of calories burned!
+                <div class="group" aria-hidden="true">
+                    <div class="card">
+                        <div class="alberta">
+                            Alberta
+                            <br />
+                            <input type="text" class="alberta-trips" readonly
+                                value="0" /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="british-columbia">
+                            British Columbia
+                            <br />
+                            <input type="text" class="british-columbia-trips"
+                                readonly value="0" /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="manitoba">
+                            Manitoba
+                            <br />
+                            <input type="text" class="manitoba-trips" readonly
+                                value="0" /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="new-brunswick">
+                            New Brunswick
+                            <br />
+                            <input type="text" class="new-brunswick-trips"
+                                readonly value="0" /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="newfoundland-and-labrador">
+                            Newfoundland and Labrador
+                            <br />
+                            <input type="text"
+                                class="newfoundland-and-labrador-trips" readonly
+                                value="0" /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="nova-scotia">
+                            Nova Scotia
+                            <br />
+                            <input type="text" class="nova-scotia-trips"
+                                readonly value="0" />
+                            %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="ontario">
+                            Ontario
+                            <br />
+                            <input type="text" class="ontario-trips" readonly
+                                value="0" /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="prince-edward-island">
+                            Prince Edward Island
+                            <br />
+                            <input type="text"
+                                class="prince-edward-island-trips" readonly
+                                value="0" /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="quebec">
+                            Quebec
+                            <br />
+                            <input type="text" class="quebec-trips" readonly
+                                value="0" /> %
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="saskatchewan">
+                            Saskatchewan
+                            <br />
+                            <input type="text" class="saskatchewan-trips"
+                                readonly value="0" /> %
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="bottom-bar">
-      <p id="company-rights" style="color: white">
-        &copy; 2026 company. All rights reserved
-      </p>
-    </div>
-    <script src="function-main-page.js"></script>
-  </body>
+        <h3 id="grand-snapshot-word"><span aria-hidden="true">📸</span> Grand Snapshot</h3>
+        <div class="carousel-weekly-snapshot">
+            <div class="group-weekly-snapshot">
+                <div class="card-weekly-snapshot">
+                    <div class="active-duration">
+                        <span aria-hidden="true">⏱️</span> Active Duration
+                        <br />
+                        <br />
+                        Total: <input type="text" class="active-duration-number"
+                            readonly value="0" aria-label="Active duration in hours." />hrs
+                        <br />
+                        <br />
+                        Total time spent in the water!
+                    </div>
+                </div>
+                <div class="card-weekly-snapshot">
+                    <div class="sessions">
+                        <span aria-hidden="true">📋</span> Sessions
+                        <br />
+                        <br />
+                        Total: <input type="text" class="session-number"
+                            readonly value="0" aria-label="Total sessions." /> #
+                        <br />
+                        <br />
+                        Total number of sessions completed!
+                    </div>
+                </div>
+                <div class="card-weekly-snapshot">
+                    <div class="distance">
+                        <span aria-hidden="true">🔥</span> Distance
+                        <br />
+                        <br />
+                        Total: <input type="text" class="distance-number"
+                            readonly value="0" aria-label="Total distance in kilometers." /> km
+                        <br />
+                        <br />
+                        Total distance completed!
+                    </div>
+                </div>
+            </div>
+            <div class="group-weekly-snapshot" aria-hidden="true">
+                <div class="card-weekly-snapshot">
+                    <div class="active-duration">
+                        ⏱️ Active Duration
+                        <br />
+                        <br />
+                        Total: <input type="text" class="active-duration-number"
+                            readonly value="0" />h
+                        <br />
+                        <br />
+                        Total time spent in the water!
+                    </div>
+                </div>
+                <div class="card-weekly-snapshot">
+                    <div class="sessions">
+                        📋 Sessions
+                        <br />
+                        <br />
+                        Total: <input type="text" class="session-number"
+                            readonly value="0" /> #
+                        <br />
+                        <br />
+                        Total number of sessions completed!
+                    </div>
+                </div>
+                
+                <div class="card-weekly-snapshot">
+                    <div class="distance">
+                        🔥 Distance
+                        <br />
+                        <br />
+                        Total: <input type="text" class="distance-number"
+                            readonly value="0" /> km
+                        <br />
+                        <br />
+                        Total distance completed!
+                    </div>
+                </div>
+                
+            </div>
+              <div class="group-weekly-snapshot" aria-hidden="true">
+                <div class="card-weekly-snapshot">
+                    <div class="active-duration">
+                        ⏱️ Active Duration
+                        <br />
+                        <br />
+                        Total: <input type="text" class="active-duration-number"
+                            readonly value="0" />h
+                        <br />
+                        <br />
+                        Total time spent in the water!
+                    </div>
+                </div>
+                <div class="card-weekly-snapshot">
+                    <div class="sessions">
+                        📋 Sessions
+                        <br />
+                        <br />
+                        Total: <input type="text" class="session-number"
+                            readonly value="0" /> #
+                        <br />
+                        <br />
+                        Total number of sessions completed!
+                    </div>
+                </div>
+                
+                <div class="card-weekly-snapshot">
+                    <div class="distance">
+                        🔥 Distance
+                        <br />
+                        <br />
+                        Total: <input type="text" class="distance-number"
+                            readonly value="0" /> km
+                        <br />
+                        <br />
+                        Total distance completed!
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+        <br>
+        <br>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index-main-page.html" title="Home"><span aria-hidden="true">🏠</span></a></li>
+                <li><a href="index-log-swim-page.html" title="Log Swim"><span aria-hidden="true">✏️</span></a></li>
+                <li><a href="index-date-tracker-distance-daily.html" title="Date Trackers"><span aria-hidden="true">⏳</span></a></li>
+                <li><a href="index-badge-page.html" title="Badges"><span aria-hidden="true">🏆</span></a></li>
+                <li><a href="index-join-server-page.html" title="Server"><span aria-hidden="true">💬</span></a></li>
+                <li><a href="index-search-page.html" title="Search"><span aria-hidden="true">🔍</span></a></li>
+                <li><a href="index-weather-page.html" title="Weather"><span aria-hidden="true">☀️</span></a></li>
+            </ul>
+        </nav>
+        <script type="module" src="function-main-page.js"></script>
+        <script src="chatbase.js"></script>
+    </body>
 </html>

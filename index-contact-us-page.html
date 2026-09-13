@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,43 +15,46 @@
   <body>
     <div id="information-details">
       <div id="social-details">
-        <div id="socials-word">📱 Socials</div>
-        <a href="https://www.tiktok.com/improvingpots"
-          ><img
+        <div id="socials-word"><span aria-hidden="true">📱</span> Socials</div>
+        <a href="https://www.tiktok.com/improvingpots">
+          <img
             src="tiktok-logo.png"
             width="45"
             height="45"
             id="tiktok-picture"
             alt="Picture of TikTok logo."
-        /></a>
-        <a href="https://www.instagram.com/improvingpots"
-          ><img
+          />
+        </a>
+        <a href="https://www.instagram.com/improvingpots">
+          <img
             src="instagram-logo.png"
             width="45"
             height="45"
             id="instagram-picture"
             alt="Picture of Instagram logo."
-        /></a>
-        <a href="https://www.twitter.com/improvingpots"
-          ><img
+          />
+        </a>
+        <a href="https://www.twitter.com/improvingpots">
+          <img
             src="twitter-logo.png"
             width="45"
             height="45"
             id="twitter-picture"
             alt="Picture of Twitter logo."
-        /></a>
+          />
+        </a>
       </div>
       <div id="phone-details">
-        <div id="phone-word">📞 Phone</div>
+        <div id="phone-word"><span aria-hidden="true">📞</span> Phone</div>
         <br />
-        <a href="wa.me/4165509762" id="phone-number">+1 (416) 550 - 9762</a>
+        <a href="wa.me/4165509762" id="phone-number"> +1 (416) 550 - 9762 </a>
       </div>
       <div id="email-details">
-        <div id="email-word-box">📧 Email</div>
+        <div id="email-word-box"><span aria-hidden="true">📧</span> Email</div>
         <br />
-        <a href="mailto:steffmanica@gmail.com" id="email-address"
-          >steffimanica@gmail.com</a
-        >
+        <a href="mailto:steffmanica@gmail.com" id="email-address">
+          steffimanica@gmail.com
+        </a>
       </div>
     </div>
     <div class="container">
@@ -63,45 +67,91 @@
         alt="Picture of Great Canadian Swim logo."
       />
       <br />
-      <label id="name-word">👋 Name</label>
-      <input
-        type="text"
-        id="name"
-        placeholder="Enter your name"
-        alt="Textbox of name."
-      />
-      <br />
-      <label id="email-word">📩 Email</label>
-      <input
-        type="text"
-        id="email"
-        placeholder="Enter your email address"
-        alt="Textbox of email."
-      />
-      <br />
-      <label id="subject-word">📝 Subject</label>
-      <input
-        type="text"
-        id="subject"
-        placeholder="Enter a subject for your message"
-        alt="Textbox of message subject."
-      />
-      <br />
-      <label id="message-word">✏️ Message</label>
-      <input
-        type="text"
-        id="message"
-        placeholder="Enter your message"
-        alt="Textbox of message."
-      />
-      <br />
-      <button id="send">Send</button>
+      <form>
+        <label id="name-word"><span aria-hidden="true">👋</span> Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          aria-label="Enter your name."
+        />
+        <br />
+        <label id="email-word"><span aria-hidden="true">📩</span> Email</label>
+        <input
+          type="text"
+          id="email"
+          placeholder="Enter your email address"
+          aria-label="Enter your email address."
+        />
+        <br />
+        <label id="subject-word"
+          ><span aria-hidden="true">📝</span> Subject</label
+        >
+        <input
+          type="text"
+          id="subject"
+          placeholder="Enter a subject for your message"
+          aria-label="Enter a subject for your message."
+        />
+        <br />
+        <label id="message-word"
+          ><span aria-hidden="true">✏️</span> Message</label
+        >
+        <input
+          type="text"
+          id="message"
+          placeholder="Enter your message"
+          aria-label="Enter your message."
+        />
+        <br />
+        <button id="send" aria-label="Send.">
+          <span aria-hidden="true">📤</span> Send
+        </button>
+      </form>
     </div>
     <br />
-    <a href="app-terms-of-use.pdf" target="_blank">
-      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
-    </a>
-    <script src="function-contact-us-page.js"></script>
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="index-main-page.html" title="Home"
+            ><span aria-hidden="true">🏠</span></a
+          >
+        </li>
+        <li>
+          <a href="index-log-swim-page.html" title="Log Swim"
+            ><span aria-hidden="true">✏️</span></a
+          >
+        </li>
+        <li>
+          <a href="index-date-tracker-distance-daily.html" title="Date Trackers"
+            >⏳</a
+          >
+        </li>
+        <li>
+          <a href="index-badge-page.html" title="Badges"
+            ><span aria-hidden="true">🏆</span></a
+          >
+        </li>
+        <li>
+          <a href="index-join-server-page.html" title="Server"
+            ><span aria-hidden="true">💬</span></a
+          >
+        </li>
+        <li>
+          <a href="index-search-page.html" title="Search"
+            ><span aria-hidden="true">🔍</span></a
+          >
+        </li>
+        <li>
+          <a href="index-weather-page.html" title="Weather"
+            ><span aria-hidden="true">☀️</span></a
+          >
+        </li>
+        <li></li>
+      </ul>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="mail.js"></script>
     <script src="chatbase.js"></script>
   </body>
 </html>

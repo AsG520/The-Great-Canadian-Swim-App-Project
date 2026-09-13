@@ -1,0 +1,213 @@
+﻿/* HTML Components */
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    color: white;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    overflow-x: hidden;
+    overflow-y: visible;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* HTML Classes */
+.container {
+    width: 327px;
+    height: 510px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.month {
+    padding: 20px;
+    width: 270px;
+    background: rgb(28, 60, 101);
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    max-width: 13.6%;
+    padding-right: 18.5px;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+    max-width: 311px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white;
+}
+
+#dateButton {
+  width: 220px;
+  height: 48px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 14px;
+  background-color: rgb(28, 60, 101);
+  color: white;
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#dateButton:hover {
+  background: #eef0f6;
+  color: rgb(28, 60, 101);
+  transform: translateY(-1px);
+}
+
+/* Hide the date input */
+#dateSelected {
+  display: none;
+  position: center;
+  pointer-events: none;
+}
+
+#user-stats-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#day-number-and-calendar-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#exp:hover,
+#level:hover,
+#streak:hover {
+    transform: scale(1.1);
+}
+
+#exp-word:hover,
+#streak-word:hover,
+#level-word:hover {
+    text-decoration-line: underline;
+}
+
+#exp-details,
+#level-details,
+#streak-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#exp,
+#level,
+#streak {
+    height: 75px;
+    width: 75px;
+    border-radius: 16px;
+    border: none;
+    background: rgba(239, 240, 242, 0.5);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(28, 60, 101);
+    box-shadow: 0px 0px 20px 2px white;
+}
+
+/* HTML @keyframes Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

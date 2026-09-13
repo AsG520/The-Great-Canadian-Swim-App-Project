@@ -1,0 +1,178 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    overflow-x: hidden;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+}
+
+#message-container {
+    width: 475px;
+}
+
+#message-container div {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    backdrop-filter: blur(8px);
+    padding: 5px;
+    font-family: "Montserrat";
+}
+
+#dark-mode,
+#light-mode,
+#regular-mode {
+    background-color: white;
+    padding: 10px;
+    border-radius: 16px;    
+    height: 25px;
+    width: 25px;
+}
+
+#mode-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#rules-and-dark-mode-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#message-input-and-control-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#server-rules {
+    height: 56px;
+    width: 125px;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 28px;
+    border-top: none;   
+    border-bottom: none;
+    border-left: none;
+    background-color: rgba(15, 192, 252, 0.5);
+    border-right: none;
+}
+
+#message-container div:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-family: "Montserrat";
+}
+
+#send-container {
+    position: fixed;
+    padding-bottom: 30px;
+    bottom: 0;
+    background: black;
+    display: flex;
+    border: none;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0px 0px 20px 2px white;
+}
+
+#message-input {
+    width: 275px;
+    height: 56px;
+    font-size: 18px;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(239, 240, 242, 0.5);
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    border-radius: 16px;
+    margin-top: 30px;
+}
+
+#message-input-and-send-button-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#send-button {
+    height: 60px;
+    width: 100px;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(15, 192, 252, 0.5);
+    border-radius: 28px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 20px;
+}
+
+#exit-button {
+    height: 56px;
+    width: 100px;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    background-color: red;
+    border-radius: 28px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+#button-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 13px;  
+}
+
+#send-button:active,
+#exit-button:active,
+#server-rules:active,
+#dark-mode:active,
+#light-mode:active,
+#regular-mode:active{
+    transform: translateY(1px);
+}
+
+#send-button:hover,
+#exit-button:hover,
+#server-rules:hover,
+#dark-mode:hover,
+#light-mode:hover,
+#regular-mode:hover {
+    transform: scale(1.1);
+}

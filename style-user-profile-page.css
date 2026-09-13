@@ -1,0 +1,321 @@
+/* HTML Components */
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    color: white;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+option {
+    min-width: 324px;
+    color: rgb(28, 60, 101);
+    font-weight: 700;
+}
+
+option:hover {
+    background: #eff0f2;
+}
+
+/* HTML Classes */
+.container {
+    width: 327px;
+    height: 1345px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 10px;
+    position: sticky;
+    bottom: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #eff0f2;
+    color: black;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+/* HTML IDs */
+#why-container {
+    width: 324px;
+    height: 100px;
+    background: rgba(239, 240, 242, 0.5);
+    border-radius: 16px;
+    border: none;
+    text-align: center;
+}
+
+#username-details {
+    margin-top: 10px;
+}
+
+#location-details {
+    margin-top: -10px;
+}
+
+#exp-details,
+#level-details,
+#streak-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#img-profile {
+    border-radius: 50%;
+}
+
+#exp,
+#level,
+#streak {
+    height: 75px;
+    width: 75px;
+    border-radius: 16px;
+    border: none;
+    background: rgba(239, 240, 242, 0.5);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(28, 60, 101);
+    box-shadow: 0px 0px 20px 2px white;
+}
+
+#follow-system {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#followers-layout,
+#following-layout {
+    display: flexl;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#follow-and-unfollow-selection {
+    width: 105px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(239, 240, 242, 0.5);
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+#user-stats-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#footer-details:hover,
+h1:hover,
+h4:hover,
+h3:hover,
+#days-swum-word:hover,
+#total-distance-word:hover,
+#goal-word:hover,
+#age-word:hover,
+#gender-word:hover,
+#their-why-word:hover,
+#total-hours-word:hover,
+#exp-word:hover,
+#level-word:hover,
+#streak-word:hover label:hover,
+#followers-label:hover,
+#following-label:hover,
+#followers-count:hover,
+#following-count:hover {
+    text-decoration-line: underline;
+}
+
+#settings-box {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    position: sticky;
+    top: 50%;
+    right: 100%;
+    text-align: center;
+    border-radius: 16px;
+    z-index: 999;
+}
+
+#settings-box:hover {
+    background-color: rgb(28, 60, 101);
+}
+
+#footer-details:hover {
+    transform: scale(1.05);
+}
+
+#profile-picture:hover,
+#exp:hover,
+#streak:hover,
+#level:hover {
+    transform: scale(1.1);
+}
+
+#footer-details {
+    justify-content: center;
+    color: white;
+    display: flex;
+    text-align: center;
+}
+
+#gender,
+#age,
+#goal,
+#total-distance,
+#days-swum,
+#total-hours {
+    width: 324px;
+    height: 56px;
+    font-size: 18px;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(239, 240, 242, 0.5);
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+#back {
+    height: 56px;
+    width: 324px;
+    color: white;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(15, 192, 252, 0.5);
+    border-radius: 28px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+#back:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/* HTML Pseudo-Element Notation */
+input[type="text"],
+input[type="number"] {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* HTML @keyframes Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes borderEffect {
+    0% {
+        border: 5px solid rgb(28, 60, 101);
+    }
+
+    25% {
+        border: 5px solid rgb(15, 192, 252);
+    }
+
+    50% {
+        border: 5px solid rgb(178, 58, 58);
+    }
+
+    75% {
+        border: 5px solid rgb(0, 0, 0);
+    }
+
+    100% {
+        border: 5px solid #f5f7f9;
+    }
+}

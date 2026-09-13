@@ -2,18 +2,15 @@
 body {
     justify-content: center;
     align-items: center;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    background-image: url("login-page-background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: 'Montserrat';
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
     animation-name: fadeIn;
     animation-duration: 1s;
-    color: rgb(28, 60, 101);
+    color: white;
     animation-delay: 0s;
     animation-fill-mode: forwards;
     animation-play-state: running;
@@ -33,13 +30,14 @@ h4 {
     text-align: center;
     font-size: 20px;
     font-weight: 600;
-} 
+}
 
-/* HTML Classes */ 
+/* HTML Classes */
 .container {
     width: 327px;
     height: 680px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     border-top: none;
     border-bottom: none;
@@ -66,7 +64,7 @@ h4 {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
+    background-color: rgba(15, 192, 252, 0.5);
     border-radius: 28px;
     border-top: none;
     border-bottom: none;
@@ -75,26 +73,34 @@ h4 {
 }
 
 #back:hover {
-    background-color: rgb(28, 60, 101);
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 #swim-across-canada-page-logo:hover {
     transform: scale(1.1);
 }
 
-#title:hover, #description:hover {
+#swim-across-canada-page-logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+}
+
+#title:hover,
+#description:hover,
+#footer-details:hover {
     text-decoration-line: underline;
 }
 
 #footer-details {
     justify-content: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     text-align: center;
 }
 
 #footer-details:hover {
-    transform: scale(1.050);
+    transform: scale(1.05);
 }
 
 #text-container {
@@ -104,7 +110,7 @@ h4 {
     justify-content: center;
     align-items: center;
     border: none;
-    background: #eff0f2;
+    background: rgba(239, 240, 242, 0.5);
     color: rgb(28, 60, 101);
     font-weight: 600;
     border-radius: 16px;
@@ -117,9 +123,11 @@ h4 {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
@@ -129,16 +137,20 @@ h4 {
     0% {
         border: 5px solid rgb(28, 60, 101);
     }
+
     25% {
         border: 5px solid rgb(15, 192, 252);
-    }   
+    }
+
     50% {
         border: 5px solid rgb(178, 58, 58);
     }
+
     75% {
         border: 5px solid rgb(0, 0, 0);
     }
+
     100% {
-        border: 5px solid #F5F7F9;
+        border: 5px solid #f5f7f9;
     }
 }

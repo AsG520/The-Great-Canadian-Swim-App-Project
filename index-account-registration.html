@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +14,11 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="account-registration-word">Account<br />Registration</h1>
+      <h1 id="account-registration-word">
+        Account
+        <br />
+        Registration
+      </h1>
       <br />
       <img
         src="loader-logo.png"
@@ -22,40 +27,50 @@
         id="account-registration-logo"
         alt="Picture of Great Canadian Swim logo."
       />
+      <br />
       <div id="customAlert" class="alertBox">
         <label id="alertText"></label>
       </div>
       <div class="first-name-details">
-        <label id="first-name-word">👤 First Name</label>
+        <label id="first-name-word"
+          ><span aria-hidden="true">👤</span> First Name</label
+        >
         <input
           type="text"
           id="fName"
           placeholder="Enter your first name"
-          alt="Textbox of name."
+          aria-label="Enter your first name."
         />
       </div>
       <br />
       <div class="email-details">
-        <label id="email-word">📧 Email</label>
+        <label id="email-word"><span aria-hidden="true">📧</span> Email</label>
         <input
           type="text"
           id="rEmail"
           placeholder="Enter your email address"
-          alt="Textbox of email."
+          aria-label="Enter your email address."
         />
       </div>
       <br />
       <div class="password-details">
-        <label id="password-word">🔒 Password</label>
+        <label id="password-word"
+          ><span aria-hidden="true">🔒</span> Password</label
+        >
         <input
           type="password"
           id="rPassword"
           placeholder="Enter your password"
-          alt="Textbox of password."
+          aria-label="Enter your password."
         />
       </div>
       <br />
-      <input type="button" id="submitSignUp" value="Sign Up" />
+      <input
+        type="button"
+        id="submitSignUp"
+        value="🔐 Sign Up"
+        aria-label="Sign up."
+      />
       <div id="sign-in-platforms">
         <img
           src="google-logo.png"
@@ -67,13 +82,13 @@
       </div>
       <br />
       <h4 id="already-have-account-sentence">
-        Already have an Account! <span id="login-word"><br />Login</span>
+        Already have an Account!
+        <span id="login-word">
+          <br />
+          🔓 Login
+        </span>
       </h4>
     </div>
-    <br />
-    <a href="app-terms-of-use.pdf" target="_blank">
-      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
-    </a>
     <script type="module" src="firebaseauth.js"></script>
     <script src="function-account-registration.js"></script>
     <script src="chatbase.js"></script>

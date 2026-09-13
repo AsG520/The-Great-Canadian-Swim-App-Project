@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-greet-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>Greet Page: The Great Canadian Swim App - 2026</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="greeting">
+        Good Morning, Amanjot !<span aria-hidden="true">👋</span>
+      </h1>
+      <div id="day-number-and-calendar-layout">
+        <h2 id="day-number"><span aria-hidden="true">⏳</span> Day #0</h2>
+        <button
+          id="dateButton"
+          type="button"
+          aria-label="Select a date."
+        ></button>
+        <input
+          type="date"
+          id="dateSelected"
+          readonly
+          aria-label="Select a date."
+        />
+      </div>
+      <label><span aria-hidden="true">✍️</span> Today's Quote!</label>
+      <br />
+      <label id="word-quote-box">"Yay"</label>
+      <br />
+      <!--
+      <div class="month">
+        <ul>
+          <li>
+            <span aria-hidden="true">📅</span> August<br /><span
+              style="font-size: 18px"
+              >2026</span
+            >
+          </li>
+        </ul>
+      </div>
+      <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+      </ul>
+      <ul class="days">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li><span class="active">26</span></li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+      </ul>
+      !-->
+      <br />
+      <div id="user-stats-details">
+        <div id="exp-details">
+          <label id="exp-word"><span aria-hidden="true">⚡</span> Exp</label>
+          <input
+            type="text"
+            id="exp"
+            value="0"
+            readonly
+            aria-label="Experience points."
+          />
+        </div>
+        <div id="level-details">
+          <label id="level-word"
+            ><span aria-hidden="true">💎</span> Level</label
+          >
+          <input
+            type="text"
+            id="level"
+            value="0"
+            readonly
+            aria-label="Level."
+          />
+        </div>
+        <div id="streak-details">
+          <label id="streak-word"
+            ><span aria-hidden="true">🔥</span> Streak</label
+          >
+          <input
+            type="text"
+            id="streak"
+            value="0"
+            readonly
+            aria-label="Streak."
+          />
+        </div>
+      </div>
+    </div>
+    <script type="module" src="function-greet-page.js"></script>
+    <script src="chatbase.js"></script>
+  </body>
+</html>

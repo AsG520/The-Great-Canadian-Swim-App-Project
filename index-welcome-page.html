@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,13 +14,17 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="about-you-word">Welcome!</h1>
-      <h4 id="description">You're part of something<br />bigger.</h4>
+      <h1 id="about-you-word"><span aria-hidden="true">👋</span> Welcome!</h1>
+      <h4 id="description">
+        You're part of something
+        <br />
+        bigger.
+      </h4>
       <div class="header-pictures">
         <img
           src="map-of-canada.png"
-          width="210"
-          height="200"
+          width="170"
+          height="160"
           id="map-of-canada-picture"
           alt="Picture of Canada map."
         />
@@ -32,32 +37,43 @@
           alt="Picture of Great Canadian Swim logo."
         />
       </div>
-      <input
+      <br />
+      <button
         type="button"
-        value="🌍 Swim across Canada"
         id="swim-across-canada-option"
-      />
+        aria-label="Swim across Canada."
+      >
+        <span aria-hidden="true">🌍</span> Swim across Canada
+      </button>
       <br />
-      <input
+      <button
         type="button"
-        value="⛏️ Build Community"
         id="build-community-option"
-      />
+        aria-label="Build community."
+      >
+        <span aria-hidden="true">⛏️</span> Build Community
+      </button>
       <br />
-      <input
+      <button
         type="button"
-        value="🥇 Make a Difference"
         id="make-a-difference-option"
-      />
+        aria-label="Make a difference."
+      >
+        <span aria-hidden="true">🥇</span> Make a Difference
+      </button>
       <br />
-      <input type="button" value="Create an Account" id="create-an-account" />
+      <button
+        type="button"
+        id="create-an-account"
+        aria-label="Create an account."
+      >
+        <span aria-hidden="true">🪪</span> Create an Account
+      </button>
       <br />
-      <input type="button" value="Sign In" id="sign-in" />
+      <button type="button" id="sign-in" aria-label="Sign in.">
+        <span aria-hidden="true">✨</span> Sign In
+      </button>
     </div>
-    <br />
-    <a href="app-terms-of-use.pdf" target="_blank">
-      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
-    </a>
     <script src="function-welcome-page.js"></script>
     <script src="chatbase.js"></script>
   </body>

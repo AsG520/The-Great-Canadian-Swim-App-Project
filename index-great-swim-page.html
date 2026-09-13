@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-great-swim-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>Great Swim Page: The Great Canadian Swim App - 2026</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="loader-logo.png"
+        width="120"
+        height="100"
+        id="great-swim-logo"
+        alt="Picture of Great Canadian Swim logo."
+      />
+      <h1>Great Swim!</h1>
+      <h4>
+        You showed up today. <span aria-hidden="true">✅</span>
+        <br />
+        <br />
+        You added 1 session to your journey
+        <br />
+        across Canada! <span aria-hidden="true">🩷</span>
+      </h4>
+      <div id="days-and-distance-layout">
+        <div id="total-days-details">
+          <label><span aria-hidden="true">📆</span> Total Days (#)</label>
+          <input
+            type="text"
+            id="total-days"
+            value="0"
+            readonly
+            aria-label="Total days."
+          />
+        </div>
+        <div id="total-distance-details">
+          <label><span aria-hidden="true">🏊</span> Total Distance (km)</label>
+          <input
+            type="text"
+            id="total-distance"
+            value="0"
+            readonly
+            aria-label="Total distance in kilometers."
+          />
+        </div>
+      </div>
+      <br />
+      <input
+        type="button"
+        value="👀 View Journey"
+        id="view-journey"
+        aria-label="View journey."
+      />
+    </div>
+  </body>
+  <script type="module" src="function-great-swim-page.js"></script>
+  <script src="chatbase.js"></script>
+</html>

@@ -1,4 +1,5 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,78 +13,399 @@
     <link rel="stylesheet" href="style-badge-page.css" />
   </head>
   <body>
+    <div id="settings-box" title="Settings">
+      <span aria-hidden="true" style="font-size: 35px">⚙️</span>
+    </div>
     <div class="container">
-      <h1 id="badges-word">Badges</h1>
-      <h4 id="description">
-        Unlock accomplishments from swimming and trying your best.
-      </h4>
-      <img
-        src="loader-logo.png"
-        width="120"
-        height="100"
-        id="badge-page-logo"
-        alt="Picture of Great Canadian Swim logo."
-      />
-      <br />
-      <br />
-      <div class="badges-layout">
-        <div id="one-row-badges">
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
+      <div id="title-and-subheading-details">
+        <h1><span id="badge-number">0</span> / 24</h1>
+        <h3><span aria-hidden="true">🛡️</span> Badges unlocked!</h3>
+      </div>
+      <div id="user-stats-details">
+        <div id="exp-details">
+          <label id="exp-word"><span aria-hidden="true">⚡</span> Exp</label>
+          <input
+            type="text"
+            id="exp"
+            value="0"
+            readonly
+            aria-label="Experience points."
+          />
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <div id="two-row-badges">
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <div id="three-row-badges">
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <div id="four-row-badges">
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <div id="five-row-badges">
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
-          <img src="" height="50" width="50" />
+        <div id="level-details">
+          <label id="level-word"
+            ><span aria-hidden="true">💎</span> Level</label
+          >
+          <input
+            type="text"
+            id="level"
+            value="0"
+            readonly
+            aria-label="Level."
+          />
         </div>
       </div>
       <br />
-      <br />
-      <br />
-      <input type="button" value="Back" id="back" />
+      <div id="badgeUnlockAlert">
+        <img id="badgeUnlockImage" src="" alt="Badge" /> <br />
+        <label id="badgeUnlockText"></label>
+      </div>
+      <div class="badges-layout">
+        <div id="one-row-badges">
+          <div id="first-splash-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="first-splash-badge"
+                alt="First splash badge."
+                title="⚡ 250 | 💎 0 | 💥 5%"
+              />
+            </figure>
+            <figcaption>First<br />Splash</figcaption>
+          </div>
+          <div id="fifteen-minutes-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="15-minutes-badge"
+                alt="15 minutes badge."
+                title="⚡ 300 | 💎 0 | 💥 6%"
+              />
+            </figure>
+            <figcaption>15<br />Minutes</figcaption>
+          </div>
+          <div id="thirty-minutes-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="30-minutes-badge"
+                alt="30 minutes badge."
+                title="⚡ 600 | 💎 0 | 💥 12%"
+              />
+            </figure>
+            <figcaption>30<br />Minutes</figcaption>
+          </div>
+        </div>
+        <br />
+        <div id="two-row-badges">
+          <div id="one-hour-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="1-hour-badge"
+                alt="1 hour badge."
+                title="⚡ 1200 | 💎 0 | 💥 24%"
+              />
+            </figure>
+            <figcaption>1<br />Hour</figcaption>
+          </div>
+          <div id="two-hours-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="2-hours-badge"
+                alt="2 hours badge."
+                title="⚡ 2400 | 💎 0 | 💥 48%"
+              />
+            </figure>
+            <figcaption>2<br />Hours</figcaption>
+          </div>
+          <div id="five-hundred-meters-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="500-meters-badge"
+                alt="500 meters badge."
+                title="⚡ 200 | 💎 0 | 💥 4%"
+              />
+            </figure>
+            <figcaption>500<br />Meters</figcaption>
+          </div>
+        </div>
+        <br />
+        <div id="three-row-badges">
+          <div id="one-kilometer-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="1-kilometer-badge"
+                alt="1 kilometer badge."
+                title="⚡ 400 | 💎 0 | 💥 8%"
+              />
+            </figure>
+            <figcaption>1<br />Kilometer</figcaption>
+          </div>
+          <div id="two-kilometers-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="two-kilometers-badge"
+                alt="2 kilometers badge."
+                title="⚡ 800 | 💎 0 | 💥 16%"
+              />
+            </figure>
+            <figcaption>2<br />Kilometers</figcaption>
+          </div>
+          <div id="five-kilometers-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="five-kilometers-badge"
+                alt="5 kilometers badge."
+                title="⚡ 1600 | 💎 0 | 💥 32%"
+              />
+            </figure>
+            <figcaption>5<br />Kilometers</figcaption>
+          </div>
+        </div>
+        <br />
+        <div id="four-row-badges">
+          <div id="ten-kilometers-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="ten-kilometers-badge"
+                alt="10 kilometers badge."
+                title="⚡ 3200 | 💎 0 | 💥 64%"
+              />
+            </figure>
+            <figcaption>10<br />Kilometers</figcaption>
+          </div>
+          <div id="alberta-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="alberta-badge"
+                alt="Alberta badge."
+                title="⚡ 12000 | 💎 2 | 💥 240%"
+              />
+            </figure>
+            <figcaption>Alberta</figcaption>
+          </div>
+          <div id="british-columbia-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="british-columbia-badge"
+                alt="British Columbia badge."
+                title="⚡ 13000 | 💎 2 | 💥 260%"
+              />
+            </figure>
+            <figcaption>British<br />Columbia</figcaption>
+          </div>
+        </div>
+        <br />
+        <div id="five-row-badges">
+          <div id="manitoba-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="manitoba-badge"
+                alt="Manitoba badge."
+                title="⚡ 10000 | 💎 2 | 💥 200%"
+              />
+            </figure>
+            <figcaption>Manitoba</figcaption>
+          </div>
+          <div id="new-brunswick-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="new-brunswick-badge"
+                alt="New Brunswick badge."
+                title="⚡ 7000 | 💎 1 | 💥 140%"
+              />
+            </figure>
+            <figcaption>New<br />Brunswick</figcaption>
+          </div>
+          <div id="newfoundland-and-labrador-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="newfoundland-and-labrador-badge"
+                alt="Newfoundland and Labrador badge."
+                title="⚡ 8000 | 💎 1 | 💥 160%"
+              />
+            </figure>
+            <figcaption>Newfoundland<br />and Labrador</figcaption>
+          </div>
+        </div>
+        <br />
+        <div id="six-row-badges">
+          <div id="quebec-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="quebec-badge"
+                alt="Quebec badge."
+                title="⚡ 16000 | 💎 3 | 💥 320%"
+              />
+            </figure>
+            <figcaption>Quebec</figcaption>
+          </div>
+          <div id="nova-scotia-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="nova-scotia-badge"
+                alt="Nova Scotia badge."
+                title="⚡ 6000 | 💎 1 | 💥 120%"
+              />
+            </figure>
+            <figcaption>Nova<br />Scotia</figcaption>
+          </div>
+          <div id="ontario-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="ontario-badge"
+                alt="Ontario badge."
+                title="⚡ 14000 | 💎 2 | 💥 280%"
+              />
+            </figure>
+            <figcaption>Ontario</figcaption>
+          </div>
+        </div>
+        <br />
+        <div id="seven-row-badges">
+          <div id="prince-edward-island-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="prince-edward-island-badge"
+                alt="Prince Edward Island badge."
+                title="⚡ 5000 | 💎 1 | 💥 100%"
+              />
+            </figure>
+            <figcaption>Prince<br />Edward Island</figcaption>
+          </div>
+          <div id="saskatchewan-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="saskatchewan-badge"
+                alt="Saskatchewan badge."
+                title="⚡ 11000 | 💎 2 | 💥 220%"
+              />
+            </figure>
+            <figcaption>Saskatchewan</figcaption>
+          </div>
+          <div id="northwest-territories-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="northwest-territories-badge"
+                alt="Northwest Territories badge."
+                title="⚡ 15000 | 💎 3 | 💥 300%"
+              />
+            </figure>
+            <figcaption>Northwest<br />Territories</figcaption>
+          </div>
+        </div>
+        <br />
+        <div id="eight-row-badges">
+          <div id="nunavut-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                height="75"
+                id="nunavut-badge"
+                alt="Nunavut badge."
+                title="⚡ 17000 | 💎 3 | 💥 340%"
+              />
+            </figure>
+            <figcaption>Nunavut</figcaption>
+          </div>
+          <div id="yukon-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="yukon-badge"
+                alt="Yukon badge."
+                title="⚡ 9000 | 💎 1 | 💥 180%"
+              />
+            </figure>
+            <figcaption>Yukon</figcaption>
+          </div>
+          <div id="canada-details">
+            <figure>
+              <img
+                src=""
+                height="75"
+                width="75"
+                id="canada-badge"
+                alt="Canada badge."
+                title="⚡ 20000 | 💎 4 | 💥 400%"
+              />
+            </figure>
+            <figcaption>Canada</figcaption>
+          </div>
+        </div>
+      </div>
     </div>
     <br />
-    <a href="app-terms-of-use.pdf" target="_blank">
-      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
-    </a>
-    <script src="function-badge-page.js"></script>
+    <br />
+    <nav class="navbar">
+      <ul>
+        <li><a href="index-main-page.html" title="Home"><span aria-hidden="true">🏠</span></a></li>
+        <li><a href="index-log-swim-page.html" title="Log Swim"><span aria-hidden="true">✏️</span></a></li>
+        <li>
+          <a href="index-date-tracker-distance-daily.html" title="Date Trackers"
+            >⏳</a
+          >
+        </li>
+        <li><a href="index-badge-page.html" title="Badges"><span aria-hidden="true">🏆</span></a></li>
+        <li><a href="index-join-server-page.html" title="Server"><span aria-hidden="true">💬</span></a></li>
+        <li><a href="index-search-page.html" title="Search"><span aria-hidden="true">🔍</span></a></li>
+        <li><a href="index-weather-page.html" title="Weather"><span aria-hidden="true">☀️</span></a></li>
+      </ul>
+    </nav>
+    <script type="module" src="function-badge-page.js"></script>
     <script src="chatbase.js"></script>
   </body>
 </html>

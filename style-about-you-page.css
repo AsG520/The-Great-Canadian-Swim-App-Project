@@ -2,14 +2,11 @@
 body {
     justify-content: center;
     align-items: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     flex-direction: column;
-    background-image: url("login-page-background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: 'Montserrat';
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
     animation-name: fadeIn;
@@ -23,11 +20,16 @@ body {
     overflow-y: visible;
 }
 
-/* HTML Classes */ 
+h1 {
+    text-align: center;
+}
+
+/* HTML Classes */
 .container {
     width: 327px;
-    height: 835px;
-    background-color:   white;
+    height: 880px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     border-top: none;
     border-bottom: none;
@@ -37,21 +39,16 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 7s;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
-.alertBox { 
+.alertBox {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 200%);
     background: white;
+    color: rgb(28, 60, 101);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -59,7 +56,12 @@ body {
 }
 
 /* HTML IDs */
-#disability-option, #parent-caregiver-option, #supporter-option, #club-coach-option, #education-option, #organization-option {
+#disability-option,
+#parent-caregiver-option,
+#supporter-option,
+#club-coach-option,
+#education-option,
+#organization-option {
     width: 280px;
     height: 56px;
     font-size: 18px;
@@ -71,13 +73,18 @@ body {
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background: #eff0f2;
+    background: rgba(239, 240, 242, 0.5);
     color: rgb(28, 60, 101);
     font-weight: 600;
     border-radius: 16px;
 }
 
-.disability-details, .parent-caregiver-details, .supporter-details, .club-coach-details, .education-details, .organization-details {
+.disability-details,
+.parent-caregiver-details,
+.supporter-details,
+.club-coach-details,
+.education-details,
+.organization-details {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,16 +92,33 @@ body {
     gap: 8px;
 }
 
-#disability-checkbox, #parent-caregiver-checkbox, #supporter-checkbox, #club-coach-checkbox, #education-checkbox, #organization-checkbox {
+#disability-checkbox,
+#parent-caregiver-checkbox,
+#supporter-checkbox,
+#club-coach-checkbox,
+#education-checkbox,
+#organization-checkbox {
     width: 25px;
     height: 25px;
 }
 
-#disability-option:hover, #parent-caregiver-option:hover, #supporter-option:hover, #club-coach-option:hover, #education-option:hover, #education-option:hover, #organization-option:hover {
-    background: rgba(0, 0, 0, 0.3);
+#disability-option:hover,
+#parent-caregiver-option:hover,
+#supporter-option:hover,
+#club-coach-option:hover,
+#education-option:hover,
+#education-option:hover,
+#organization-option:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
-#disability-option:active, #parent-caregiver-option:active, #supporter-option:active, #club-coach-option:active, #education-option:active, #organization-option:active {
+#disability-option:active,
+#parent-caregiver-option:active,
+#supporter-option:active,
+#club-coach-option:active,
+#education-option:active,
+#organization-option:active {
     transform: translateY(1px);
 }
 
@@ -106,7 +130,7 @@ body {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
+    background-color: rgba(15, 192, 252, 0.5);
     border-radius: 28px;
     border-top: none;
     border-bottom: none;
@@ -115,11 +139,11 @@ body {
 }
 
 #footer-details:hover {
-    transform: scale(1.050);
+    transform: scale(1.05);
 }
 
 .clicked-black {
-    background-color: black;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
 }
 
 #about-you-word {
@@ -127,11 +151,17 @@ body {
 }
 
 #about-you-logo:hover {
-    transform: scale(1.1);  
+    transform: scale(1.1);
+}
+
+#about-you-logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
 }
 
 #continue:hover {
-    background-color: rgb(28, 60, 101);
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 #description {
@@ -140,18 +170,20 @@ body {
     font-weight: 600;
 }
 
-#about-you-word:hover, #description:hover, #footer-details:hover {
+#about-you-word:hover,
+#description:hover,
+#footer-details:hover {
     text-decoration-line: underline;
 }
 
 #footer-details {
     justify-content: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     text-align: center;
 }
 
-/* HTML Pseudo-Element Notation */ 
+/* HTML Pseudo-Element Notation */
 input[type="button"] {
     color: black;
     text-align: center;
@@ -162,28 +194,12 @@ input[type="button"] {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes borderEffect {
-    0% {
-        border: 5px solid rgb(28, 60, 101);
-    }
-    25% {
-        border: 5px solid rgb(15, 192, 252);
-    }   
-    50% {
-        border: 5px solid rgb(178, 58, 58);
-    }
-    75% {
-        border: 5px solid rgb(0, 0, 0);
-    }
-    100% {
-        border: 5px solid #F5F7F9;
     }
 }

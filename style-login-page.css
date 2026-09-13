@@ -2,18 +2,18 @@
 body {
     justify-content: center;
     align-items: center;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    background-image: url("login-page-background.png");
+    background-image: url("login-and-registration-account-page-background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
     animation-name: fadeIn;
     animation-duration: 1s;
-    color: rgb(28, 60, 101);
+    color: white;
     animation-delay: 0s;
     animation-fill-mode: forwards;
     animation-play-state: running;
@@ -23,11 +23,12 @@ body {
     overflow-y: visible;
 }
 
-/* HTML Classes */ 
+/* HTML Classes */
 .container {
     width: 327px;
     height: 700px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     border-top: none;
     border-bottom: none;
@@ -37,50 +38,65 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 5s;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-}   
+}
 
 /* HTML IDs */
-#login-page-logo:hover, #googleSignIn:hover, #forgot-password-word:active {
+#login-page-logo:hover,
+#googleSignIn:hover,
+#forgot-password-word:active {
     transform: scale(1.1);
 }
 
 #submitSignIn:hover {
-    background-color: rgb(28, 60, 101);
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 #footer-details:hover {
-    transform: scale(1.050);
+    transform: scale(1.05);
 }
 
-#submitSignIn:active, #googleSignIn:active {
+#submitSignIn:active,
+#googleSignIn:active {
     transform: translateY(1px);
+}
+
+#login-page-logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
 }
 
 #googleSignIn {
     cursor: pointer;
     margin-top: -25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px;
+    border-radius: 16px;
+}
+
+#user-picture,
+#padlock-picture {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 3px;
 }
 
 #footer-details {
     justify-content: center;
-    color: rgb(28, 60, 101);
+    color: white;
     display: flex;
     text-align: center;
 }
 
-#forgot-password-word, #sentence-register { 
+#forgot-password-word,
+#sentence-register {
     text-align: center;
     font-size: 20px;
     font-weight: 600;
 }
 
-#email, #password {
+#email,
+#password {
     width: 324px;
     height: 56px;
     font-size: 18px;
@@ -92,8 +108,7 @@ body {
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background: #eff0f2;
-    color: rgb(28, 60, 101);
+    background: rgba(239, 240, 242, 0.5);
     font-weight: 600;
     border-radius: 16px;
 }
@@ -106,7 +121,7 @@ body {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    background-color: rgb(15, 192, 252);
+    background-color: rgba(15, 192, 252, 0.5);
     border-radius: 28px;
     border-top: none;
     border-bottom: none;
@@ -130,14 +145,16 @@ body {
     gap: 5px;
 }
 
-#username-word, #password-word {
+#username-word,
+#password-word {
     width: 324px;
     text-align: left;
     margin-bottom: 6px;
     font-weight: 700;
 }
 
-.password-header, .username-header {
+.password-header,
+.username-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,7 +162,11 @@ body {
     width: 320px;
 }
 
-#username-word:hover, #password-word:hover, #login-word:hover, #forgot-password-word:hover {
+#username-word:hover,
+#password-word:hover,
+#login-word:hover,
+#forgot-password-word:hover,
+#footer-details:hover {
     text-decoration-line: underline;
 }
 
@@ -158,13 +179,14 @@ body {
     font-weight: 800;
 }
 
-.alertBox {  
+.alertBox {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 200%);
     background: white;
+    color: rgb(28, 60, 101);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -177,7 +199,7 @@ body {
     align-items: center;
 }
 
-/* HTML Pseudo-Element Notation */ 
+/* HTML Pseudo-Element Notation */
 input::placeholder {
     color: rgb(28, 60, 101);
     font-weight: 600;
@@ -185,19 +207,22 @@ input::placeholder {
     text-align: left;
 }
 
-input[type="email"], input[type="password"] {
+input[type="email"],
+input[type="password"] {
     color: rgb(28, 60, 101);
-    text-align:center;
-} 
+    text-align: center;
+}
 
 /* HTML @keyframes Animations */
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         opacity: 1;
     }
@@ -207,16 +232,20 @@ input[type="email"], input[type="password"] {
     0% {
         border: 5px solid rgb(28, 60, 101);
     }
+
     25% {
         border: 5px solid rgb(15, 192, 252);
-    }   
+    }
+
     50% {
         border: 5px solid rgb(178, 58, 58);
     }
+
     75% {
         border: 5px solid rgb(0, 0, 0);
     }
+
     100% {
-        border: 5px solid #F5F7F9;
+        border: 5px solid #f5f7f9;
     }
 }

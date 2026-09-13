@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-history-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="logo.png" />
+    <title>History Page: The Great Canadian Swim App - 2026</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><span aria-hidden="true">⌛</span> History</h1>
+      <select id="option-details">
+        <option selected disabled>
+          <span aria-hidden="true">📊</span> Select your date
+        </option>
+        <option id="yesterday-option" value="Yesterday">Yesterday</option>
+        <option id="day-before-yesterday-option" value="Day Before Yesterday">
+          Day Before Yesterday
+        </option>
+      </select>
+      <br />
+      <label><span aria-hidden="true">❤️</span> How was your swim?</label>
+      <div class="face-pictures-top">
+        <figure>
+          <input
+            type="radio"
+            name="face"
+            id="great"
+            value="Great"
+            aria-label="Great."
+          />
+          <label for="great" class="face-label">
+            <img
+              src="great-face.png"
+              height="50"
+              width="50"
+              id="great-picture"
+              alt="Picture of great face."
+            />
+            <figcaption>Great</figcaption>
+          </label>
+        </figure>
+        <figure>
+          <input
+            type="radio"
+            name="face"
+            id="good"
+            value="Good"
+            aria-label="Good."
+          />
+          <label for="good" class="face-label">
+            <img
+              src="good-face.png"
+              height="50"
+              width="50"
+              id="good-picture"
+              alt="Picture of good face."
+            />
+            <figcaption>Good</figcaption>
+          </label>
+        </figure>
+      </div>
+      <div class="face-pictures-bottom">
+        <figure>
+          <input
+            type="radio"
+            name="face"
+            id="okay"
+            value="Okay"
+            aria-label="Okay."
+          />
+          <label for="okay" class="face-label">
+            <img
+              src="okay-face.png"
+              height="50"
+              width="50"
+              id="okay-picture"
+              alt="Picture of okay face."
+            />
+            <figcaption>Okay</figcaption>
+          </label>
+        </figure>
+        <figure>
+          <input
+            type="radio"
+            name="face"
+            id="tough"
+            value="Tough"
+            aria-label="Tough."
+          />
+          <label for="tough" class="face-label">
+            <img
+              src="tough-face.png"
+              height="50"
+              width="50"
+              id="tough-picture"
+              alt="Picture of tough face."
+            />
+            <figcaption>Tough</figcaption>
+          </label>
+        </figure>
+      </div>
+      <br />
+      <label><span aria-hidden="true">🏁</span> Distance</label>
+      <input
+        type="number"
+        id="distance"
+        oninput="this.value = Math.abs(this.value)"
+        min="0"
+        placeholder="Enter distance swam in meters"
+        aria-label="Enter distance swam in meters."
+      />
+      <br />
+      <label><span aria-hidden="true">⌚</span> Time</label>
+      <input
+        type="number"
+        id="time"
+        oninput="this.value = Math.abs(this.value)"
+        min="0"
+        placeholder="Enter time swam in minutes"
+        aria-label="Enter time swam in minutes."
+      />
+      <br />
+      <label><span aria-hidden="true">📍</span> Where did you swim?</label>
+      <div class="button-layout">
+        <input
+          type="radio"
+          name="whereswam"
+          id="pool"
+          value="Pool"
+          aria-label="Button - Pool."
+        />
+        <label for="pool" class="whereswamlabel"
+          ><span aria-hidden="true">🏊</span> Pool</label
+        >
+        <input
+          type="radio"
+          name="whereswam"
+          id="open-water"
+          value="Open Water"
+          aria-label="Button - Open water."
+        />
+        <label for="open-water" class="whereswamlabel"
+          ><span aria-hidden="true">💦</span> Open Water</label
+        >
+      </div>
+      <br />
+      <label><span aria-hidden="true">📓</span> Notes (optional)</label>
+      <input
+        type="text"
+        id="notes"
+        placeholder="Enter your notes"
+        maxlength="30"
+        aria-label="Enter your notes."
+      />
+      <br />
+      <input
+        type="button"
+        value="📥 Save Swim"
+        id="save-swim"
+        aria-label="Save swim."
+      />
+    </div>
+    <br />
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href="index-main-page.html" title="Home"
+            ><span aria-hidden="true">🏠</span></a
+          >
+        </li>
+        <li>
+          <a href="index-log-swim-page.html" title="Log Swim"
+            ><span aria-hidden="true">✏️</span></a
+          >
+        </li>
+        <li>
+          <a href="index-date-tracker-distance-daily.html" title="Date Trackers"
+            >⏳</a
+          >
+        </li>
+        <li>
+          <a href="index-badge-page.html" title="Badges"
+            ><span aria-hidden="true">🏆</span></a
+          >
+        </li>
+        <li>
+          <a href="index-join-server-page.html" title="Server"
+            ><span aria-hidden="true">💬</span></a
+          >
+        </li>
+        <li>
+          <a href="index-search-page.html" title="Search"
+            ><span aria-hidden="true">🔍</span></a
+          >
+        </li>
+        <li>
+          <a href="index-weather-page.html" title="Weather"
+            ><span aria-hidden="true">☀️</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <script type="module" src="function-history-page.js"></script>
+    <script src="chatbase.js"></script>
+  </body>
+</html>

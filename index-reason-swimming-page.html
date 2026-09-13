@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +14,12 @@
   </head>
   <div class="container">
     <h1 id="whats-your-reason-for-swimming-word">
-      What's your reason for swimming?
+      <span aria-hidden="true">🔍</span> What's your<br />reason for swimming?
     </h1>
     <h4 id="description">
-      Your "why" is what keeps you<br />going when it gets tough.
+      Your "why" is what keeps you
+      <br />
+      going when it gets tough.
     </h4>
     <img
       src="loader-logo.png"
@@ -29,28 +32,38 @@
       <label id="alertText"></label>
     </div>
     <br />
-    <label id="write-your-reason-word">Write your reason</label>
+    <label id="write-your-reason-word"
+      ><span aria-hidden="true">✍</span> Write your reason</label
+    >
     <input
       type="text"
       id="reason"
       maxlength="29"
-      alt="Textbox of reason."
+      aria-label="Enter your reason."
       placeholder="Enter you reason"
     />
     <br />
     <div class="profile-details">
-      <input type="checkbox" alt="Checkbox of reason." id="profile-checkbox" />
-      <label id="profile-choose"
-        >This will be displayed on<br />your profile if you choose.</label
-      >
+      <div id="private-details">
+        <input
+          type="checkbox"
+          aria-label="Keep reason private on profile."
+          id="private-checkbox"
+        />
+        <label id="profile-private">
+          <span aria-hidden="true">🌎</span> This will be displayed private on
+          your profile.
+        </label>
+      </div>
     </div>
     <br />
-    <input type="button" id="continue" value="Continue" />
+    <input
+      type="button"
+      id="continue"
+      value="➡️ Continue"
+      aria-label="Continue."
+    />
   </div>
-  <br />
-  <a href="app-terms-of-use.pdf" target="_blank">
-    <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
-  </a>
   <script type="module" src="function-reason-swimming-page.js"></script>
   <script src="chatbase.js"></script>
 </html>

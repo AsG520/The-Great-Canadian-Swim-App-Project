@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,8 +27,11 @@
           <label id="alertText"></label>
         </div>
         <div class="username-header">
-          <label id="username-word">Email</label>
+          <label id="username-word"
+            ><span aria-hidden="true">📧</span> Email</label
+          >
           <img
+            id="user-picture"
             src="user-picture.png"
             height="25"
             width="25"
@@ -38,14 +42,18 @@
           type="email"
           id="email"
           placeholder="Enter your email"
-          alt="Textbox of email."
+          aria-label="Enter your email."
+          required
         />
       </div>
       <br />
       <div id="password-details">
         <div class="password-header">
-          <label id="password-word">Password</label>
+          <label id="password-word"
+            ><span aria-hidden="true">🔒</span> Password</label
+          >
           <img
+            id="padlock-picture"
             src="padlock-picture.png"
             height="25"
             width="25"
@@ -56,31 +64,36 @@
           type="password"
           id="password"
           placeholder="Enter your password"
-          alt="Textbox of password."
+          aria-label="Enter your password."
         />
       </div>
-      <h4 id="forgot-password-word">Forgot Password?</h4>
-      <input type="button" id="submitSignIn" value="Login" />
+      <h4 id="forgot-password-word">
+        <span aria-hidden="true">🔑</span> Forgot Password?
+      </h4>
+      <input
+        type="button"
+        id="submitSignIn"
+        value="🔓 Login"
+        aria-label="Login."
+      />
       <div id="registration-details">
         <h4 id="sentence-register">
-          Don't have an account?<br /><span id="register-word">Register</span>
+          Don't have an account?
+          <br />
+          <span id="register-word">🔐 Register</span>
         </h4>
       </div>
       <br />
       <img
         src="google-logo.png"
-        height="35"
+        height="  35"
         width="35"
         id="googleSignIn"
         alt="Picture of Google logo."
       />
     </div>
-    <br />
-    <a href="app-terms-of-use.pdf" target="_blank">
-      <div id="footer-details">Privacy Policy / Terms of Use / Disclaimer</div>
-    </a>
     <script type="module" src="firebaseauth.js"></script>
-    <script type="module" src="function-login-page.js"></script>
+    <script src="function-login-page.js"></script>
     <script src="chatbase.js"></script>
   </body>
 </html>
