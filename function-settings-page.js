@@ -2,7 +2,7 @@
 // Import Firebase app to link this website to Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 // Import Firestore and functions used to access and update user data within
-import { getFirestore, getDoc, doc, updateDoc, deleteDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { getFirestore, getDoc, doc, updateDoc, deleteDoc, collection, getDocs, getCountFromServer } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 import { getAuth, onAuthStateChanged, signOut, reauthenticateWithPopup, reauthenticateWithCredential, GoogleAuthProvider, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -53,14 +53,57 @@ const expDisplay = document.getElementById("exp");
 const levelDisplay = document.getElementById("level");
 const streakDisplay = document.getElementById("streak");
 
+const followersLayout = document.getElementById("followers-layout");
+const followingLayout = document.getElementById("following-layout");
+const followersCount = document.getElementById("followers-count");
+const followingCount = document.getElementById("following-count");
+
 const profile = document.getElementById("img-profile");
 const pencile = document.getElementById("pencile-icon");
 const input = document.getElementById("select-file");
+
+// Load the user's followers and following counts
+async function loadFollowCounts(userUID) {
+  try {
+    // Get the user's followers collection
+    const followersRef = collection(
+      db,
+      "profiles",
+      userUID,
+      "followers"
+    );
+
+    // Get the number of followers
+    const followersSnapshot = await getCountFromServer(followersRef);
+
+    // Display the number of followers
+    followersCount.textContent = followersSnapshot.data().count;
+
+    // Get the user's following collection
+    const followingRef = collection(
+      db,
+      "profiles",
+      userUID,
+      "following"
+    );
+
+    // Get the number of people the user follows
+    const followingSnapshot = await getCountFromServer(followingRef);
+
+    // Display the number of people they follow
+    followingCount.textContent = followingSnapshot.data().count;
+  } catch (error) {
+    console.error("Error loading follower/following counts:", error);
+  }
+}
+
 // checks if user is logged in
 onAuthStateChanged(auth, async (user) => {
     currentUser = user;
 
     if (!user) return;
+
+      await loadFollowCounts(user.uid);
 
     await updateStreak(user);
 
@@ -102,7 +145,7 @@ onAuthStateChanged(auth, async (user) => {
             // Displays taken user data in a way it can be put on an html page to be seen
             username = userData.username;
             //https://stackoverflow.com/questions/14688141/convert-first-letter-to-uppercase-on-input-box - Control f and type: "8 Answers"
-            displayUsername = username.charAt(0).toUpperCase() + username.substr(1);
+            displayUsername = username.charAt(0).toUpperCase() + username.substring(1);
             usernameText.textContent = displayUsername;
             location = userData.location;
             locationText.textContent = "🍁 " + location + ", Canada";
@@ -419,16 +462,20 @@ async function handleControlPanelSelection() {
 
 controlPanelDetails.addEventListener("change", handleControlPanelSelection);
 
-let following = document.getElementById("following-label");
-let followers = document.getElementById("followers-label");
+// Open the followers list
+followersLayout.addEventListener("click", () => {
+  // Save this user's UID
+  sessionStorage.setItem("profileUID", currentUser.uid);
 
-function callFollowingList() {
-    window.location.href = "index-following-list-page.html";
-}
+  // Open the followers page
+  window.location.href = "index-followers-list-page.html";
+});
 
-function callFollowersList() {
-    window.location.href = "index-followers-list-page.html";
-}
+// Open the following list
+followingLayout.addEventListener("click", () => {
+  // Save this user's UID
+  sessionStorage.setItem("profileUID", currentUser.uid);
 
-following.addEventListener("click", callFollowingList);
-followers.addEventListener("click", callFollowersList);
+  // Open the following page
+  window.location.href = "index-following-list-page.html";
+});

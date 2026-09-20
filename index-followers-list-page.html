@@ -14,10 +14,27 @@
   </head>
   <body>
     <div class="container">
+      <br />
       <h1>Followers</h1>
+      <br />
+      <template id="profile-template">
+        <a class="profile-card">
+          <img
+            class="profile-pfp"
+            src="profile-picture.png"
+            alt="Profile picture"
+          />
+          <div class="profile-info">
+            <div class="profile-username"></div>
+            <div class="profile-details"></div>
+          </div>
+          <div class="profile-arrow">›</div>
+        </a>
+      </template>
+      <div id="profiles"></div>
+      <br />
       <input type="button" value="⬅️ Back" id="back" aria-label="Back." />
     </div>
-    <script src="function-followers-list-page.js"></script>
-    <script src="chatbase.js"></script>
+    <script type="module" src="function-followers-list-page.js"></script>
   </body>
 </html>

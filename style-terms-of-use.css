@@ -25,7 +25,7 @@ p,
 li,
 h1 {
     text-align: left;
-    width: 327px;
+    width: 320px;
 }
 
 h1:hover,
@@ -69,8 +69,8 @@ li:hover {
 
 /* HTML Classes */
 .container {
-    width: 370px;
-    height: 15890px;
+    width: 327px;
+    height: 15545px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;

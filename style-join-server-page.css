@@ -35,7 +35,7 @@ label:hover {
 
 /* HTML Classes */
 .container {
-    width: 360px;
+    width: 327px;
     height: 525px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);

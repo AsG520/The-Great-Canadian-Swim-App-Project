@@ -37,6 +37,66 @@ body {
     flex-direction: column;
 }
 
+.profile-card {
+  min-height: 70px;
+  max-width: 150%;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: rgba(239, 240, 242, 0.8);
+  border-radius: 16px;
+  text-decoration: none;
+  color: rgb(28, 60, 101);
+  transition: 0.2s ease;
+}
+
+.profile-card:hover {
+  background: rgba(239, 240, 242, 1);
+  transform: translateY(-2px);
+}
+
+.profile-card:active {
+  transform: translateY(1px);
+}
+
+.profile-pfp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.profile-username {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  overflow: hidden;
+}
+
+.profile-details {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  color: rgb(28, 60, 101);
+}
+
+.profile-arrow {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+}
+
 /* HTML IDs */
 #back {
     height: 56px;

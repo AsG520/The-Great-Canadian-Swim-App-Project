@@ -1,4 +1,4 @@
-/* (function() {
+(function() {
     if (!window.chatbase || window.chatbase("getState") !== "initialized") {
         window.chatbase = (...arguments) => {
             if (!window.chatbase.q) {
@@ -28,4 +28,3 @@
         window.addEventListener("load", onLoad);
     }
 })();
-*/

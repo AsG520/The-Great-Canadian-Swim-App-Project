@@ -51,7 +51,7 @@ h1 {
 }
 
 .container {
-    width: 360px;
+    width: 327px;
     height: 670px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
@@ -118,7 +118,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
+    gap: 4px;
     margin-top: 125px;
 }
 
@@ -281,7 +281,7 @@ h1 {
 }
 
 #search {
-    width: 280px;
+    width: 270px;
     height: 35px;
     border-radius: 20px;
     text-align: center;

@@ -38,8 +38,8 @@ body {
 }
 
 .container {
-    width: 370px;
-    height: 840px;
+    width: 327px;
+    height: 775px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -202,7 +202,7 @@ body {
 }
 
 #search-bar {
-    width: 290px;
+    width: 270px;
     height: 56px;
     font-size: 18px;
     display: flex;

@@ -84,7 +84,7 @@ h4 {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 200%);
+    transform: translate(-50%, 85%);
     background: white;
     color: rgb(28, 60, 101);
     padding: 20px;

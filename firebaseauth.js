@@ -24,6 +24,39 @@ const auth = getAuth(app);
 
 const db = getFirestore(app);
 
+// Follow another user
+async function followUser(currentUserId, userToFollowId) {
+  // Reference to the current user's following list
+  const followingRef = doc(
+    db,
+    "profiles",
+    currentUserId,
+    "following",
+    userToFollowId,
+  );
+
+  // Reference to the other user's followers list
+  const followerRef = doc(
+    db,
+    "profiles",
+    userToFollowId,
+    "followers",
+    currentUserId,
+  );
+
+  // Add the user to the current user's following list
+  await setDoc(followingRef, {
+    userId: userToFollowId,
+  });
+
+  // Add the current user to the other user's followers list
+  await setDoc(followerRef, {
+    userId: currentUserId,
+  });
+
+  console.log("User followed!");
+}
+
 // Creates a collection in Firestore (initalized only when not previously created) to store community(all users) collected data
 async function createCommunityTotals() {
     const communityRef = doc(db, "community", "totals");
