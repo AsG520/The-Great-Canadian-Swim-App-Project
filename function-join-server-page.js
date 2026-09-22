@@ -1,7 +1,8 @@
 let join = document.getElementById("join");
 
 function callServer() {
-    window.location.href = "index-server-page.html";
+    // window.location.href = "index-server-page.html";
+    alert("Coming Soon!");
 }
 
 join.addEventListener("click", callServer);

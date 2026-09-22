@@ -18,6 +18,8 @@ body {
     animation-timing-function: ease-in-out;
     overflow-x: hidden;
     overflow-y: visible;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 h3,
@@ -25,7 +27,8 @@ p,
 li,
 h1 {
     text-align: left;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
 }
 
 h1:hover,
@@ -39,12 +42,12 @@ li:hover {
 #terms-of-use-logo {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
-    transform: translateX(-100px);
+    transform: translateX(-95px);
 }
 
 #agree {
     height: 56px;
-    width: 324px;
+    width: min(324px, 100%);
     color: white;
     font-style: normal;
     font-size: 20px;
@@ -69,8 +72,11 @@ li:hover {
 
 /* HTML Classes */
 .container {
-    width: 327px;
-    height: 15545px;
+    width: min(327px, calc(100vw - 24px));
+    min-height: 100vh;
+    height: auto;
+    box-sizing: border-box;
+    padding: 24px 12px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;

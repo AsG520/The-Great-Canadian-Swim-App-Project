@@ -38,8 +38,8 @@ body {
 }
 
 .container {
-    width: 327px;
-    height: 775px;
+    width: 324px;
+    height: 760px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -198,11 +198,11 @@ body {
 }
 
 #video4 {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 }
 
 #search-bar {
-    width: 270px;
+    width: 260px;
     height: 56px;
     font-size: 18px;
     display: flex;
