@@ -4,7 +4,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -264,10 +264,6 @@ option:hover {
     color: white;
 }
 
-#footer-details:hover {
-    transform: scale(1.05);
-}
-
 #total-sessions-word,
 #average-sessions-word {
     text-align: left;
@@ -276,14 +272,6 @@ option:hover {
     font-weight: 700;
 }
 
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
-}
-
-#footer-details:hover,
 #total-sessions-word:hover,
 #average-sessions-word:hover {
     text-decoration-line: underline;

@@ -52,10 +52,6 @@ body {
     color: white;
 }
 
-#footer-details:hover {
-    transform: scale(1.05);
-}
-
 #submitSignIn:active,
 #googleSignIn:active {
     transform: translateY(1px);
@@ -79,13 +75,6 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     padding: 3px;
-}
-
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
 }
 
 #forgot-password-word,
@@ -165,8 +154,7 @@ body {
 #username-word:hover,
 #password-word:hover,
 #login-word:hover,
-#forgot-password-word:hover,
-#footer-details:hover {
+#forgot-password-word:hover {
     text-decoration-line: underline;
 }
 

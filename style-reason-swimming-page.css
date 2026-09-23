@@ -4,7 +4,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -85,17 +85,6 @@ h4 {
     width: 260px;
 }
 
-#footer-details:hover {
-    transform: scale(1.05);
-}
-
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
-}
-
 #private-checkbox {
     width: 50px;
     height: 50px;
@@ -164,7 +153,6 @@ h4 {
     font-weight: 700;
 }
 
-#footer-details:hover,
 h1:hover,
 h4:hover,
 #profile-choose:hover,

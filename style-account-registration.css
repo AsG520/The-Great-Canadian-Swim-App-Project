@@ -108,13 +108,6 @@ h4 {
     border-right: none;
 }
 
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
-}
-
 #fName,
 #rEmail,
 #rPassword {
@@ -153,10 +146,6 @@ h4 {
     border-radius: 16px;
 }
 
-#footer-details:hover {
-    transform: scale(1.05);
-}
-
 #submitSignUp:active,
 #googleSignIn:active {
     transform: translateY(1px);
@@ -171,8 +160,7 @@ h4 {
 #first-name-word:hover,
 #email-word:hover,
 #password-word:hover,
-#login-word,
-#footer-details:hover {
+#login-word {
     text-decoration-line: underline;
 }
 

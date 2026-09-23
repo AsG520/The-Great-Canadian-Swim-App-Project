@@ -4,7 +4,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -175,7 +175,6 @@ option:hover {
     gap: 25px;
 }
 
-#footer-details:hover,
 h1:hover,
 h4:hover,
 h3:hover,
@@ -212,22 +211,11 @@ h3:hover,
     background-color: rgb(28, 60, 101);
 }
 
-#footer-details:hover {
-    transform: scale(1.05);
-}
-
 #profile-picture:hover,
 #exp:hover,
 #streak:hover,
 #level:hover {
     transform: scale(1.1);
-}
-
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
 }
 
 #gender,

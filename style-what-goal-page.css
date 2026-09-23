@@ -4,7 +4,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -130,17 +130,6 @@ h1 {
     border-radius: 16px;
 }
 
-#footer-details:hover {
-    transform: scale(1.05);
-}
-
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
-}
-
 #icon-and-text-layout-show-up {
     display: flex;
     justify-content: center;
@@ -184,7 +173,6 @@ h1 {
 
 h1:hover,
 h4:hover,
-#footer-details:hover,
 .goal-text:hover,
 #description:hover {
     text-decoration-line: underline;

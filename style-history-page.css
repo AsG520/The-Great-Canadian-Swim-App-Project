@@ -4,7 +4,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -32,8 +32,7 @@ option:hover {
 
 label:hover,
 h1:hover,
-figcaption:hover,
-#footer-details:hover {
+figcaption:hover {
     text-decoration-line: underline;
 }
 
@@ -232,25 +231,13 @@ input[type="radio"]:checked + .face-label {
 #good-picture:hover,
 #okay-picture:hover,
 #tough-picture:hover,
-#log-swim-logo:hover,
-#footer-details:hover {
+#log-swim-logo:hover {
     transform: scale(1.1);
 }
 
 #log-swim-logo {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
-}
-
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
-}
-
-#footer-details:hover {
-    transform: scale(1.05);
 }
 
 /* HTML Pseudo-Element Notation */

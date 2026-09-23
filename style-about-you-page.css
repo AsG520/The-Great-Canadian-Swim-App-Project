@@ -5,7 +5,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -138,10 +138,6 @@ h1 {
     border-right: none;
 }
 
-#footer-details:hover {
-    transform: scale(1.05);
-}
-
 .clicked-black {
     background: linear-gradient(to right, #4a00e0, #8e2de2);
 }
@@ -171,16 +167,8 @@ h1 {
 }
 
 #about-you-word:hover,
-#description:hover,
-#footer-details:hover {
+#description:hover {
     text-decoration-line: underline;
-}
-
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
 }
 
 /* HTML Pseudo-Element Notation */

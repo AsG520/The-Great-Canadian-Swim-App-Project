@@ -5,7 +5,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -116,20 +116,8 @@ h4 {
 
 #the-great-canadian-swim-word:hover,
 #every-try-counts:hover,
-#every-ripple-matters:hover,
-#footer-details:hover {
+#every-ripple-matters:hover {
     text-decoration-line: underline;
-}
-
-#footer-details:hover {
-    transform: scale(1.05);
-}
-
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
 }
 
 #get-started:hover {

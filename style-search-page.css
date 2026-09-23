@@ -4,7 +4,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -39,7 +39,7 @@ body {
 
 .container {
     width: 324px;
-    height: 760px;
+    height: 770px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -161,23 +161,11 @@ body {
     color: rgb(28, 60, 101);
 }
 
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
-}
-
 #video1,
 #video2,
 #video3,
 #video4 {
     border-radius: 16px;
-}
-
-#footer-details:hover {
-    text-decoration-line: underline;
-    transform: scale(1.05);
 }
 
 #search-details {

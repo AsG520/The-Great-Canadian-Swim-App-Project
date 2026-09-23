@@ -4,10 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
-    */
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     font-family: "Montserrat";
     font-weight: 700;
     font-style: normal;
@@ -152,13 +149,6 @@ body {
     margin-top: 30px;
 }
 
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
-}
-
 #name-word,
 #email-word,
 #subject-word,
@@ -179,8 +169,7 @@ body {
 #email-word:hover,
 #privacy-policy-word:hover,
 #terms-of-use-word:hover,
-#disclaimer-word:hover,
-#footer-details:hover {
+#disclaimer-word:hover {
     text-decoration-line: underline;
 }
 
@@ -194,10 +183,6 @@ body {
 #contact-us-page-logo {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
-}
-
-#footer-details:hover {
-    transform: scale(1.05);
 }
 
 #phone-number:hover,

@@ -9,12 +9,7 @@ body {
     font-style: normal;
     font-weight: 700;
     flex-direction: column;
-    /*
-    background-image: url("background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    background: #8e2de2;
     overflow-x: hidden;
     overflow-y: visible;
     animation-name: fadeIn;
@@ -375,17 +370,6 @@ label:hover {
     font-size: 16px;
 }
 
-#footer-details:hover {
-    transform: scale(1.05);
-}
-
-#footer-details {
-    justify-content: center;
-    color: white;
-    display: flex;
-    text-align: center;
-}
-
 .alberta-trips,
 .british-columbia-trips,
 .manitoba-trips,
@@ -489,8 +473,7 @@ label:hover {
     background-color: #49a09d;
 }
 
-.quote-box:hover,
-#footer-details:hover {
+.quote-box:hover {
     text-decoration-line: underline;
 }
 
