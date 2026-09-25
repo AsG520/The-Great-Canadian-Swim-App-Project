@@ -2,8 +2,6 @@
 
 ## Table of Contents
 - Summary of App
-- Visuals of App
-- Walkthrough Video
 - Features in App
 - How it Works
 - Requirements
@@ -13,72 +11,6 @@
 
 ## Summary of App
 Track your swims, watch your progress move across the country, unlock inspiring stories, learn about Canada's communities, and discover the impact of resilience one swim at a time. Whether you swim 25 meters or 5 kilometers, every swim moves you forward. Because every meter matters. The Great Canadian Swim is a community of people choosing to show up for themselves and for one another. Connect with friends, join a team, celebrate milestones, encourage fellow swimmers, and share your journey with people across Canada who believe that every effort deserves recognition. Together, we prove that trying counts. Every swim helps raise awareness of chronic illnesses, invisible disabilities, and the power of perseverance. Support fundraising campaigns, thank sponsors, share inspiring stories, and help building a more understanding and inclusive Canada. Small actions create lasting change. Together, we can make every stroke count.
-
-## Visual of Home Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Welcome Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Swim Across Canada Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Build Community Page - The Great Canadian Swim App
-- Coming Soon!
-  
-## Visual of Make a Difference Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Login Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Account Registration Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of User Credentials Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of About You Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Reason Swimming Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Goal Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of All Set Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Main Page - The Great Canadian Swim App 
-- Coming Soon!
-
-## Visual of Log Swim Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Great Swim Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Date Tracker Distance Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Date Tracker Duration Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Date Tracker Session Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Badge Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Contact Us Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Visual of Profile Page - The Great Canadian Swim App
-- Coming Soon!
-
-## Walkthrough Video
-- Coming Soon!
 
 ## Features in App
 - Secure User Authentication - Users can create an account, sign in and access their data using Firebase Authentication.
