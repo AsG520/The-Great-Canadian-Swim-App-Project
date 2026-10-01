@@ -21,11 +21,16 @@ body {
     animation-timing-function: ease-in-out;
     overflow-x: hidden;
     overflow-y: visible;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /* HTML Classes */
 .container {
-    width: 327px;
+    width: min(327px, calc(100vw - 32px));
     height: 700px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
@@ -75,6 +80,19 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     padding: 3px;
+}
+
+#username-details,
+#password-details,
+#email,
+#password,
+#submitSignIn,
+.username-header,
+.password-header,
+#username-word,
+#password-word {
+  width: 100%;
+  max-width: 100%;
 }
 
 #forgot-password-word,
