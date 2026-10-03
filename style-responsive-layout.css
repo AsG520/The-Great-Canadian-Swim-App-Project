@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    align-items: center;
+}
+
+body * {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.container,
+.container-profile,
+.container-contact-us {
+    width: min(327px, calc(100vw - 32px));
+    max-width: calc(100vw - 32px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#message-container {
+    width: min(475px, calc(100vw - 32px));
+    max-width: calc(100vw - 32px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#send-container {
+    left: 50%;
+    width: min(100%, 475px);
+    transform: translateX(-50%);
+}
