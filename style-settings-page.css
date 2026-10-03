@@ -33,7 +33,7 @@ option:hover {
 /* HTML Classes */
 .container-profile {
     width: 327px;
-    height: 1300px;
+    height: 1375px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -49,7 +49,7 @@ option:hover {
 
 .container-contact-us {
     width: 327px;
-    height: 690px;
+    height: 740px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
