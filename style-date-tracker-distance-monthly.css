@@ -26,6 +26,10 @@ option {
     font-weight: 700;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 option:hover {
     background: #eff0f2;
 }
@@ -133,7 +137,7 @@ option:hover {
 }
 
 .container {
-    width: 327px;
+    width: min(327px, calc(100vw - 32px));
     height: 700px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);

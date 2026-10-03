@@ -20,6 +20,10 @@ body {
     overflow-y: visible;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 option {
     min-width: 324px;
     color: rgb(28, 60, 101);
@@ -133,7 +137,7 @@ option:hover {
 }
 
 .container {
-    width: 327px;
+    width: min(327px, calc(100vw - 32px));
     height: 720px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
