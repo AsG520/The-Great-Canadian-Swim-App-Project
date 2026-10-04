@@ -21,7 +21,8 @@ body {
     height: 100vh;
 }
 
-h1 {
+h1,
+#word-quote-box {
     text-align: center;
 }
 
@@ -132,9 +133,9 @@ ul {
 }
 
 #dateButton:hover {
-  background: #eef0f6;
-  color: rgb(28, 60, 101);
-  transform: translateY(-1px);
+    background: #eef0f6;
+    color: rgb(28, 60, 101);
+    transform: translateY(-1px);
 }
 
 /* Hide the date input */
