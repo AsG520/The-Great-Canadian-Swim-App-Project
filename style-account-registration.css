@@ -36,7 +36,7 @@ h4 {
 /* HTML Classes */
 .container {
     width: min(327px, calc(100vw - 32px));
-    height: 765px;
+    height: 800px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
