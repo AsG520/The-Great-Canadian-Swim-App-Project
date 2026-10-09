@@ -1,4 +1,4 @@
-﻿/* HTML Components */
+/* HTML Components */
 body {
     justify-content: center;
     align-items: center;
@@ -21,9 +21,8 @@ body {
     height: 100vh;
 }
 
-h1,
-#word-quote-box {
-    text-align: center;
+ul {
+    list-style-type: none;
 }
 
 /* HTML Classes */
@@ -41,10 +40,6 @@ h1,
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-ul {
-    list-style-type: none;
 }
 
 .month {
@@ -117,19 +112,25 @@ ul {
     color: white;
 }
 
+/* HTML IDs */
+h1,
+#word-quote-box {
+    text-align: center;
+}
+
 #dateButton {
-  width: 220px;
-  height: 48px;
-  padding: 0 16px;
-  border: none;
-  border-radius: 14px;
-  background-color: rgb(28, 60, 101);
-  color: white;
-  font-family: "Montserrat";
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.2s ease;
+    width: 220px;
+    height: 48px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 14px;
+    background-color: rgb(28, 60, 101);
+    color: white;
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
 #dateButton:hover {
@@ -138,11 +139,10 @@ ul {
     transform: translateY(-1px);
 }
 
-/* Hide the date input */
 #dateSelected {
-  display: none;
-  position: center;
-  pointer-events: none;
+    display: none;
+    position: center;
+    pointer-events: none;
 }
 
 #user-stats-details {

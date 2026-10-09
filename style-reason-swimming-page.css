@@ -30,6 +30,18 @@ h4 {
     font-weight: 600;
 }
 
+input::placeholder {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
+input[type="text"] {
+    color: rgb(28, 60, 101);
+    text-align: left;
+}
+
 /* HTML Classes */
 .container {
     width: 327px;
@@ -61,14 +73,6 @@ h4 {
     text-align: center;
 }
 
-/* HTML IDs */
-#profile-choose {
-    width: 324px;
-    text-align: center;
-    margin-bottom: 6px;
-    font-weight: 700;
-}
-
 .profile-details {
     display: flex;
     justify-content: center;
@@ -83,6 +87,14 @@ h4 {
     align-items: center;
     flex-direction: row;
     width: 260px;
+}
+
+/* HTML IDs */
+#profile-choose {
+    width: 324px;
+    text-align: center;
+    margin-bottom: 6px;
+    font-weight: 700;
 }
 
 #private-checkbox {
@@ -162,19 +174,6 @@ h4:hover,
 
 #continue:active {
     transform: translateY(1px);
-}
-
-/* HTML Pseudo-Element Notation */
-input::placeholder {
-    color: rgb(28, 60, 101);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: left;
-}
-
-input[type="text"] {
-    color: rgb(28, 60, 101);
-    text-align: left;
 }
 
 /* HTML @keyframes Animations */

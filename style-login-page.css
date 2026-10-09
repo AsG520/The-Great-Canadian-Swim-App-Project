@@ -28,6 +28,19 @@ body {
     box-sizing: border-box;
 }
 
+input::placeholder {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
+input[type="email"],
+input[type="password"] {
+    color: rgb(28, 60, 101);
+    text-align: center;
+}
+
 /* HTML Classes */
 .container {
     width: min(327px, calc(100vw - 32px));
@@ -43,6 +56,42 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#username-details,
+#password-details,
+#email,
+#password,
+#submitSignIn,
+.username-header,
+.password-header,
+#username-word,
+#password-word {
+    width: 100%;
+    max-width: 100%;
+}
+
+.password-header,
+.username-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 320px;
+}
+
+.alertBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    background: white;
+    color: rgb(28, 60, 101);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 /* HTML IDs */
@@ -80,19 +129,6 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     padding: 3px;
-}
-
-#username-details,
-#password-details,
-#email,
-#password,
-#submitSignIn,
-.username-header,
-.password-header,
-#username-word,
-#password-word {
-  width: 100%;
-  max-width: 100%;
 }
 
 #forgot-password-word,
@@ -160,15 +196,6 @@ body {
     font-weight: 700;
 }
 
-.password-header,
-.username-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 320px;
-}
-
 #username-word:hover,
 #password-word:hover,
 #login-word:hover,
@@ -185,38 +212,10 @@ body {
     font-weight: 800;
 }
 
-.alertBox {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 200%);
-    background: white;
-    color: rgb(28, 60, 101);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-
 #registration-details {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* HTML Pseudo-Element Notation */
-input::placeholder {
-    color: rgb(28, 60, 101);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: left;
-}
-
-input[type="email"],
-input[type="password"] {
-    color: rgb(28, 60, 101);
-    text-align: center;
 }
 
 /* HTML @keyframes Animations */

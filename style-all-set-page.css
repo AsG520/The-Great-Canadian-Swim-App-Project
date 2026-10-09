@@ -32,6 +32,11 @@ h4 {
     font-weight: 600;
 }
 
+h1:hover,
+h4:hover {
+    text-decoration-line: underline;
+}
+
 /* HTML Classes */
 .container {
     width: 327px;
@@ -107,11 +112,6 @@ h4 {
 #login-page-logo-circle {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
-}
-
-h1:hover,
-h4:hover {
-    text-decoration-line: underline;
 }
 
 #subtitle {
