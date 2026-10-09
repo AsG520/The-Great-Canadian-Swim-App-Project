@@ -13,7 +13,11 @@ body {
 
 /* HTML IDs */
 #message-container {
-    width: 475px;
+ height: 60%;
+  width: 475px;
+  padding-bottom: 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 #message-container div {
