@@ -30,6 +30,26 @@ option:hover {
     background: #eff0f2;
 }
 
+input[type="text"],
+input[type="number"] {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
+input::placeholder {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
+input[type="text"] {
+    color: white;
+    text-align: center;
+}
+
 /* HTML Classes */
 .container-profile {
     width: 327px;
@@ -429,27 +449,6 @@ label:hover {
 #back:hover {
     background-color: rgb(0, 0, 0);
     color: white;
-}
-
-/* HTML Pseudo-Element Notation */
-input[type="text"],
-input[type="number"] {
-    color: rgb(28, 60, 101);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: left;
-}
-
-input::placeholder {
-    color: rgb(28, 60, 101);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: left;
-}
-
-input[type="text"] {
-    color: white;
-    text-align: center;
 }
 
 /* HTML @keyframes Animations */

@@ -41,23 +41,19 @@ option:hover {
     background: #eff0f2;
 }
 
+input[type="radio"] {
+    display: none;
+}
+
+input::placeholder,
+input[type="text"] {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
 /* HTML Classes */
-#settings-box {
-    height: 50px;
-    width: 50px;
-    background-color: black;
-    position: sticky;
-    top: 50%;
-    right: 100%;
-    text-align: center;
-    border-radius: 16px;
-    z-index: 999;
-}
-
-#settings-box:hover {
-    background-color: rgb(28, 60, 101);
-}
-
 .container {
     width: 327px;
     height: 990px;
@@ -121,7 +117,67 @@ option:hover {
     display: inline-block;
 }
 
+.whereswamlabel {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 16px;
+    background-color: rgba(15, 192, 252, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+.whereswamlabel:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+input[type="radio"]:checked + .whereswamlabel {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    color: white;
+}
+
+.face-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    padding: 2px;
+    border-radius: 16px;
+    transition: 0.2s;
+    background: rgba(239, 240, 242, 0.5);
+    color: rgb(28, 60, 101);
+}
+
+.face-label:hover {
+    background: #e6f4ff;
+}
+
+input[type="radio"]:checked + .face-label {
+    background: rgb(28, 60, 101);
+    color: white;
+    border-color: rgb(28, 60, 101);
+}
+
 /* HTML IDs */
+#settings-box {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    position: sticky;
+    top: 50%;
+    right: 100%;
+    text-align: center;
+    border-radius: 16px;
+    z-index: 999;
+}
+
+#settings-box:hover {
+    background-color: rgb(28, 60, 101);
+}
+
 #save-swim {
     height: 56px;
     width: 324px;
@@ -178,54 +234,6 @@ option:hover {
     color: rgb(28, 60, 101);
     font-weight: 600;
     border-radius: 16px;
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-.whereswamlabel {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 16px;
-    background-color: rgba(15, 192, 252, 0.5);
-    color: white;
-    cursor: pointer;
-}
-
-.whereswamlabel:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
-}
-
-input[type="radio"]:checked + .whereswamlabel {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
-    color: white;
-}
-
-.face-label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 110px;
-    padding: 2px;
-    border-radius: 16px;
-    transition: 0.2s;
-    background: rgba(239, 240, 242, 0.5);
-    color: rgb(28, 60, 101);
-}
-
-.face-label:hover {
-    background: #e6f4ff;
-}
-
-input[type="radio"]:checked + .face-label {
-    background: rgb(28, 60, 101);
-    color: white;
-    border-color: rgb(28, 60, 101);
 }
 
 #distance,
@@ -292,15 +300,6 @@ input[type="radio"]:checked + .face-label {
 #log-swim-logo {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
-}
-
-/* HTML Pseudo-Element Notation */
-input::placeholder,
-input[type="text"] {
-    color: rgb(28, 60, 101);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: left;
 }
 
 /* HTML @keyframes Animations */

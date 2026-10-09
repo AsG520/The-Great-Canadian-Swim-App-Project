@@ -35,22 +35,6 @@ option:hover {
 }
 
 /* HTML Classes */
-#settings-box {
-    height: 50px;
-    width: 50px;
-    background-color: black;
-    position: sticky;
-    top: 50%;
-    right: 100%;
-    text-align: center;
-    border-radius: 16px;
-    z-index: 999;
-}
-
-#settings-box:hover {
-    background-color: rgb(28, 60, 101);
-}
-
 .navbar {
     margin-top: auto;
     display: flex;
@@ -125,15 +109,6 @@ option:hover {
     display: inline-block;
 }
 
-#top_x_div {
-    max-width: 324px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 16px;
-}
-
 .container {
     width: min(327px, calc(100vw - 32px));
     height: 730px;
@@ -158,6 +133,31 @@ option:hover {
 }
 
 /* HTML IDs */
+#settings-box {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    position: sticky;
+    top: 50%;
+    right: 100%;
+    text-align: center;
+    border-radius: 16px;
+    z-index: 999;
+}
+
+#settings-box:hover {
+    background-color: rgb(28, 60, 101);
+}
+
+#top_x_div {
+    max-width: 324px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+}
+
 #dateButton {
     width: 285px;
     height: 48px;
@@ -180,7 +180,6 @@ option:hover {
     transform: translateY(-1px);
 }
 
-/* Hide the date input */
 #dateSelected {
     display: none;
     position: center;

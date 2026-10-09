@@ -20,23 +20,23 @@ body {
     overflow-y: visible;
 }
 
-/* HTML Classes */
-#settings-box {
-    height: 50px;
-    width: 50px;
-    background-color: black;
-    position: sticky;
-    top: 50%;
-    right: 100%;
+input::placeholder {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    filter: brightness(0);
+}
+
+input[type="search"] {
+    color: rgb(28, 60, 101);
     text-align: center;
-    border-radius: 16px;
-    z-index: 999;
 }
 
-#settings-box:hover {
-    background-color: rgb(28, 60, 101);
-}
-
+/* HTML Classes */
 .container {
     width: 324px;
     height: 770px;
@@ -113,7 +113,6 @@ body {
     margin-top: auto;
     display: flex;
     justify-content: center;
-
     padding: 20px 0 10px;
     position: sticky;
     bottom: 0;
@@ -149,6 +148,22 @@ body {
 }
 
 /* HTML IDs */
+#settings-box {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    position: sticky;
+    top: 50%;
+    right: 100%;
+    text-align: center;
+    border-radius: 16px;
+    z-index: 999;
+}
+
+#settings-box:hover {
+    background-color: rgb(28, 60, 101);
+}
+
 #profiles {
     width: 290px;
     max-height: 570px;
@@ -219,23 +234,6 @@ body {
 
 #search-picture:active {
     transform: translateY(1px);
-}
-
-/* HTML Pseudo-Element Notation */
-input::placeholder {
-    color: rgb(28, 60, 101);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: left;
-}
-
-input[type="search"]::-webkit-search-cancel-button {
-    filter: brightness(0);
-}
-
-input[type="search"] {
-    color: rgb(28, 60, 101);
-    text-align: center;
 }
 
 /* HTML @keyframes Animations */

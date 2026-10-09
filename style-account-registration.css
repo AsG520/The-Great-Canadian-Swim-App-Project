@@ -33,6 +33,19 @@ h4 {
     font-weight: 600;
 }
 
+input::placeholder {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    color: rgb(28, 60, 101);
+    text-align: center;
+}
+
 /* HTML Classes */
 .container {
     width: min(327px, calc(100vw - 32px));
@@ -77,6 +90,7 @@ h4 {
     text-align: center;
 }
 
+/* HTML IDs */
 #first-name-word,
 #email-word,
 #password-word {
@@ -86,7 +100,6 @@ h4 {
     font-weight: 700;
 }
 
-/* HTML IDs */
 #sign-in-platforms {
     display: flex;
     justify-content: center;
@@ -193,20 +206,6 @@ h1,
 
 #login-word:hover {
     font-weight: 800;
-}
-
-/* HTML Pseudo-Element Notation */
-input::placeholder {
-    color: rgb(28, 60, 101);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: left;
-}
-
-input[type="text"],
-input[type="password"] {
-    color: rgb(28, 60, 101);
-    text-align: center;
 }
 
 /* HTML @keyframes Animations */

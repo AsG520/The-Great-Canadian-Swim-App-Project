@@ -90,6 +90,13 @@ h1 {
     height: 20px;
 }
 
+h1:hover,
+h4:hover,
+.goal-text:hover,
+#description:hover {
+    text-decoration-line: underline;
+}
+
 /* HTML IDs */
 #description {
     text-align: center;
@@ -169,13 +176,6 @@ h1 {
 
 #ok:active {
     transform: translateY(1px);
-}
-
-h1:hover,
-h4:hover,
-.goal-text:hover,
-#description:hover {
-    text-decoration-line: underline;
 }
 
 /* HTML @keyframes Animations */
