@@ -18,7 +18,6 @@ body {
     animation-timing-function: ease-in-out;
     overflow-x: hidden;
     overflow-y: visible;
-    width: 100%;
 }
 
 figcaption:hover,
