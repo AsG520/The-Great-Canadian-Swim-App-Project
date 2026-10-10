@@ -20,6 +20,10 @@ body {
     overflow-y: visible;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h3,
 label {
     text-align: center;
@@ -28,8 +32,8 @@ label {
 
 /* HTML Classes */
 .container {
-    width: 327px;
-    height: 2325px;
+    width: min(327px, calc(100vw - 32px));
+    height: 2310px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
