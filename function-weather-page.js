@@ -61,7 +61,7 @@ function displayWeatherInfo(data) {
     pressureDisplay.value = `${Math.floor(pressure)}`;
     descriptionDisplay.innerHTML = `${description}`;
     weatherEmojiDisplay.textContent = getWeatherEmoji(id);
-    locationDisplay.textContent = cityInput.value;
+    locationDisplay.textContent = cityInput.value.substring(0, 1).toUpperCase() + cityInput.value.substring(1, cityInput.value.length);
     windAngleDisplay.value = `${deg}`;
 }
 
