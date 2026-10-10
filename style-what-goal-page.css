@@ -27,7 +27,7 @@ h1 {
 /* HTML Classes */
 .container {
     width: 327px;
-    height: 935px;
+    height: 940px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
