@@ -18,6 +18,7 @@ body {
     animation-timing-function: ease-in-out;
     overflow-x: hidden;
     overflow-y: visible;
+    height: 100vh;
 }
 
 h1 {
