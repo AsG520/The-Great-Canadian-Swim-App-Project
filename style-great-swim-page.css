@@ -18,11 +18,18 @@ body {
     animation-timing-function: ease-in-out;
     overflow-x: hidden;
     overflow-y: visible;
+    height: 100vh;
 }
 
 h4,
 label {
     text-align: center;
+}
+
+h1:hover,
+h4:hover,
+label:hover {
+    text-decoration-line: underline;
 }
 
 /* HTML Classes */
@@ -101,12 +108,6 @@ label {
 #total-days:hover,
 #total-distance:hover {
     transform: scale(1.05);
-}
-
-h1:hover,
-h4:hover,
-label:hover {
-    text-decoration-line: underline;
 }
 
 #great-swim-logo:hover {

@@ -27,7 +27,7 @@ h1 {
 /* HTML Classes */
 .container {
     width: 327px;
-    height: 935px;
+    height: 940px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -88,6 +88,13 @@ h1 {
 .goal-option input {
     width: 20px;
     height: 20px;
+}
+
+h1:hover,
+h4:hover,
+.goal-text:hover,
+#description:hover {
+    text-decoration-line: underline;
 }
 
 /* HTML IDs */
@@ -169,13 +176,6 @@ h1 {
 
 #ok:active {
     transform: translateY(1px);
-}
-
-h1:hover,
-h4:hover,
-.goal-text:hover,
-#description:hover {
-    text-decoration-line: underline;
 }
 
 /* HTML @keyframes Animations */

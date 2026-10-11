@@ -24,6 +24,11 @@ h1 {
     text-align: center;
 }
 
+input[type="button"] {
+    color: black;
+    text-align: center;
+}
+
 /* HTML Classes */
 .container {
     width: 327px;
@@ -55,6 +60,23 @@ h1 {
     text-align: center;
 }
 
+.disability-details,
+.parent-caregiver-details,
+.supporter-details,
+.club-coach-details,
+.education-details,
+.organization-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.clicked-black {
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+}
+
 /* HTML IDs */
 #disability-option,
 #parent-caregiver-option,
@@ -77,19 +99,6 @@ h1 {
     color: rgb(28, 60, 101);
     font-weight: 600;
     border-radius: 16px;
-}
-
-.disability-details,
-.parent-caregiver-details,
-.supporter-details,
-.club-coach-details,
-.education-details,
-.organization-details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 8px;
 }
 
 #disability-checkbox,
@@ -138,10 +147,6 @@ h1 {
     border-right: none;
 }
 
-.clicked-black {
-    background: linear-gradient(to right, #4a00e0, #8e2de2);
-}
-
 #about-you-word {
     margin-bottom: -10px;
 }
@@ -169,12 +174,6 @@ h1 {
 #about-you-word:hover,
 #description:hover {
     text-decoration-line: underline;
-}
-
-/* HTML Pseudo-Element Notation */
-input[type="button"] {
-    color: black;
-    text-align: center;
 }
 
 /* HTML @keyframes Animations */

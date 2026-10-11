@@ -23,16 +23,33 @@ body {
     overflow-y: visible;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h4 {
     text-align: center;
     font-size: 20px;
     font-weight: 600;
 }
 
+input::placeholder {
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    color: rgb(28, 60, 101);
+    text-align: center;
+}
+
 /* HTML Classes */
 .container {
-    width: 327px;
-    height: 765px;
+    width: min(327px, calc(100vw - 32px));
+    height: 810px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
@@ -73,6 +90,7 @@ h4 {
     text-align: center;
 }
 
+/* HTML IDs */
 #first-name-word,
 #email-word,
 #password-word {
@@ -82,7 +100,6 @@ h4 {
     font-weight: 700;
 }
 
-/* HTML IDs */
 #sign-in-platforms {
     display: flex;
     justify-content: center;
@@ -156,6 +173,17 @@ h4 {
     transform: scale(1.1);
 }
 
+h1,
+#first-name-word,
+#email-word,
+#password-word,
+#submitSignUp,
+#already-have-account-sentence,
+#login-word {
+    width: 100%;
+    max-width: 100%;
+}
+
 #account-registration-word:hover,
 #first-name-word:hover,
 #email-word:hover,
@@ -178,20 +206,6 @@ h4 {
 
 #login-word:hover {
     font-weight: 800;
-}
-
-/* HTML Pseudo-Element Notation */
-input::placeholder {
-    color: rgb(28, 60, 101);
-    font-weight: 600;
-    font-size: 18px;
-    text-align: left;
-}
-
-input[type="text"],
-input[type="password"] {
-    color: rgb(28, 60, 101);
-    text-align: center;
 }
 
 /* HTML @keyframes Animations */
