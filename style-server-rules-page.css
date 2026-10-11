@@ -33,7 +33,8 @@ label {
 /* HTML Classes */
 .container {
     width: min(327px, calc(100vw - 32px));
-    height: 2310px;
+    height: auto;
+    min-height: 2310px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
