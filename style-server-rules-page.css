@@ -34,7 +34,7 @@ label {
 .container {
     width: min(327px, calc(100vw - 32px));
     height: auto;
-    min-height: 2310px;
+    min-height: 2315px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px);
     border-radius: 20px;
