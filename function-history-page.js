@@ -214,9 +214,10 @@ submissionButton.addEventListener("click", async () => {
                 lastUpdated: serverTimestamp(),
             });
 
-            alert("Your past swim was added!");
-
-            clearInputs();
+            if (confirm("Your past swim was added!")) {
+                clearInputs();
+                window.location.href = "index-main-page.html";
+            }
 
             return;
         }
@@ -257,7 +258,9 @@ submissionButton.addEventListener("click", async () => {
             lastUpdated: serverTimestamp(),
         });
 
-        alert("Your swim history was updated!");
+        if (confirm("Your swim history was updated!")) {
+            window.location.href = "index-main-page.html";
+        }
     } catch (error) {
         console.error("Error updating history:", error);
 
