@@ -2,7 +2,7 @@
 // Import Firebase app to link this website to Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 // Import Firestore and functions used to access and update user data within
-import { getFirestore, getDoc, doc, updateDoc, deleteDoc, collection, getDocs, getCountFromServer } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { getFirestore, getDoc, doc, updateDoc, deleteDoc, query, collection, getDocs, getCountFromServer } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 import { getAuth, onAuthStateChanged, signOut, reauthenticateWithPopup, reauthenticateWithCredential, GoogleAuthProvider, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 const firebaseConfig = {
