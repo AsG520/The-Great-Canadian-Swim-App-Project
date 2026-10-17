@@ -424,13 +424,27 @@ async function handleControlPanelSelection() {
                 return;
             }
 
-            // Delete all activity documents
-            const activitySnapshot = await getDocs(activityRef);
+           // Delete all activity documents
+const activitySnapshot = await getDocs(activityRef);
 
-            for (const activityDoc of activitySnapshot.docs) {
-                await deleteDoc(activityDoc.ref);
-            }
+for (const activityDoc of activitySnapshot.docs) {
+await deleteDoc(activityDoc.ref);
+}
 
+// Find all chat messages sent by this user
+const messagesRef = collection(db, "serverMessages");
+
+const messagesQuery = query(
+messagesRef,
+where("userId", "==", user.uid)
+);
+
+const messagesSnapshot = await getDocs(messagesQuery);
+
+// Delete each chat message
+for (const messageDoc of messagesSnapshot.docs) {
+await deleteDoc(messageDoc.ref);
+}
             // DELETE USER DOCUMENT
             await deleteDoc(userRef);
 
