@@ -2,8 +2,8 @@
 // Import Firebase app to link this website to Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 // Import Firestore and functions used to access and update user data within
-import { getFirestore, getDoc, doc, updateDoc, deleteDoc, query, collection, getDocs, getCountFromServer } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
-import { getAuth, onAuthStateChanged, signOut, reauthenticateWithPopup, reauthenticateWithCredential, GoogleAuthProvider, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getFirestore, getDoc, doc, updateDoc, deleteDoc, query, where, collection, getDocs, getCountFromServer } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { getAuth, onAuthStateChanged, signOut, deleteUser, reauthenticateWithPopup, reauthenticateWithCredential, GoogleAuthProvider, EmailAuthProvider } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 const firebaseConfig = {
     // Identifies firebase project to link to
@@ -399,10 +399,16 @@ async function handleControlPanelSelection() {
             const profileRef = doc(db, "profiles", user.uid);
             const activityRef = collection(db, "users", user.uid, "activity");
 
-            const userSnap = await getDoc(userRef);
-            const userData = userSnap.data();
+           const userSnap = await getDoc(userRef);
 
-            const provider = userData.provider;
+if (!userSnap.exists()) {
+alert("User data could not be found.");
+return;
+}
+
+const userData = userSnap.data();
+const provider = userData.provider;
+            
             // Re-authenticate the user
             if (provider === "google") {
                 const googleProvider = new GoogleAuthProvider();
@@ -424,11 +430,57 @@ async function handleControlPanelSelection() {
                 return;
             }
 
-           // Delete all activity documents
+  // DELETE ALL ACTIVITY DOCUMENTS
 const activitySnapshot = await getDocs(activityRef);
 
 for (const activityDoc of activitySnapshot.docs) {
 await deleteDoc(activityDoc.ref);
+}
+
+// GET THE USER'S FOLLOWERS
+const followersRef = collection(db, "profiles", user.uid, "followers");
+const followersSnapshot = await getDocs(followersRef);
+
+// REMOVE THIS USER FROM EACH FOLLOWER'S FOLLOWING LIST
+for (const followerDoc of followersSnapshot.docs) {
+const followerUID = followerDoc.id;
+
+const followingDoc = doc(
+    db,
+    "profiles",
+    followerUID,
+    "following",
+    user.uid
+);
+
+await deleteDoc(followingDoc);
+
+// Delete the follower document from this user's profile
+await deleteDoc(followerDoc.ref);
+
+}
+
+// GET THE USERS THIS PERSON FOLLOWS
+const followingRef = collection(db, "profiles", user.uid, "following");
+const followingSnapshot = await getDocs(followingRef);
+
+// REMOVE THIS USER FROM EACH FOLLOWED USER'S FOLLOWERS LIST
+for (const followingDoc of followingSnapshot.docs) {
+const followingUID = followingDoc.id;
+
+const followerDoc = doc(
+    db,
+    "profiles",
+    followingUID,
+    "followers",
+    user.uid
+);
+
+await deleteDoc(followerDoc);
+
+// Delete the following document from this user's profile
+await deleteDoc(followingDoc.ref);
+
 }
 
 // Find all chat messages sent by this user
@@ -452,8 +504,8 @@ await deleteDoc(messageDoc.ref);
             await deleteDoc(profileRef);
 
             // DELETE FIREBASE AUTHENTICATION ACCOUNT
-            await user.delete();
-
+await deleteUser(user);
+            
             alert("Account deleted successfully.");
 
             window.location.href = "index-login-page.html";
