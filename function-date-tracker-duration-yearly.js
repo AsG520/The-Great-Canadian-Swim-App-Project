@@ -67,10 +67,10 @@ function drawYearlyDurationChart(monthlyDurations, unit) {
     }
   }
   // Set the graph title and axis label
-  let graphTitle = "Yearly Duration (hrs)";
+  let graphTitle = "Yearly Duration";
   let axisTitle = "Duration (hrs)";
   if (unit === "Minutes") {
-    graphTitle = "Yearly Duration (min)";
+    graphTitle = "Yearly Duration";
     axisTitle = "Duration (min)";
   } // Create the graph the first time
   if (yearlyDurationChart === null) {
