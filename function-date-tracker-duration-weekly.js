@@ -67,9 +67,9 @@ function drawDurationChart(dailyDurations) {
     }
   }
   // Set the graph's unit label
-  let unitText = "Hours";
+  let unitText = "hrs";
   if (unit === "Minutes") {
-    unitText = "Minutes";
+    unitText = "min";
   }
   // Create the graph if it does not exist yet
   if (durationChart === null) {
