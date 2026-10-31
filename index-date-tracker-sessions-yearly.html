@@ -1,47 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
-    <script type="text/javascript">
-      google.charts.load("current", { packages: ["bar"] });
-
-      function drawStuff(monthlySessions) {
-        var data = new google.visualization.arrayToDataTable([
-          [" ", "Sessions #"],
-          ["Jan", monthlySessions[0]],
-          ["Feb", monthlySessions[1]],
-          ["Mar", monthlySessions[2]],
-          ["Apr", monthlySessions[3]],
-          ["May", monthlySessions[4]],
-          ["Jun", monthlySessions[5]],
-          ["Jul", monthlySessions[6]],
-          ["Aug", monthlySessions[7]],
-          ["Sep", monthlySessions[8]],
-          ["Oct", monthlySessions[9]],
-          ["Nov", monthlySessions[10]],
-          ["Dec", monthlySessions[11]],
-        ]);
-
-        var options = {
-          width: 300,
-          legend: { position: "none" },
-          chart: {
-            title: "Yearly Sessions",
-            subtitle: "Your sessions by month across the year.",
-          },
-          bar: { groupWidth: "90%" },
-        };
-
-        var chart = new google.charts.Bar(document.getElementById("top_x_div"));
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style-date-tracker-sessions-yearly.css" />
-    <link rel="stylesheet" href="style-responsive-layout.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -111,7 +73,9 @@
         </ul>
       </nav>
       <br />
-      <div id="top_x_div" style="width: 1000px; height: 300px"></div>
+      <div id="chart-container">
+        <canvas id="yearly-sessions-chart"></canvas>
+      </div>
       <br />
       <div id="forward-and-back-details">
         <img
