@@ -120,10 +120,10 @@ function drawDurationChart(dailyDurations) {
     // Update the graph when the selected week or unit changes
     durationChart.data.datasets[0].data = graphDurations;
     // Update the graph labels
-    durationChart.data.datasets[0].label = "Duration (hrs)";
+    durationChart.data.datasets[0].label = "Duration (" + unitText + ")";
     durationChart.options.plugins.title.text =
-      "Weekly Duration (" + unitText + ")";
-    durationChart.options.scales.y.title.text = unitText;
+      "Weekly Duration";
+    durationChart.options.scales.y.title.text = "Duration (" + unitText + ")";
     durationChart.update();
   }
 }
