@@ -110,7 +110,7 @@ function drawDurationChart(dailyDurations) {
           x: { ticks: { color: "white" } },
           y: {
             beginAtZero: true,
-            title: { display: true, text: unitText, color: "white" },
+            title: { display: true, text: "Duration (" + unitText + ")", color: "white" },
             ticks: { color: "white" },
           },
         },
