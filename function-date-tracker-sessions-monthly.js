@@ -79,7 +79,7 @@ function drawSessionsChart(dailySessions) {
         },
         scales: {
           x: {
-            title: { display: true, text: "Day of the Month", color: "white" },
+            title: { display: false, text: "", color: "white" },
             ticks: { color: "white" },
           },
           y: {
