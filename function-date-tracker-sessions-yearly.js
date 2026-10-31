@@ -82,7 +82,7 @@ function drawStuff(monthlySessions, year) {
 
       datasets: [
         {
-          label: "Sessions #",
+          label: "Sessions (#)",
           data: monthlySessions,
           backgroundColor: "rgba(15, 192, 252, 0.7)",
           borderColor: "white",
@@ -98,7 +98,7 @@ function drawStuff(monthlySessions, year) {
       plugins: {
         title: {
           display: true,
-          text: "Yearly Sessions - " + year,
+          text: "Yearly Sessions",
           color: "white",
         },
 

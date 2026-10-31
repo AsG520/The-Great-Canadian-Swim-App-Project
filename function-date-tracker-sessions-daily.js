@@ -74,7 +74,7 @@ const sessionsChart = new Chart(chartCanvas, {
         beginAtZero: true,
         title: {
           display: true,
-          text: "Number of Sessions",
+          text: "Sessions (#)",
           color: "white",
           font: { size: 12, weight: "bold" },
         },

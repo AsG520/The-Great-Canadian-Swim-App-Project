@@ -67,9 +67,9 @@ function drawDurationChart(dailyDurations) {
     }
   }
   // Set the graph's unit label
-  let unitText = "Hours";
+  let unitText = "hrs";
   if (unit === "Minutes") {
-    unitText = "Minutes";
+    unitText = "min";
   }
   // Create the graph if it does not exist yet
   if (durationChart === null) {
@@ -102,7 +102,7 @@ function drawDurationChart(dailyDurations) {
           legend: { display: false },
           title: {
             display: true,
-            text: "Weekly Duration (" + unitText + ")",
+            text: "Weekly Duration",
             color: "white",
           },
         },
@@ -120,7 +120,7 @@ function drawDurationChart(dailyDurations) {
     // Update the graph when the selected week or unit changes
     durationChart.data.datasets[0].data = graphDurations;
     // Update the graph labels
-    durationChart.data.datasets[0].label = "Duration (" + unitText + ")";
+    durationChart.data.datasets[0].label = "Duration (hrs)";
     durationChart.options.plugins.title.text =
       "Weekly Duration (" + unitText + ")";
     durationChart.options.scales.y.title.text = unitText;
