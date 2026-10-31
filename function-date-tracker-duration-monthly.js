@@ -153,7 +153,7 @@ function drawDurationChart(dailyDurations, unit) {
 
     // Update the graph title
     durationChart.options.plugins.title.text =
-      "Monthly Duration (" + graphUnit + ")";
+      "Monthly Duration";
 
     // Update the vertical axis label
     durationChart.options.scales.y.title.text = "Duration (" + graphUnit + ")";
