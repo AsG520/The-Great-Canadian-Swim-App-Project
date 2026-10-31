@@ -103,7 +103,7 @@ function drawDistanceChart(dailyDistances, unit) {
 
           title: {
             display: true,
-            text: "Monthly Distance (" + graphUnit + ")",
+            text: "Monthly Distance",
             color: "white",
           },
 
@@ -116,8 +116,8 @@ function drawDistanceChart(dailyDistances, unit) {
         scales: {
           x: {
             title: {
-              display: true,
-              text: "Day of the Month",
+              display: false,
+              text: "",
               color: "white",
             },
 
