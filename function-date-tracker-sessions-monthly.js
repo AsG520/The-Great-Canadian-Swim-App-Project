@@ -88,7 +88,7 @@ function drawSessionsChart(dailySessions) {
             ticks: { color: "white", precision: 0 },
             title: {
               display: true,
-              text: "Number of Sessions",
+              text: "Sessions (#)",
               color: "white",
             },
           },
