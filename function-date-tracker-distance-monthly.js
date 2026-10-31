@@ -153,7 +153,7 @@ function drawDistanceChart(dailyDistances, unit) {
 
     // Update the graph's unit labels
     distanceChart.options.plugins.title.text =
-      "Monthly Distance (" + graphUnit + ")";
+      "Monthly Distance";
 
     distanceChart.options.scales.y.title.text = "Distance (" + graphUnit + ")";
 
