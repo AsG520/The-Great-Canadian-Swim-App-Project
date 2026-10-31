@@ -91,6 +91,12 @@ function drawStuff(dailyDistances) {
           },
         },
 
+          title: {
+            display: true,
+            text: "Weekly Distance",
+            color: "white",
+          },
+
         scales: {
           x: {
             ticks: {
