@@ -68,10 +68,10 @@ function drawYearlyDistanceChart(monthlyDistances, unit) {
     }
   }
   // Set the graph title and axis label
-  let graphTitle = "Yearly Distance (km)";
+  let graphTitle = "Yearly Distance";
   let axisTitle = "Distance (km)";
   if (unit === "Meters") {
-    graphTitle = "Yearly Distance (m)";
+    graphTitle = "Yearly Distance";
     axisTitle = "Distance (m)";
   }
   // Create the graph if it does not exist yet
