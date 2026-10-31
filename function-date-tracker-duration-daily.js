@@ -203,11 +203,11 @@ onAuthStateChanged(auth, async (user) => {
     if (unit === "Minutes") {
       displayedDuration = duration * 60;
 
-      durationChart.options.scales.y.title.text = "Duration (Minutes)";
+      durationChart.options.scales.y.title.text = "Duration (min)";
     } else if (unit === "Hours") {
       displayedDuration = duration;
 
-      durationChart.options.scales.y.title.text = "Duration (Hours)";
+      durationChart.options.scales.y.title.text = "Duration (hrs)";
     }
 
     durationDisplay.value = displayedDuration.toFixed(2);
