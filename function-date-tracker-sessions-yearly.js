@@ -53,7 +53,7 @@ function drawStuff(monthlySessions, year) {
   if (yearlyChart !== null) {
     yearlyChart.data.datasets[0].data = monthlySessions;
 
-    yearlyChart.options.plugins.title.text = "Yearly Sessions - " + year;
+    yearlyChart.options.plugins.title.text = "Yearly Sessions";
 
     yearlyChart.update();
 
@@ -129,7 +129,7 @@ function drawStuff(monthlySessions, year) {
 
           title: {
             display: true,
-            text: "Sessions #",
+            text: "Sessions (#)",
             color: "white",
           },
         },
