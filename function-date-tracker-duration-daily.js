@@ -79,7 +79,7 @@ const durationChart = new Chart(chartCanvas, {
 
         title: {
           display: true,
-          text: "Duration (Hours)",
+          text: "Duration (hrs)",
           color: "white",
           font: {
             size: 12,
