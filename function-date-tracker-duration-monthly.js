@@ -103,7 +103,7 @@ function drawDurationChart(dailyDurations, unit) {
 
           title: {
             display: true,
-            text: "Monthly Duration (" + graphUnit + ")",
+            text: "Monthly Duration",
             color: "white",
           },
 
@@ -117,9 +117,7 @@ function drawDurationChart(dailyDurations, unit) {
         scales: {
           x: {
             title: {
-              display: true,
-              text: "Day of the Month",
-              color: "white",
+              display: false,
             },
 
             ticks: {
