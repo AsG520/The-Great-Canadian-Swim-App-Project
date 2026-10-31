@@ -124,7 +124,7 @@ function drawSessionsChart(dailySessions) {
 
             title: {
               display: true,
-              text: "Number of Sessions",
+              text: "Sessions (#)",
               color: "white",
             },
           },
