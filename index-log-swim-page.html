@@ -114,7 +114,7 @@
         <input
           type="number"
           id="distance"
-          oninput="this.value = Math.abs(this.value)"
+          oninput="this.value = this.value.slice(0, 4)"
           min="0"
           placeholder="Enter distance swam"
           aria-label="Enter distance swam."
@@ -130,7 +130,7 @@
         <input
           type="number"
           id="time"
-          oninput="this.value = Math.abs(this.value)"
+          oninput="this.value = this.value.slice(0, 3)"
           min="0"
           placeholder="Enter time swam"
           aria-label="Enter time swam."

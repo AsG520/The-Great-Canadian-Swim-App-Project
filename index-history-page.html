@@ -14,6 +14,7 @@
     <title>History Page: The Great Canadian Swim App - 2026</title>
   </head>
   <body>
+    <br />
     <div class="container">
       <h1><span aria-hidden="true">⌛</span> History</h1>
       <select id="option-details">
@@ -109,24 +110,36 @@
       </div>
       <br />
       <label><span aria-hidden="true">🏁</span> Distance</label>
-      <input
-        type="number"
-        id="distance"
-        oninput="this.value = Math.abs(this.value)"
-        min="0"
-        placeholder="Enter distance swam in meters"
-        aria-label="Enter distance swam in meters."
-      />
+      <div id="distance-details">
+        <input
+          type="number"
+          id="distance"
+          oninput="this.value = this.value.slice(0, 4)"
+          min="0"
+          placeholder="Enter distance swam"
+          aria-label="Enter distance swam in meters."
+        />
+        <select id="unit-details">
+          <option value="Meters" id="meters-option">m</option>
+          <option selected value="Kilometers" id="kilometers-option">km</option>
+        </select>
+      </div>
       <br />
       <label><span aria-hidden="true">⌚</span> Time</label>
-      <input
-        type="number"
-        id="time"
-        oninput="this.value = Math.abs(this.value)"
-        min="0"
-        placeholder="Enter time swam in minutes"
-        aria-label="Enter time swam in minutes."
-      />
+      <div id="time-details">
+        <input
+          type="number"
+          id="time"
+          oninput="this.value = this.value.slice(0, 3)"
+          min="0"
+          placeholder="Enter time swam"
+          aria-label="Enter time swam in minutes."
+        />
+        <select id="unit-details">
+          <option value="Minutes" id="minutes-option">min</option>
+          <option selected value="Hours" id="hours-option">hrs</option>
+        </select>
+      </div>
       <br />
       <label><span aria-hidden="true">📍</span> Where did you swim?</label>
       <div class="button-layout">

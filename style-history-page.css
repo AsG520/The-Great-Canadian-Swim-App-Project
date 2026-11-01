@@ -207,6 +207,33 @@ input[type="radio"]:checked + .face-label {
     border-radius: 16px;
 }
 
+#unit-details {
+    width: 80px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(239, 240, 242, 0.5);
+    color: rgb(28, 60, 101);
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+#distance-details,
+#time-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
 #notes,
 #distance,
 #time {
