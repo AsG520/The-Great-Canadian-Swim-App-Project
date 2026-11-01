@@ -51,7 +51,7 @@ input[type="text"] {
 /* HTML Classes */
 .container {
   width: 327px;
-  height: 885px;
+  height: 888px;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
   border-radius: 20px;
