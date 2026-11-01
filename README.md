@@ -72,3 +72,5 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 ## Team
 - <a href="https://github.com/AsG520" target="_blank">Amanjot.S</a>: Front-End Developer
 - <a href="https://github.com/JF032109" target="_blank">Jonathan.F</a>: Back-End Developer
+
+Note: All commits and pushes was done from AsG520! This includes, JF032109 back-end programming (JS files).

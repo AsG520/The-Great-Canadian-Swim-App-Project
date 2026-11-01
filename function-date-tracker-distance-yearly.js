@@ -1,7 +1,7 @@
 let settings = document.getElementById("settings-box");
 
 function callSettingsPage() {
-    window.location.href = "index-settings-page.html";
+  window.location.href = "index-settings-page.html";
 }
 
 settings.addEventListener("click", callSettingsPage);
@@ -11,19 +11,26 @@ settings.addEventListener("click", callSettingsPage);
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 
 // Import Firestore and functions used to access and update user data within
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
 // Import Firebase Authentication
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import {
+  getAuth,
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 const firebaseConfig = {
-    // Identifies firebase project to link to
-    apiKey: "AIzaSyANYbFNAyk1fAaDXc7gPnkeRNTTgXyeViU",
-    authDomain: "testing-database-c0a2c.firebaseapp.com",
-    projectId: "testing-database-c0a2c",
-    storageBucket: "testing-database-c0a2c.firebasestorage.app",
-    messagingSenderId: "879740645963",
-    appId: "1:879740645963:web:f7419ce03565bf401fd3ce",
+  // Identifies firebase project to link to
+  apiKey: "AIzaSyANYbFNAyk1fAaDXc7gPnkeRNTTgXyeViU",
+  authDomain: "testing-database-c0a2c.firebaseapp.com",
+  projectId: "testing-database-c0a2c",
+  storageBucket: "testing-database-c0a2c.firebasestorage.app",
+  messagingSenderId: "879740645963",
+  appId: "1:879740645963:web:f7419ce03565bf401fd3ce",
 };
 
 // Initialize firebase
@@ -31,151 +38,242 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
+// Store the yearly distance chart
+let yearlyDistanceChart = null;
+// Draw the yearly distance graph
+function drawYearlyDistanceChart(monthlyDistances, unit) {
+  const canvas = document.getElementById("yearly-distance-chart");
+  // Month names shown along the bottom of the graph
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  // Convert the graph values depending on the selected unit
+  let convertedDistances = [];
+  for (let i = 0; i < monthlyDistances.length; i++) {
+    if (unit === "Meters") {
+      convertedDistances.push(monthlyDistances[i] * 1000);
+    } else {
+      convertedDistances.push(monthlyDistances[i]);
+    }
+  }
+  // Set the graph title and axis label
+  let graphTitle = "Yearly Distance";
+  let axisTitle = "Distance (km)";
+  if (unit === "Meters") {
+    graphTitle = "Yearly Distance";
+    axisTitle = "Distance (m)";
+  }
+  // Create the graph if it does not exist yet
+  if (yearlyDistanceChart === null) {
+    yearlyDistanceChart = new Chart(canvas, {
+      type: "bar",
+      data: {
+        labels: months,
+        datasets: [
+          {
+            label: axisTitle,
+            data: convertedDistances,
+            backgroundColor: "rgba(0, 123, 255, 0.5)",
+            borderColor: "#f7f9fb",
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: graphTitle,
+            color: "white",
+            font: { size: 16 },
+          },
+        },
+        scales: {
+          x: { ticks: { color: "white" }, grid: { display: false } },
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: axisTitle, color: "white" },
+            ticks: { color: "white" },
+          },
+        },
+      },
+    });
+  } else {
+    // Update the graph when the year or unit changes
+    yearlyDistanceChart.data.labels = months;
+    yearlyDistanceChart.data.datasets[0].data = convertedDistances;
+    yearlyDistanceChart.data.datasets[0].label = axisTitle;
+    yearlyDistanceChart.options.plugins.title.text = graphTitle;
+    yearlyDistanceChart.options.scales.y.title.text = axisTitle;
+    yearlyDistanceChart.update();
+  }
+}
+
 onAuthStateChanged(auth, async (user) => {
-    if (!user) {
-        console.log("No user is signed in.");
-        return;
-    }
+  if (!user) {
+    console.log("No user is signed in.");
+    return;
+  }
 
-    // Get this user's activity
-    const activityRef = collection(db, "users", user.uid, "activity");
+  // Get this user's activity
+  const activityRef = collection(db, "users", user.uid, "activity");
 
-    // Get all activity documents
-    const snapshot = await getDocs(activityRef);
+  // Get all activity documents
+  const snapshot = await getDocs(activityRef);
 
-    // This represents the year being displayed
-    let displayedDate = new Date();
+  // This represents the year being displayed
+  let displayedDate = new Date();
 
-    const backButton = document.getElementById("back-picture");
+  const backButton = document.getElementById("back-picture");
 
-    backButton.addEventListener("click", function () {
-        // Go back one year
-        displayedDate.setFullYear(displayedDate.getFullYear() - 1);
+  backButton.addEventListener("click", function () {
+    // Go back one year
+    displayedDate.setFullYear(displayedDate.getFullYear() - 1);
 
-        // Load that year's data
-        loadYear(displayedDate);
-    });
-
-    const forwardButton = document.getElementById("forward-picture");
-
-    forwardButton.addEventListener("click", function () {
-        // Go forward one year
-        displayedDate.setFullYear(displayedDate.getFullYear() + 1);
-
-        // Load that year's data
-        loadYear(displayedDate);
-    });
-
-    let distance = 0;
-
-    let distanceDisplay = document.getElementById("total-distance");
-
-    const unitSelection = document.getElementById("unit-details");
-
-    unitSelection.addEventListener("change", function () {
-        const unit = this.value;
-
-        let displayedDistance = distance;
-
-        if (unit === "Meters") {
-            displayedDistance = distance * 1000;
-        } else if (unit === "Kilometers") {
-            displayedDistance = distance;
-        }
-
-        distanceDisplay.value = displayedDistance.toFixed(2);
-
-    });
-
-    let averageDistance = 0;
-
-    let averageDistanceDisplay = document.getElementById("average-distance");
-
-    const averageUnitSelection = document.getElementById("average-unit-details");
-
-    averageUnitSelection.addEventListener("change", function () {
-        const averageUnit = this.value;
-
-        let displayedAverageDistance = averageDistance;
-
-        if (averageUnit === "Meters") {
-            displayedAverageDistance = averageDistance * 1000;
-        } else if (averageUnit === "Kilometers") {
-            displayedAverageDistance = averageDistance;
-        }
-        averageDistanceDisplay.value = displayedAverageDistance.toFixed(2);
-    });
-
-    function loadYear(date) {
-        // Get the year being displayed
-        const selectedYear = date.getFullYear();
-
-        // Display the year
-        document.getElementById("current-date").textContent = selectedYear;
-
-        // Total distance for the year
-        let totalDistance = 0;
-
-        // Store distance for each month
-        let monthlyDistances = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-        // Go through all Firestore activity documents
-        snapshot.forEach((activityDoc) => {
-            const data = activityDoc.data();
-
-            // Convert Firestore date into a Date object
-            const [year, month, day] = data.date.split("-");
-
-            const activityDate = new Date(year, month - 1, day);
-
-            // Check if activity belongs to this year
-            if (activityDate.getFullYear() === selectedYear) {
-                // Convert km to meters
-                const distanceValue = data.distance;
-
-                // Add to yearly total
-                totalDistance += distanceValue;
-
-                // Get the month
-                const monthNumber = activityDate.getMonth();
-
-                // Add distance to that month
-                monthlyDistances[monthNumber] += distanceValue;
-            }
-        });
-
-        distance = totalDistance;
-
-        averageDistance = totalDistance / 12;
-
-        const unit = unitSelection.value;
-
-        let displayedDistance = distance;
-
-        if (unit === "Meters") {
-            displayedDistance = distance * 1000;
-        } else if (unit === "Kilometers") {
-            displayedDistance = distance;
-        }
-
-        distanceDisplay.value = displayedDistance.toFixed(2);
-
-        const averageUnit = averageUnitSelection.value;
-
-        let displayedAverageDistance = averageDistance;
-
-        if (averageUnit === "Meters") {
-            displayedAverageDistance = averageDistance * 1000;
-        } else if (averageUnit === "Kilometers") {
-            displayedAverageDistance = averageDistance;
-        }
-
-        averageDistanceDisplay.value = displayedAverageDistance.toFixed(2);
-   
-        drawStuff(monthlyDistances);
-    }
-    // Load the current year when the page opens
+    // Load that year's data
     loadYear(displayedDate);
+  });
+
+  const forwardButton = document.getElementById("forward-picture");
+
+  forwardButton.addEventListener("click", function () {
+    // Go forward one year
+    displayedDate.setFullYear(displayedDate.getFullYear() + 1);
+
+    // Load that year's data
+    loadYear(displayedDate);
+  });
+
+  let distance = 0;
+
+  // Store the distances for each month
+  let monthlyDistancesForChart = [];
+
+  let distanceDisplay = document.getElementById("total-distance");
+
+  const unitSelection = document.getElementById("unit-details");
+
+  unitSelection.addEventListener("change", function () {
+    const unit = this.value;
+    let displayedDistance = distance;
+    if (unit === "Meters") {
+      displayedDistance = distance * 1000;
+    } else if (unit === "Kilometers") {
+      displayedDistance = distance;
+    }
+    // Update the total distance
+    distanceDisplay.value = displayedDistance.toFixed(2);
+    // Update the graph using the selected unit
+    drawYearlyDistanceChart(monthlyDistancesForChart, unit);
+  });
+
+  let averageDistance = 0;
+
+  let averageDistanceDisplay = document.getElementById("average-distance");
+
+  const averageUnitSelection = document.getElementById("average-unit-details");
+
+  averageUnitSelection.addEventListener("change", function () {
+    const averageUnit = this.value;
+
+    let displayedAverageDistance = averageDistance;
+
+    if (averageUnit === "Meters") {
+      displayedAverageDistance = averageDistance * 1000;
+    } else if (averageUnit === "Kilometers") {
+      displayedAverageDistance = averageDistance;
+    }
+    averageDistanceDisplay.value = displayedAverageDistance.toFixed(2);
+  });
+
+  function loadYear(date) {
+    // Get the year being displayed
+    const selectedYear = date.getFullYear();
+
+    // Display the year
+    document.getElementById("current-date").textContent = selectedYear;
+
+    // Total distance for the year
+    let totalDistance = 0;
+
+    // Store distance for each month
+    let monthlyDistances = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    // Save the monthly distances so the unit dropdown can access them
+    monthlyDistancesForChart = monthlyDistances;
+
+    // Go through all Firestore activity documents
+    snapshot.forEach((activityDoc) => {
+      const data = activityDoc.data();
+
+      // Convert Firestore date into a Date object
+      const [year, month, day] = data.date.split("-");
+
+      const activityDate = new Date(year, month - 1, day);
+
+      // Check if activity belongs to this year
+      if (activityDate.getFullYear() === selectedYear) {
+        // Convert km to meters
+        const distanceValue = data.distance;
+
+        // Add to yearly total
+        totalDistance += distanceValue;
+
+        // Get the month
+        const monthNumber = activityDate.getMonth();
+
+        // Add distance to that month
+        monthlyDistances[monthNumber] += distanceValue;
+      }
+    });
+
+    distance = totalDistance;
+
+    averageDistance = totalDistance / 12;
+
+    const unit = unitSelection.value;
+
+    let displayedDistance = distance;
+
+    if (unit === "Meters") {
+      displayedDistance = distance * 1000;
+    } else if (unit === "Kilometers") {
+      displayedDistance = distance;
+    }
+
+    distanceDisplay.value = displayedDistance.toFixed(2);
+
+    const averageUnit = averageUnitSelection.value;
+
+    let displayedAverageDistance = averageDistance;
+
+    if (averageUnit === "Meters") {
+      displayedAverageDistance = averageDistance * 1000;
+    } else if (averageUnit === "Kilometers") {
+      displayedAverageDistance = averageDistance;
+    }
+
+    averageDistanceDisplay.value = displayedAverageDistance.toFixed(2);
+
+    // Draw or update the yearly distance graph
+    drawYearlyDistanceChart(monthlyDistancesForChart, unitSelection.value);
+  }
+  // Load the current year when the page opens
+  loadYear(displayedDate);
 });
 
 const dropdown = document.getElementById("date-tracker-details");
@@ -183,13 +281,13 @@ const dropdown = document.getElementById("date-tracker-details");
 let averageDistanceDisplay = document.getElementById("average-distance");*/
 
 dropdown.addEventListener("change", function () {
-    const selectedValue = this.value;
+  const selectedValue = this.value;
 
-    if (selectedValue === "Distance") {
-        window.location.href = "index-date-tracker-distance-daily.html";
-    } else if (selectedValue === "Duration") {
-        window.location.href = "index-date-tracker-duration-daily.html";
-    } else if (selectedValue === "Session") {
-        window.location.href = "index-date-tracker-sessions-daily.html";
-    }
+  if (selectedValue === "Distance") {
+    window.location.href = "index-date-tracker-distance-daily.html";
+  } else if (selectedValue === "Duration") {
+    window.location.href = "index-date-tracker-duration-daily.html";
+  } else if (selectedValue === "Session") {
+    window.location.href = "index-date-tracker-sessions-daily.html";
+  }
 });

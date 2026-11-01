@@ -1,27 +1,123 @@
 let settings = document.getElementById("settings-box");
 
 function callSettingsPage() {
-    window.location.href = "index-settings-page.html";
+  window.location.href = "index-settings-page.html";
 }
 
 settings.addEventListener("click", callSettingsPage);
 
 // Import firebase
 // Import Firebase app to link this website to Firebase
-import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+import {
+  initializeApp,
+  getApps,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 // Import Firestore and functions used to access and update user data within
-import { getFirestore, collection, getDocs, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  doc,
+  setDoc,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import {
+  getAuth,
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 const firebaseConfig = {
-    // Identifies firebase project to link to
-    apiKey: "AIzaSyANYbFNAyk1fAaDXc7gPnkeRNTTgXyeViU",
-    authDomain: "testing-database-c0a2c.firebaseapp.com",
-    projectId: "testing-database-c0a2c",
-    storageBucket: "testing-database-c0a2c.firebasestorage.app",
-    messagingSenderId: "879740645963",
-    appId: "1:879740645963:web:f7419ce03565bf401fd3ce",
+  // Identifies firebase project to link to
+  apiKey: "AIzaSyANYbFNAyk1fAaDXc7gPnkeRNTTgXyeViU",
+  authDomain: "testing-database-c0a2c.firebaseapp.com",
+  projectId: "testing-database-c0a2c",
+  storageBucket: "testing-database-c0a2c.firebasestorage.app",
+  messagingSenderId: "879740645963",
+  appId: "1:879740645963:web:f7419ce03565bf401fd3ce",
 };
+
+// Create the duration chart
+const chartCanvas = document.getElementById("duration-chart");
+
+const durationChart = new Chart(chartCanvas, {
+  type: "bar",
+
+  data: {
+    labels: [""],
+
+    datasets: [
+      {
+        label: "Duration",
+        data: [0],
+
+        backgroundColor: "rgba(0, 123, 255, 0.5)",
+        borderColor: "#f7f9fb",
+        borderWidth: 2,
+        barPercentage: 0.7,
+      },
+    ],
+  },
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+
+    plugins: {
+      legend: {
+        display: false,
+      },
+
+      title: {
+        display: true,
+        text: "Daily Duration",
+        color: "white",
+      },
+    },
+
+    scales: {
+      y: {
+        beginAtZero: true,
+
+        title: {
+          display: true,
+          text: "Duration (hrs)",
+          color: "white",
+          font: {
+            size: 12,
+            weight: "bold",
+          },
+        },
+
+        // Changes the colour of the numbers on the side
+        ticks: {
+          color: "white",
+        },
+
+        // Changes the horizontal gridlines
+        grid: {
+          color: "white",
+        },
+      },
+
+      x: {
+        title: {
+          color: "white",
+          display: false,
+        },
+
+        ticks: {
+          color: "white",
+        },
+      },
+    },
+  },
+});
+
+// Update the chart when the duration changes
+function drawStuff(duration) {
+  durationChart.data.datasets[0].data = [duration];
+
+  durationChart.update();
+}
 
 // Initialize firebase
 const app = initializeApp(firebaseConfig);
@@ -29,150 +125,166 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 
 onAuthStateChanged(auth, async (user) => {
-    if (!user) {
-        console.log("No user is signed in.");
-        return;
+  if (!user) {
+    console.log("No user is signed in.");
+    return;
+  }
+
+  // Get this user's activity
+  const activityRef = collection(db, "users", user.uid, "activity");
+  const snapshot = await getDocs(activityRef);
+
+  let displayedDate = new Date();
+
+  const dateButton = document.getElementById("dateButton");
+
+  const dateSelection = document.getElementById("dateSelected");
+
+  // Function to format the visible date
+  function updateDateButton(date) {
+    document.getElementById("dateText").textContent = date.toLocaleDateString(
+      "en-US",
+      {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      },
+    );
+  }
+
+  // Click the visible button
+  dateButton.addEventListener("click", () => {
+    if (typeof dateSelection.showPicker === "function") {
+      dateSelection.showPicker();
     }
+  });
 
-    // Get this user's activity
-    const activityRef = collection(db, "users", user.uid, "activity");
-    const snapshot = await getDocs(activityRef);
+  // When the user selects a date
+  dateSelection.addEventListener("change", function () {
+    const selectedDate = new Date(this.value + "T00:00:00");
 
-    let displayedDate = new Date();
+    displayedDate = selectedDate;
 
-    const dateButton = document.getElementById("dateButton");
+    // Update visible button
+    updateDateButton(displayedDate);
 
-    const dateSelection = document.getElementById("dateSelected");
-
-    // Function to format the visible date
-    function updateDateButton(date) {
-        document.getElementById("dateText").textContent = date.toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
-        });
-    }
-
-    // Click the visible button
-    dateButton.addEventListener("click", () => {
-        if (typeof dateSelection.showPicker === "function") {
-            dateSelection.showPicker();
-        }
-    });
-
-    // When the user selects a date
-    dateSelection.addEventListener("change", function () {
-        const selectedDate = new Date(this.value + "T00:00:00");
-
-        displayedDate = selectedDate;
-
-        // Update visible button
-        updateDateButton(displayedDate);
-
-        // Load selected day's data
-        loadDay(displayedDate);
-    });
-
-    const backButton = document.getElementById("back-picture");
-
-    backButton.addEventListener("click", function () {
-        // Go back one day
-        displayedDate.setDate(displayedDate.getDate() - 1);
-
-        // Load that day's data
-        loadDay(displayedDate);
-    });
-
-    const forwardButton = document.getElementById("forward-picture");
-
-    forwardButton.addEventListener("click", function () {
-        displayedDate.setDate(displayedDate.getDate() + 1);
-
-        loadDay(displayedDate);
-    });
-
-    let duration = 0;
-
-    const durationDisplay = document.getElementById("total-duration");
-    const unitSelection = document.getElementById("unit-details");
-
-    unitSelection.addEventListener("change", function () {
-        const unit = this.value;
-
-        let displayedDuration = duration;
-
-        if (unit === "Minutes") {
-            displayedDuration = duration * 60;
-        } else if (unit === "Hours") {
-            displayedDuration = duration;
-        }
-
-        durationDisplay.value = displayedDuration.toFixed(2);
-
-        drawStuff(displayedDuration);
-    });
-
-    function loadDay(date) {
-        // Update the date picker to match the date being displayed
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, "0");
-        const day = String(date.getDate()).padStart(2, "0");
-
-        document.getElementById("dateSelected").value = year + "-" + month + "-" + day;
-
-        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-        // Update the visible date button
-        document.getElementById("dateText").textContent = date.toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
-        });
-
-        let found = false;
-
-        // Go through all Firestore activity documents
-        snapshot.forEach((activityDoc) => {
-            const data = activityDoc.data();
-
-            // Convert Firestore date into a Date object
-            const [year, month, day] = data.date.split("-");
-
-            const activityDate = new Date(year, month - 1, day);
-            // Compare the year, month, and day
-            if (activityDate.getFullYear() === date.getFullYear() && activityDate.getMonth() === date.getMonth() && activityDate.getDate() === date.getDate()) {
-                found = true;
-
-                // We found the correct day
-                console.log("Found:", data);
-
-                duration = data.duration;
-
-                // Put the distance into the HTML
-                durationDisplay.value = duration;
-
-                // Put the distance into the graph
-                drawStuff(duration);
-            }
-        });
-        if (!found) {
-            duration = 0;
-            durationDisplay.value = 0;
-            drawStuff(0);
-        }
-    }
+    // Load selected day's data
     loadDay(displayedDate);
+  });
+
+  const backButton = document.getElementById("back-picture");
+
+  backButton.addEventListener("click", function () {
+    // Go back one day
+    displayedDate.setDate(displayedDate.getDate() - 1);
+
+    // Load that day's data
+    loadDay(displayedDate);
+  });
+
+  const forwardButton = document.getElementById("forward-picture");
+
+  forwardButton.addEventListener("click", function () {
+    displayedDate.setDate(displayedDate.getDate() + 1);
+
+    loadDay(displayedDate);
+  });
+
+  let duration = 0;
+
+  const durationDisplay = document.getElementById("total-duration");
+  const unitSelection = document.getElementById("unit-details");
+
+  unitSelection.addEventListener("change", function () {
+    const unit = this.value;
+
+    let displayedDuration = duration;
+
+    if (unit === "Minutes") {
+      displayedDuration = duration * 60;
+
+      durationChart.options.scales.y.title.text = "Duration (min)";
+    } else if (unit === "Hours") {
+      displayedDuration = duration;
+
+      durationChart.options.scales.y.title.text = "Duration (hrs)";
+    }
+
+    durationDisplay.value = displayedDuration.toFixed(2);
+
+    drawStuff(displayedDuration);
+
+    durationChart.update();
+  });
+  function loadDay(date) {
+    // Update the date picker to match the date being displayed
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+
+    document.getElementById("dateSelected").value =
+      year + "-" + month + "-" + day;
+
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+    // Update the visible date button
+    document.getElementById("dateText").textContent = date.toLocaleDateString(
+      "en-US",
+      {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      },
+    );
+
+    let found = false;
+
+    // Go through all Firestore activity documents
+    snapshot.forEach((activityDoc) => {
+      const data = activityDoc.data();
+
+      // Convert Firestore date into a Date object
+      const [year, month, day] = data.date.split("-");
+
+      const activityDate = new Date(year, month - 1, day);
+      // Compare the year, month, and day
+      if (
+        activityDate.getFullYear() === date.getFullYear() &&
+        activityDate.getMonth() === date.getMonth() &&
+        activityDate.getDate() === date.getDate()
+      ) {
+        found = true;
+
+        // We found the correct day
+        console.log("Found:", data);
+
+        duration = data.duration;
+
+        // Put the distance into the HTML
+        durationDisplay.value = duration;
+
+        // Put the distance into the graph
+        drawStuff(duration);
+      }
+    });
+    if (!found) {
+      duration = 0;
+      durationDisplay.value = 0;
+      drawStuff(0);
+    }
+  }
+  loadDay(displayedDate);
 });
 
 const dropdown = document.getElementById("date-tracker-details");
 
 dropdown.addEventListener("change", function () {
-    const selectedValue = this.value;
+  const selectedValue = this.value;
 
-    if (selectedValue === "Distance") {
-        window.location.href = "index-date-tracker-distance-daily.html";
-    } else if (selectedValue === "Duration") {
-        window.location.href = "index-date-tracker-duration-daily.html";
-    } else if (selectedValue === "Session") {
-        window.location.href = "index-date-tracker-sessions-daily.html";
-    }
+  if (selectedValue === "Distance") {
+    window.location.href = "index-date-tracker-distance-daily.html";
+  } else if (selectedValue === "Duration") {
+    window.location.href = "index-date-tracker-duration-daily.html";
+  } else if (selectedValue === "Session") {
+    window.location.href = "index-date-tracker-sessions-daily.html";
+  }
 });

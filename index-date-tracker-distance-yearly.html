@@ -1,47 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
-    <script type="text/javascript">
-      google.charts.load("current", { packages: ["bar"] });
-
-      function drawStuff(monthlyDistances) {
-        var data = new google.visualization.arrayToDataTable([
-          ["", "Distance"],
-          ["Jan", monthlyDistances[0]],
-          ["Feb", monthlyDistances[1]],
-          ["Mar", monthlyDistances[2]],
-          ["Apr", monthlyDistances[3]],
-          ["May", monthlyDistances[4]],
-          ["Jun", monthlyDistances[5]],
-          ["Jul", monthlyDistances[6]],
-          ["Aug", monthlyDistances[7]],
-          ["Sep", monthlyDistances[8]],
-          ["Oct", monthlyDistances[9]],
-          ["Nov", monthlyDistances[10]],
-          ["Dec", monthlyDistances[11]],
-        ]);
-
-        var options = {
-          width: 300,
-          legend: { position: "none" },
-          chart: {
-            title: "Yearly Distance (km)",
-            subtitle: "Your distance by month across the year.",
-          },
-          bar: { groupWidth: "90%" },
-        };
-
-        var chart = new google.charts.Bar(document.getElementById("top_x_div"));
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style-date-tracker-distance-yearly.css" />
-    <link rel="stylesheet" href="style-responsive-layout.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -111,28 +73,30 @@
         </ul>
       </nav>
       <br />
-      <div id="top_x_div" style="width: 1000px; height: 300px"></div>
+      <div id="yearly-distance-chart-container">
+        <canvas id="yearly-distance-chart"></canvas>
+      </div>
       <br />
       <div id="forward-and-back-details">
         <img
           src="back.png"
-          height="35"
-          width="35"
+          height="25"
+          width="25"
           id="back-picture"
           alt="Picture of back arrow."
         />
         <a href="index-history-page.html"
           ><img
             src="plus.png"
-            height="35"
-            width="35"
+            height="25"
+            width="25"
             id="plus-picture"
             alt="Picture of plus sign."
         /></a>
         <img
           src="forward.png"
-          height="35"
-          width="35"
+          height="25"
+          width="25"
           id="forward-picture"
           alt="Picture of forward arrow."
         />

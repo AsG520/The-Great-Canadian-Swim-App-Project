@@ -3,7 +3,6 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style-log-swim-page.css" />
-    <link rel="stylesheet" href="style-responsive-layout.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -119,7 +118,7 @@
           placeholder="Enter distance swam"
           aria-label="Enter distance swam."
         />
-        <select id="unit-details">
+        <select id="distance-unit">
           <option value="Meters" id="meters-option">m</option>
           <option selected value="Kilometers" id="kilometers-option">km</option>
         </select>
@@ -130,12 +129,16 @@
         <input
           type="number"
           id="time"
+<<<<<<< HEAD
           oninput="this.value = this.value.slice(0, 3)"
+=======
+          oninput="this.value = this.value.slice(0, 4)"
+>>>>>>> a9b3b161763e504067fdf05ba1b5e88af4f169c3
           min="0"
           placeholder="Enter time swam"
           aria-label="Enter time swam."
         />
-        <select id="unit-details">
+        <select id="time-unit">
           <option value="Minutes" id="minutes-option">min</option>
           <option selected value="Hours" id="hours-option">hrs</option>
         </select>

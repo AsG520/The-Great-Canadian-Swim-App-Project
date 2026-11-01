@@ -1,36 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
-    <script type="text/javascript">
-      google.charts.load("current", { packages: ["bar"] });
-
-      function drawStuff(duration) {
-        var data = new google.visualization.arrayToDataTable([
-          ["", "Duration"],
-          [" ", duration],
-        ]);
-
-        var options = {
-          width: 300,
-          legend: { position: "none" },
-          chart: {
-            title: "Daily Duration",
-            subtitle: "Your duration by hour across the day.",
-          },
-          bar: { groupWidth: "90%" },
-        };
-
-        var chart = new google.charts.Bar(document.getElementById("top_x_div"));
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style-date-tracker-duration-daily.css" />
-    <link rel="stylesheet" href="style-responsive-layout.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -100,28 +73,30 @@
         </ul>
       </nav>
       <br />
-      <div id="top_x_div" style="width: 1000px; height: 300px"></div>
+      <div id="chart-container">
+        <canvas id="duration-chart"></canvas>
+      </div>
       <br />
       <div id="forward-and-back-details">
         <img
           src="back.png"
-          height="35"
-          width="35"
+          height="25"
+          width="25"
           id="back-picture"
           alt="Picture of back arrow."
         />
         <a href="index-history-page.html"
           ><img
             src="plus.png"
-            height="35"
-            width="35"
+            height="25"
+            width="25"
             id="plus-picture"
             alt="Picture of plus sign."
         /></a>
         <img
           src="forward.png"
-          height="35"
-          width="35"
+          height="25"
+          width="25"
           id="forward-picture"
           alt="Picture of forward arrow."
         />
