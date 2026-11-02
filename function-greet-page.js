@@ -140,7 +140,7 @@ function updateGreeting(username) {
         timeOfDay = "Night";
     }
 
-    greetingDisplay.textContent = "Good " + timeOfDay + ", " + username + "! 👋";
+    greetingDisplay.textContent = "Good " + timeOfDay + ", " + username.substring(0,1).toUpperCase() + username.substring(1) + "! 👋";
 }
 
 // Wait for Firebase to determine the logged-in user
