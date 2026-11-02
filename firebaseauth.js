@@ -305,9 +305,9 @@ async function checkUserInfo(user) {
         return;
     }
 
-    // Everything completed (after all information pages are completed, user will always be sent to main page after signing in
-    // Send user to the main page when every setup section is completed
-    window.location.href = "index-main-page.html";
+    // Everything completed (after all information pages are completed, user will always be sent to greet page and then taken to main page after signing in
+    // Send user to the main page (after greeting page) when every setup section is completed
+    window.location.href = "index-greet-page.html";
 }
 
 // Finds the sign-up button on the current page (HTML)
