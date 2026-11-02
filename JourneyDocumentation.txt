@@ -1,10 +1,7 @@
-Journey Documentation - iPOTS Reminder App
+Journey Documentation - The Great Canadian Swim App
 By: Amanjot.S & Jonathan.F
 
-2026 - Summer Co-op - Mr. Vale
-
-Note: This file is used to record our progress over time. Completed tasks, updated features, and other major events will be noted for reference 
-each time we work on this app. 
+Note: This file is used to record our progress over time. Completed tasks, updated features, and other major events will be noted for reference each time we work on this app. 
 
 Day 1 - Sunday, 17 May
 - Initialized README.txt, will update later over time for GitHub references. 
