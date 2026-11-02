@@ -200,59 +200,13 @@ Day 17 - Tuesday, 30 June
 - Lastly an alert was added to tell the user that no input (input of zero) was housed in the variable and an actual value needed to be given.
 - While the other two parts of the Weekly Snapshot were not completed, we determined that further input would need to be added to the interface on a later date, for adding hours and trying to calculate calories burnt (height, weight, etc).
 
-Day 18 - Wednesday, 1 July
-
 Day 19 - Thursday, 2 July 
-- Due to the large scale of the Challenge box in a straight line (10 big boxes for each province), the screen was forced to be shrunken down, looking confusing and less modern
-- Through the use of research a modern fix that was determined was the use an infinite carousel would be a suitable solution
-- After studying a video tutorial and understanding the carousel’s implementation, an infinite carousel was successfully placed in the application
-- To maintain size standardization all em sizing taken from the tutorial was replaced with px for sizing. In addition, adjustments were made towards animation speed, carousel dimensions, spacing and overall layout to fit the applications theme
-- A card:hover effect was added to increase size of card when hovered over and increase interactivity. The scroll bar was removed, and animation-play-state: paused; was added to pause screen while being hovered over
-- After many bug test it was discovered that if the user manually dragged the carousel it would break the infinite carousel animation, so a overflow: hidden; was added to prevent manual interaction
-- Finally, a mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%); was added to the screen to create a blend/fade in effect when the card was moving off screen, giving a more modern look
+- Due to the large scale of the Challenge box in a straight line (10 big boxes for each province), the screen was forced to be shrunken down, looking confusing and less modern.
+- Through the use of research a modern fix that was determined was the use an infinite carousel would be a suitable solution.
+- After studying a video tutorial and understanding the carousel’s implementation, an infinite carousel was successfully placed in the application.
+- To maintain size standardization all em sizing taken from the tutorial was replaced with px for sizing. In addition, adjustments were made towards animation speed, carousel dimensions, spacing and overall layout to fit the applications theme.
+- A card:hover effect was added to increase size of card when hovered over and increase interactivity. The scroll bar was removed, and animation-play-state: paused; was added to pause screen while being hovered over.
+- After many bug test it was discovered that if the user manually dragged the carousel it would break the infinite carousel animation, so a overflow: hidden; was added to prevent manual interaction.
+- Finally, a mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%); was added to the screen to create a blend/fade in effect when the card was moving off screen, giving a more modern look.
 
-Day 20 - Friday, 3 July
-
-Day 21 - Saturday, 4 July
-
-Day 22 - Sunday, 5 July
-
-Day 23 - Monday, 6 July
-
-Day 24 - Tuesday, 7 July
-
-Day 25 - Wednesday, 8 July
-
-Day 26 - Thursday, 9 July
-
-Day 27 - Friday, 10 July
-
-Day 28 - Saturday, 11 July
-
-Day 29 - Sunday, 12 July
-
-Day 30 - Monday, 13 July
-
-Day 31 - Tuesday, 14 July
-
-Day 32 - Wednesday, 15 July
-
-Day 33 - Thursday, 16 July
-
-Day 34 - Friday, 17 July
-
-Day 35 - Saturday, 18 July
-
-Day 36 - Sunday, 19 July
-
-Day 37 - Monday, 20 July
-
-Day 38 - Tuesday, 21 July
-
-Day 39 - Wednesday, 22 July
-
-Day 40 - Thursday, 23 July
-
-Day 41 - Friday, 24 July
-
-Day 42 - Saturday, 25 July
+Note: To view documentation progress after Day 19 - Thursday, 2 July, refer to the commit history :D.
