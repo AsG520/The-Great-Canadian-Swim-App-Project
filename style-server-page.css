@@ -4,7 +4,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    background: linear-gradient(#4a00e0, #8e2de2);
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
     overflow-x: hidden;
     font-family: "Montserrat";
     font-weight: 700;
