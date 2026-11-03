@@ -87,6 +87,8 @@ submissionButton.addEventListener("click", async () => {
     distanceEntered = distanceEntered / 1000;
   }
 
+  distanceEntered = Number(distanceEntered.toFixed(2));
+
   // Get the time entered by the user
   let timeEntered = Number(time.value);
   // Check whether the user entered a valid time
