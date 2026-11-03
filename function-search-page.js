@@ -7,7 +7,19 @@ function callSettingsPage() {
 settings.addEventListener("click", callSettingsPage);
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"; // Imports firebase connection tools
-import { getFirestore, setDoc, updateDoc, doc, getDoc, collection, query, where, getDocs, increment, onSnapshot } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"; // connects to Firebase's database, Firebase stores UID, Email and password, while Firestore holds other info
+import {
+    getFirestore,
+    setDoc,
+    updateDoc,
+    doc,
+    getDoc,
+    collection,
+    query,
+    where,
+    getDocs,
+    increment,
+    onSnapshot,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"; // connects to Firebase's database, Firebase stores UID, Email and password, while Firestore holds other info
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 // Imports Firebase Authentication functions used to create accounts, sign users in, sign in with Google, and reset passwords.
 
@@ -47,14 +59,14 @@ profiles.style.display = "none";
 let unsubscribe = null;
 
 // Prevent spaces when typing
-searchBox.addEventListener("keydown", (e) => {
+searchBox.addEventListener("keydown", e => {
     if (e.key === " ") {
         e.preventDefault();
     }
 });
 
 // Prevent spaces when copy/pasting
-searchBox.addEventListener("input", (e) => {
+searchBox.addEventListener("input", e => {
     e.target.value = e.target.value.replace(/\s/g, "").toLowerCase();
 
     const value = e.target.value.toLowerCase();
@@ -95,14 +107,14 @@ searchBox.addEventListener("input", (e) => {
 
         unsubscribe = onSnapshot(
             q,
-            (querySnapshot) => {
+            querySnapshot => {
                 console.log("Matching usernames:");
 
                 profiles.innerHTML = "";
 
                 const template = document.getElementById("profile-template");
 
-                querySnapshot.forEach((doc) => {
+                querySnapshot.forEach(doc => {
                     const data = doc.data();
 
                     /*  // Only show public profiles
@@ -149,7 +161,7 @@ searchBox.addEventListener("input", (e) => {
                     }
                 });
             },
-            (error) => {
+            error => {
                 console.error("Firestore snapshot error:", error);
             },
         );

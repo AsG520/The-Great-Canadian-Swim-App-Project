@@ -1,7 +1,18 @@
 // Basically, gets the values that the user puts in (e.g. username, age, gender, etc) it forces them to insert input and storages information into the fire store.
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { getFirestore, doc, setDoc, getDoc, updateDoc, collection, query, where, onSnapshot, getDocs } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import {
+    getFirestore,
+    doc,
+    setDoc,
+    getDoc,
+    updateDoc,
+    collection,
+    query,
+    where,
+    onSnapshot,
+    getDocs,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -39,14 +50,14 @@ const usernameInput = document.getElementById("username");
 let usernameAvailable = false;
 let unsubscribeUsername = null;
 
-usernameInput.addEventListener("keydown", (e) => {
+usernameInput.addEventListener("keydown", e => {
     if (e.key === " ") {
         // Check if the pressed key is a space
         e.preventDefault(); // Block the space
     }
 });
 // Prevents spacing when copy/paste
-usernameInput.addEventListener("input", (e) => {
+usernameInput.addEventListener("input", e => {
     e.target.value = e.target.value.replace(/\s/g, "");
 
     const username = e.target.value.trim().toLowerCase();
@@ -63,7 +74,7 @@ usernameInput.addEventListener("input", (e) => {
 
     const q = query(collection(db, "profiles"), where("username", "==", username));
 
-    unsubscribeUsername = onSnapshot(q, (snapshot) => {
+    unsubscribeUsername = onSnapshot(q, snapshot => {
         if (snapshot.empty) {
             usernameAvailable = true;
             console.log("Username available");

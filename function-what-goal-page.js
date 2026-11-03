@@ -35,7 +35,7 @@ const auth = getAuth(app);
 
 let currentUser = null;
 
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, user => {
     currentUser = user;
 });
 // Submit user information

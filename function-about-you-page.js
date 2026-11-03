@@ -35,7 +35,7 @@ const auth = getAuth(app);
 
 let currentUser = null;
 
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, user => {
     currentUser = user;
 });
 // Submit user information
@@ -54,7 +54,14 @@ submit.addEventListener("click", async () => {
     const organizationCheckbox = document.getElementById("organization-checkbox");
 
     // Make sure every field is filled in
-    if (!disabilityCheckbox.checked && !parentCheckbox.checked && !supportCheckbox.checked && !clubCheckbox.checked && !educationCheckbox.checked && !organizationCheckbox.checked) {
+    if (
+        !disabilityCheckbox.checked &&
+        !parentCheckbox.checked &&
+        !supportCheckbox.checked &&
+        !clubCheckbox.checked &&
+        !educationCheckbox.checked &&
+        !organizationCheckbox.checked
+    ) {
         customAlert("Please select at least one option before continuing.");
         return;
     }

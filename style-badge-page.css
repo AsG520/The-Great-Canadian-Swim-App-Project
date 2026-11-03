@@ -21,7 +21,7 @@ body {
 }
 
 label:hover,
-h3:hover, 
+h3:hover,
 h1:hover {
     text-decoration-line: underline;
 }

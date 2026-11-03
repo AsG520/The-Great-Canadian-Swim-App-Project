@@ -47,12 +47,6 @@ h4 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation-name: borderEffect;
-    animation-timing-function: ease-in-out;
-    animation-delay: 7s;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
 /* HTML IDs */
@@ -118,27 +112,5 @@ h4 {
 
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes borderEffect {
-    0% {
-        border: 5px solid rgb(28, 60, 101);
-    }
-
-    25% {
-        border: 5px solid rgb(15, 192, 252);
-    }
-
-    50% {
-        border: 5px solid rgb(178, 58, 58);
-    }
-
-    75% {
-        border: 5px solid rgb(0, 0, 0);
-    }
-
-    100% {
-        border: 5px solid #f5f7f9;
     }
 }

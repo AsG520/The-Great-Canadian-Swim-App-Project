@@ -108,7 +108,7 @@ badgeNunavut.src = "nunavut-badge-grey.png";
 badgeYukon.src = "yukon-badge-grey.png";
 badgeCanada.src = "canada-badge-grey.png";
 
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, user => {
     currentUser = user;
 
     if (!user) return;
@@ -116,7 +116,7 @@ onAuthStateChanged(auth, (user) => {
     const docRef = doc(db, "users", user.uid);
     onSnapshot(
         docRef,
-        async (docSnap) => {
+        async docSnap => {
             if (docSnap.exists()) {
                 const userData = docSnap.data();
                 let expIncrease = 0;
@@ -180,17 +180,17 @@ onAuthStateChanged(auth, (user) => {
                     badgeUnlockImage.src = badgeImage;
 
                     // Wait 2 seconds before showing the popup
-                    await new Promise((resolve) => setTimeout(resolve, 2000));
+                    await new Promise(resolve => setTimeout(resolve, 2000));
 
                     badgeAlertBox.style.display = "block";
 
                     // Keep popup visible for 3 seconds
-                    await new Promise((resolve) => setTimeout(resolve, 3000));
+                    await new Promise(resolve => setTimeout(resolve, 3000));
 
                     badgeAlertBox.style.display = "none";
 
                     // Wait 1 second before allowing the next popup
-                    await new Promise((resolve) => setTimeout(resolve, 1000));
+                    await new Promise(resolve => setTimeout(resolve, 1000));
                 }
                 totalSessionsNumber = userData.mySessions;
 
@@ -412,7 +412,7 @@ onAuthStateChanged(auth, (user) => {
                 console.log("No document found matching ID");
             }
         },
-        (error) => {
+        error => {
             console.error(error);
         },
     );

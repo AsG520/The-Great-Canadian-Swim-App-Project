@@ -33,63 +33,63 @@ let wordQuoteBox = document.getElementById("word-quote-box");
 
 // Updating Quotes
 let quotes = [
-  "Effort is the point. - Stephanie Manica",
-  "Trying Counts. - Stephanie Manica",
-  "You Belong Here. - Stephanie Manica",
-  "If you showed up, it counts. - Stephanie Manica",
-  "Effort looks different. - Stephanie Manica",
-  "You're allowed to stop. - Stephanie Manica",
-  "This includes you. - Stephanie Manica",
-  "Trying is human. - Stephanie Manica",
-  "One attempt is enough. - Stephanie Manica",
-  "Outcomes are optional. - Stephanie Manica",
-  "Different still counts. - Stephanie Manica",
-  "Invisible effort still counts. - Stephanie Manica",
-  "Today can look different. - Stephanie Manica",
-  "You don't have to win. - Stephanie Manica",
-  "This moment counts. - Stephanie Manica",
-  "There is no wrong way to try. - Stephanie Manica",
-  "Trying is not a straight line. - Stephanie Manica",
-  "Listening to your body counts. - Stephanie Manica",
-  "Today is enough. - Stephanie Manica",
-  "Today, I chose to try. - Stephanie Manica",
-  "I am stronger than the voice that says I can't. - Stephanie Manica",
-  "Small efforts create meaningful change. - Stephanie Manica",
-  "Begin where you are use what you have. - Stephanie Manica",
-  "I don't have to be fast to make progress. - Stephanie Manica",
-  "Every stroke is a step forward. - Stephanie Manica",
-  "Today showing up is enough. - Stephanie Manica",
-  "Turning daily swims into national impact",
-  "Resilience has many forms. - Stephanie Manica",
-  "Keep moving forward. - Stephanie Manica",
-  "What seems impossible is often just unfinished. - Stephanie Manica",
-  "Your distance counts too. - Stephanie Manica",
-  "The Great Canadian Swim continues. - Stephanie Manica",
-  "Every body moves differently. - Stephanie Manica",
-  "Small efforts, big impact. - Stephanie Manica",
-  "Consistency is a superpower. - Stephanie Manica",
-  "Every journey matters. - Stephanie Manica",
-  "More than a swim. - Stephanie Manica",
-  "Progress isn't always visible. - Stephanie Manica",
-  "Progress lives in the everyday. - Stephanie Manica",
-  "Great things grow from small daily actions. - Stephanie Manica",
-  "Progress is better together. - Stephanie Manica",
-  "Building a coast to coast movement. - Stephanie Manica",
-  "Showing up looks different everyday. - Stephanie Manica",
-  "Every stroke counts. - Stephanie Manica",
-  "Hope lives in the next stroke. - Stephanie Manica",
-  "Show up with us. - Stephanie Manica",
-  "Canada's longest lesson in consistency. - Stephanie Manica",
-  "Participation is powerful. - Stephanie Manica",
-  "Consistency creates possibility. - Stephanie Manica",
-  "Resilience is repetition. - Stephanie Manica",
-  "Join the movement. - Stephanie Manica",
-  "A swim for every body. - Stephanie Manica",
-  "Adaptive effort is still effort. - Stephanie Manica",
-  "Showing up changes everything. - Stephanie Manica",
-  "Keep going. - Stephanie Manica",
-  "The water doesn't care. Show up anyway. - Stephanie Manica",
-  "One day. One swim. One step forward. - Stephanie Manica"
+    "Effort is the point. - Stephanie Manica",
+    "Trying Counts. - Stephanie Manica",
+    "You Belong Here. - Stephanie Manica",
+    "If you showed up, it counts. - Stephanie Manica",
+    "Effort looks different. - Stephanie Manica",
+    "You're allowed to stop. - Stephanie Manica",
+    "This includes you. - Stephanie Manica",
+    "Trying is human. - Stephanie Manica",
+    "One attempt is enough. - Stephanie Manica",
+    "Outcomes are optional. - Stephanie Manica",
+    "Different still counts. - Stephanie Manica",
+    "Invisible effort still counts. - Stephanie Manica",
+    "Today can look different. - Stephanie Manica",
+    "You don't have to win. - Stephanie Manica",
+    "This moment counts. - Stephanie Manica",
+    "There is no wrong way to try. - Stephanie Manica",
+    "Trying is not a straight line. - Stephanie Manica",
+    "Listening to your body counts. - Stephanie Manica",
+    "Today is enough. - Stephanie Manica",
+    "Today, I chose to try. - Stephanie Manica",
+    "I am stronger than the voice that says I can't. - Stephanie Manica",
+    "Small efforts create meaningful change. - Stephanie Manica",
+    "Begin where you are use what you have. - Stephanie Manica",
+    "I don't have to be fast to make progress. - Stephanie Manica",
+    "Every stroke is a step forward. - Stephanie Manica",
+    "Today showing up is enough. - Stephanie Manica",
+    "Turning daily swims into national impact",
+    "Resilience has many forms. - Stephanie Manica",
+    "Keep moving forward. - Stephanie Manica",
+    "What seems impossible is often just unfinished. - Stephanie Manica",
+    "Your distance counts too. - Stephanie Manica",
+    "The Great Canadian Swim continues. - Stephanie Manica",
+    "Every body moves differently. - Stephanie Manica",
+    "Small efforts, big impact. - Stephanie Manica",
+    "Consistency is a superpower. - Stephanie Manica",
+    "Every journey matters. - Stephanie Manica",
+    "More than a swim. - Stephanie Manica",
+    "Progress isn't always visible. - Stephanie Manica",
+    "Progress lives in the everyday. - Stephanie Manica",
+    "Great things grow from small daily actions. - Stephanie Manica",
+    "Progress is better together. - Stephanie Manica",
+    "Building a coast to coast movement. - Stephanie Manica",
+    "Showing up looks different everyday. - Stephanie Manica",
+    "Every stroke counts. - Stephanie Manica",
+    "Hope lives in the next stroke. - Stephanie Manica",
+    "Show up with us. - Stephanie Manica",
+    "Canada's longest lesson in consistency. - Stephanie Manica",
+    "Participation is powerful. - Stephanie Manica",
+    "Consistency creates possibility. - Stephanie Manica",
+    "Resilience is repetition. - Stephanie Manica",
+    "Join the movement. - Stephanie Manica",
+    "A swim for every body. - Stephanie Manica",
+    "Adaptive effort is still effort. - Stephanie Manica",
+    "Showing up changes everything. - Stephanie Manica",
+    "Keep going. - Stephanie Manica",
+    "The water doesn't care. Show up anyway. - Stephanie Manica",
+    "One day. One swim. One step forward. - Stephanie Manica",
 ];
 
 const today = new Date();
@@ -100,18 +100,17 @@ const quoteNumber = dayOfYear % quotes.length;
 
 wordQuoteBox.textContent = quotes[quoteNumber];
 
-
 let day = today.getDate();
 let month = today.getMonth() + 1;
 let year = today.getFullYear();
 
 // Conditional for Calendar Feature
 if (day < 10) {
-  day = "0" + day;
+    day = "0" + day;
 }
 
 if (month < 10) {
-  month = "0" + month;
+    month = "0" + month;
 }
 // Put calendar values in correct format (html is very specific) link: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date
 calendar.value = year + "-" + month + "-" + day;
@@ -119,9 +118,9 @@ calendar.value = year + "-" + month + "-" + day;
 const dateButton = document.getElementById("dateButton");
 
 dateButton.textContent = today.toLocaleDateString("en-US", {
-  month: "long",
-  day: "numeric",
-  year: "numeric",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
 });
 
 // Function to update the greeting based on the current time
@@ -140,11 +139,11 @@ function updateGreeting(username) {
         timeOfDay = "Night";
     }
 
-    greetingDisplay.textContent = "Good " + timeOfDay + ", " + username.substring(0,1).toUpperCase() + username.substring(1) + "! 👋";
+    greetingDisplay.textContent = "Good " + timeOfDay + ", " + username.substring(0, 1).toUpperCase() + username.substring(1) + "! 👋";
 }
 
 // Wait for Firebase to determine the logged-in user
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, user => {
     if (!user) {
         console.log("No user is signed in.");
         return;
@@ -158,7 +157,7 @@ onAuthStateChanged(auth, (user) => {
     const userRef = doc(db, "users", user.uid);
 
     // Listen for changes to the user's data
-    onSnapshot(userRef, (docSnap) => {
+    onSnapshot(userRef, docSnap => {
         if (!docSnap.exists()) {
             console.log("User document does not exist.");
             return;
@@ -249,7 +248,7 @@ setInterval(() => {
     if (user) {
         const userRef = doc(db, "users", user.uid);
 
-        onSnapshot(userRef, (docSnap) => {
+        onSnapshot(userRef, docSnap => {
             if (docSnap.exists()) {
                 const userData = docSnap.data();
                 const username = userData.username || "User";
@@ -261,5 +260,5 @@ setInterval(() => {
 }, 60000);
 
 setInterval(() => {
- window.location.href = "index-main-page.html";
+    window.location.href = "index-main-page.html";
 }, 8000);

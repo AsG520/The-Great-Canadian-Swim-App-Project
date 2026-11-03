@@ -50,7 +50,7 @@ const yourReasonText = document.getElementById("your-Reason-Text");
 let yourGoals = "";
 const goalChoiceSelection = document.getElementById("subtitle");
 // checks if user is logged in
-onAuthStateChanged(auth, async (user) => {
+onAuthStateChanged(auth, async user => {
     currentUser = user;
 
     if (!user) return;

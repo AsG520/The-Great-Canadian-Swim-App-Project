@@ -6,7 +6,15 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 // Imports Firebase Firestore functions to create, retrieve, update, and modify database documents
 import { getFirestore, setDoc, updateDoc, doc, getDoc, increment } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"; // connects to Firebase's database, Firebase stores UID, Email and password, while Firestore holds other info
 // Imports Firebase Authentication functions to create accounts, sign in, sign in with Google, and reset password
-import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import {
+    getAuth,
+    onAuthStateChanged,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
+    sendPasswordResetEmail,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
 //project configuration
 const firebaseConfig = {
@@ -35,35 +43,23 @@ const db = getFirestore(app);
 
 // Allows one user to follow another user by adding their IDs to each other's Firestore collections
 async function followUser(currentUserId, userToFollowId) {
-  // Reference to the current user's following list
-  const followingRef = doc(
-    db,
-    "profiles",
-    currentUserId,
-    "following",
-    userToFollowId,
-  );
+    // Reference to the current user's following list
+    const followingRef = doc(db, "profiles", currentUserId, "following", userToFollowId);
 
-  // Reference to the other user's followers list
-  const followerRef = doc(
-    db,
-    "profiles",
-    userToFollowId,
-    "followers",
-    currentUserId,
-  );
+    // Reference to the other user's followers list
+    const followerRef = doc(db, "profiles", userToFollowId, "followers", currentUserId);
 
-  // Add the user to the current user's following list
-  await setDoc(followingRef, {
-    userId: userToFollowId,
-  });
+    // Add the user to the current user's following list
+    await setDoc(followingRef, {
+        userId: userToFollowId,
+    });
 
-  // Add the current user to the other user's followers list
-  await setDoc(followerRef, {
-    userId: currentUserId,
-  });
+    // Add the current user to the other user's followers list
+    await setDoc(followerRef, {
+        userId: currentUserId,
+    });
 
-  console.log("User followed!");
+    console.log("User followed!");
 }
 
 // Creates a collection in Firestore (initalized only when not previously created) to store community (all users) collected/stored data
@@ -72,7 +68,7 @@ async function createCommunityTotals() {
     // Checks if the document exists already
     const communitySnap = await getDoc(communityRef);
 
-// Creates the document only if it does not already exist
+    // Creates the document only if it does not already exist
     if (!communitySnap.exists()) {
         await setDoc(communityRef, {
             totalDistance: 0,
@@ -100,12 +96,12 @@ if (forgotPassword) {
             customAlert("Please enter your email first.");
             return;
         }
-// Requests a password-reset email from Firebase Authentication
+        // Requests a password-reset email from Firebase Authentication
         try {
             await sendPasswordResetEmail(auth, email); //video: https://www.youtube.com/watch?v=XpMnUNWMyQI
-// Notifies user to check email for reset password email, in order to change password
-        customAlert("Password reset email sent. Check your inbox. (It may appear in Spam/Trash)");
-        // Handles errors when Firebase cannot send the reset email
+            // Notifies user to check email for reset password email, in order to change password
+            customAlert("Password reset email sent. Check your inbox. (It may appear in Spam/Trash)");
+            // Handles errors when Firebase cannot send the reset email
         } catch (error) {
             if (error.code === "auth/user-not-found") {
                 customAlert("No account found with this email.");
@@ -118,7 +114,7 @@ if (forgotPassword) {
 }
 // ----- Google Signin and Signup Process -----
 
-// Sets up Google as an option for authentication 
+// Sets up Google as an option for authentication
 const googleProvider = new GoogleAuthProvider(); // link: https://firebase.google.com/docs/auth/web/google-signin?utm_source
 
 // Prompts the user to choose which Google account they want to use (prevents a direct signin to account previously signed in, allowing user to use a different account)
@@ -315,7 +311,7 @@ const signUp = document.getElementById("submitSignUp");
 // Checks whether the sign-up button exists before adding its click event
 if (signUp) {
     // Runs the registration process when the user clicks the sign-up button
-    signUp.addEventListener("click", (event) => {
+    signUp.addEventListener("click", event => {
         // When signUp button is clicked, it prevent page refresh, gets user info
         event.preventDefault();
         const email = document.getElementById("rEmail").value.trim().toLowerCase();
@@ -325,10 +321,10 @@ if (signUp) {
         // Creates a Firebase Authentication account using the entered email and password
         createUserWithEmailAndPassword(auth, email, password)
             // Continues after Firebase successfully creates account
-            .then(async (userCredential) => {
+            .then(async userCredential => {
                 // userCredentials are uid and email
                 const user = userCredential.user; // user is now seen as the uid
-               // Stores the user's starting account details and progress values
+                // Stores the user's starting account details and progress values
                 const userData = {
                     // Creates user data
                     email: email,
@@ -383,11 +379,11 @@ if (signUp) {
                     gender: "",
                     profilePublic: false,
                 });
-// Send the user to the login page after successfully creating their account.
+                // Send the user to the login page after successfully creating their account.
                 window.location.href = "index-login-page.html";
             })
             // Handles errors that occur during account registration
-            .catch((error) => {
+            .catch(error => {
                 const errorCode = error.code;
                 // Checks if the email is already associated with another Firebase saved account
                 if (errorCode == "auth/email-already-in-use") {
@@ -404,8 +400,8 @@ const signIn = document.getElementById("submitSignIn");
 // Checks whether the sign-in button exists before adding its click event
 if (signIn) {
     // Runs the login process when the user clicks the sign-in button
-    signIn.addEventListener("click", async (event) => {
-       // Prevents the form from refreshing the webpage
+    signIn.addEventListener("click", async event => {
+        // Prevents the form from refreshing the webpage
         event.preventDefault();
 
         // Attempts to authenticate the user using their email and password
@@ -466,7 +462,6 @@ if (signIn) {
 
 // Returns today's date in YYYY-MM-DD format for use as a daily activity document ID
 function getTodayDate() {
-   
     // Get the current year, month, and day from the Date object.
     const date = new Date();
     const year = date.getFullYear();
@@ -479,7 +474,7 @@ function getTodayDate() {
 
 // Monitors Firebase Authentication to determine whether a user is signed in
 // Runs whenever the authentication state has changed
-onAuthStateChanged(auth, async (user) => {
+onAuthStateChanged(auth, async user => {
     // Stops the process if nobody is currently signed in
     if (!user) {
         console.log("No user is signed in.");
@@ -487,20 +482,20 @@ onAuthStateChanged(auth, async (user) => {
     }
 
     console.log("Signed-in user:", user.uid);
-// Makes sure the community totals document exists before continuing  
+    // Makes sure the community totals document exists before continuing
     await createCommunityTotals();
 
     const today = getTodayDate(); // Get today's date in YYYY-MM-DD format
 
-    // Creates a reference to the current user's activity document using today's date as its ID (allows the subcollection to be easily accessible via date to allow date tracker graphs to work effectively) ex. 2026-06-21 
+    // Creates a reference to the current user's activity document using today's date as its ID (allows the subcollection to be easily accessible via date to allow date tracker graphs to work effectively) ex. 2026-06-21
     const activityRef = doc(db, "users", user.uid, "activity", today);
 
     // Attempts to retrieve or initialize the user's daily swimming activity document
     try {
         const activitySnap = await getDoc(activityRef);
 
-// Checks whether an activity document for today's date already exists
-// The document is named after the date so that way if a document with the same date exists it will not create another one (no duplicates), however if date is not saved in a document it will create one (making a new document for a new day)
+        // Checks whether an activity document for today's date already exists
+        // The document is named after the date so that way if a document with the same date exists it will not create another one (no duplicates), however if date is not saved in a document it will create one (making a new document for a new day)
         if (!activitySnap.exists()) {
             // Creates a new daily activity document with default values if one does not exist
             await setDoc(activityRef, {

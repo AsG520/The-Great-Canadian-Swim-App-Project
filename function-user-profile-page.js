@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
 
-import { getFirestore, getDoc, doc,setDoc,deleteDoc, collection, getCountFromServer, } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+import { getFirestore, getDoc, doc, setDoc, deleteDoc, collection, getCountFromServer } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
 
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
@@ -46,7 +46,7 @@ const followersCount = document.getElementById("followers-count");
 const followingCount = document.getElementById("following-count");
 const followButton = document.getElementById("follow-and-unfollow-selection");
 // Load the profile
-onAuthStateChanged(auth, async (user) => {
+onAuthStateChanged(auth, async user => {
     if (!user) {
         console.log("User is not signed in.");
         return;
@@ -120,7 +120,7 @@ onAuthStateChanged(auth, async (user) => {
 
         await loadFollowCounts();
 
-    await checkIfFollowing(user); // Check if the current user is following this profile
+        await checkIfFollowing(user); // Check if the current user is following this profile
     } catch (error) {
         console.error("Error fetching profile data:", error);
     }
@@ -128,24 +128,24 @@ onAuthStateChanged(auth, async (user) => {
 
 // Load the number of followers and following
 async function loadFollowCounts() {
-  try {
-    // Selected user's followers collection
-    const followersRef = collection(db, "profiles", profileUID, "followers");
-    // Selected user's following collection
-    const followingRef = collection(db, "profiles", profileUID, "following");
-    // Count the documents in both collections
-    const followersSnapshot = await getCountFromServer(followersRef);
-    const followingSnapshot = await getCountFromServer(followingRef);
-    // Put the numbers into the HTML
-    followersCount.textContent = followersSnapshot.data().count;
-    followingCount.textContent = followingSnapshot.data().count;
-    console.log("Followers:", followersSnapshot.data().count);
-    console.log("Following:", followingSnapshot.data().count);
-  } catch (error) {
-    console.error("Error loading follow counts:", error);
-    followersCount.textContent = "0";
-    followingCount.textContent = "0";
-  }
+    try {
+        // Selected user's followers collection
+        const followersRef = collection(db, "profiles", profileUID, "followers");
+        // Selected user's following collection
+        const followingRef = collection(db, "profiles", profileUID, "following");
+        // Count the documents in both collections
+        const followersSnapshot = await getCountFromServer(followersRef);
+        const followingSnapshot = await getCountFromServer(followingRef);
+        // Put the numbers into the HTML
+        followersCount.textContent = followersSnapshot.data().count;
+        followingCount.textContent = followingSnapshot.data().count;
+        console.log("Followers:", followersSnapshot.data().count);
+        console.log("Following:", followingSnapshot.data().count);
+    } catch (error) {
+        console.error("Error loading follow counts:", error);
+        followersCount.textContent = "0";
+        followingCount.textContent = "0";
+    }
 }
 
 // Back button
@@ -157,130 +157,100 @@ back.addEventListener("click", () => {
 
 // Check if the current user is already following this profile
 async function checkIfFollowing(currentUser) {
-  // You cannot follow yourself
-  if (currentUser.uid === profileUID) {
-    followButton.style.display = "none";
-    return;
-  }
+    // You cannot follow yourself
+    if (currentUser.uid === profileUID) {
+        followButton.style.display = "none";
+        return;
+    }
 
-  // Find the current user's following document
-  const followingRef = doc(
-    db,
-    "profiles",
-    currentUser.uid,
-    "following",
-    profileUID,
-  );
+    // Find the current user's following document
+    const followingRef = doc(db, "profiles", currentUser.uid, "following", profileUID);
 
-  const followingSnapshot = await getDoc(followingRef);
+    const followingSnapshot = await getDoc(followingRef);
 
-  // Change the dropdown depending on whether they are following
-  if (followingSnapshot.exists()) {
-    followButton.value = "Follow";
-  } else {
-    followButton.value = "Unfollow";
-  }
+    // Change the dropdown depending on whether they are following
+    if (followingSnapshot.exists()) {
+        followButton.value = "Follow";
+    } else {
+        followButton.value = "Unfollow";
+    }
 }
 
 // Follow or unfollow when the dropdown changes
 followButton.addEventListener("change", async () => {
-  // Get the person currently signed in
-  const currentUser = auth.currentUser;
+    // Get the person currently signed in
+    const currentUser = auth.currentUser;
 
-  if (!currentUser) {
-    console.log("No user is signed in.");
-    return;
-  }
+    if (!currentUser) {
+        console.log("No user is signed in.");
+        return;
+    }
 
-  // You cannot follow yourself
-  if (currentUser.uid === profileUID) {
-    console.log("You cannot follow yourself.");
-    return;
-  }
+    // You cannot follow yourself
+    if (currentUser.uid === profileUID) {
+        console.log("You cannot follow yourself.");
+        return;
+    }
 
-  const selectedOption = followButton.value;
+    const selectedOption = followButton.value;
 
-  // FOLLOW
-  if (selectedOption === "Follow") {
-    // Add the selected profile to MY following list
-    const followingRef = doc(
-      db,
-      "profiles",
-      currentUser.uid,
-      "following",
-      profileUID,
-    );
+    // FOLLOW
+    if (selectedOption === "Follow") {
+        // Add the selected profile to MY following list
+        const followingRef = doc(db, "profiles", currentUser.uid, "following", profileUID);
 
-    // Add ME to the selected profile's followers list
-    const followerRef = doc(
-      db,
-      "profiles",
-      profileUID,
-      "followers",
-      currentUser.uid,
-    );
+        // Add ME to the selected profile's followers list
+        const followerRef = doc(db, "profiles", profileUID, "followers", currentUser.uid);
 
-    await setDoc(followingRef, {
-      userId: profileUID,
-    });
+        await setDoc(followingRef, {
+            userId: profileUID,
+        });
 
-    await setDoc(followerRef, {
-      userId: currentUser.uid,
-    });
+        await setDoc(followerRef, {
+            userId: currentUser.uid,
+        });
 
-    console.log("Followed user!");
-    // Check the actual status again
-    await checkIfFollowing(currentUser);
+        console.log("Followed user!");
+        // Check the actual status again
+        await checkIfFollowing(currentUser);
 
-    // Update the follower/following counts
-    await loadFollowCounts();
-  }
+        // Update the follower/following counts
+        await loadFollowCounts();
+    }
 
-  // UNFOLLOW
-  if (selectedOption === "Unfollow") {
-    // Remove the selected profile from MY following list
-    const followingRef = doc(
-      db,
-      "profiles",
-      currentUser.uid,
-      "following",
-      profileUID,
-    );
+    // UNFOLLOW
+    if (selectedOption === "Unfollow") {
+        // Remove the selected profile from MY following list
+        const followingRef = doc(db, "profiles", currentUser.uid, "following", profileUID);
 
-    // Remove ME from the selected profile's followers list
-    const followerRef = doc(
-      db,
-      "profiles",
-      profileUID,
-      "followers",
-      currentUser.uid,
-    );
+        // Remove ME from the selected profile's followers list
+        const followerRef = doc(db, "profiles", profileUID, "followers", currentUser.uid);
 
-    await deleteDoc(followingRef);
-    await deleteDoc(followerRef);
+        await deleteDoc(followingRef);
+        await deleteDoc(followerRef);
 
-    console.log("Unfollowed user!");
-    // Check the actual status again
-    await checkIfFollowing(currentUser);
+        console.log("Unfollowed user!");
+        // Check the actual status again
+        await checkIfFollowing(currentUser);
 
-    // Update the follower/following counts
-    await loadFollowCounts();
-  }
+        // Update the follower/following counts
+        await loadFollowCounts();
+    }
 });
 
 const following = document.getElementById("following-label");
 const followers = document.getElementById("followers-label");
 // Open the following list for the profile being viewed
 following.addEventListener("click", () => {
-  // Save the UID of the profile being viewed
-  sessionStorage.setItem("listProfileUID", profileUID);
-  // Open following page
-  window.location.href = "index-following-list-page.html";
+    // Save the UID of the profile being viewed
+    sessionStorage.setItem("listProfileUID", profileUID);
+    // Open following page
+    window.location.href = "index-following-list-page.html";
 });
 // Open the followers list for the profile being viewed
 followers.addEventListener("click", () => {
-  // Save the UID of the profile being viewed
-  sessionStorage.setItem("listProfileUID", profileUID);
-  // Open followers page
-  window.location.href = "index-followers-list-page.html";
+    // Save the UID of the profile being viewed
+    sessionStorage.setItem("listProfileUID", profileUID);
+    // Open followers page
+    window.location.href = "index-followers-list-page.html";
 });

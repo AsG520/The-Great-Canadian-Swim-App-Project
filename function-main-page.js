@@ -7,8 +7,19 @@ function callSettingsPage() {
 settings.addEventListener("click", callSettingsPage);
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"; /* connect to firebase*/
-import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"; /* Creates the authentication system. watches whether a user is logged in or logged out. Logs the user out. */
-import { getFirestore, onSnapshot, getDoc, doc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"; /* Firestore is where you store user data.*/
+import {
+    getAuth,
+    onAuthStateChanged,
+    signOut,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"; /* Creates the authentication system. watches whether a user is logged in or logged out. Logs the user out. */
+import {
+    getFirestore,
+    onSnapshot,
+    getDoc,
+    doc,
+    updateDoc,
+    increment,
+} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"; /* Firestore is where you store user data.*/
 
 const firebaseConfig = {
     /* firebase project to connect to*/
@@ -59,14 +70,14 @@ const communitySessionsText = document.getElementById("total-community-sessions"
 const communityTodayDistanceText = document.getElementById("today-community-distance");
 const communityTodayTimeText = document.getElementById("today-community-time");
 const communityTodaySessionsText = document.getElementById("today-community-sessions");
-onAuthStateChanged(auth, (user) => {
+onAuthStateChanged(auth, user => {
     if (user) {
         // checks if user exist, otherwise no document is found in local storage
         const userRef = doc(db, "users", user.uid);
 
         onSnapshot(
             userRef,
-            (docSnap) => {
+            docSnap => {
                 if (docSnap.exists()) {
                     // Checks if document exists
                     const userData = docSnap.data();
@@ -89,7 +100,7 @@ onAuthStateChanged(auth, (user) => {
 
                     const activityRef = doc(db, "users", user.uid, "activity", today);
 
-                    getDoc(activityRef).then((activitySnap) => {
+                    getDoc(activityRef).then(activitySnap => {
                         if (activitySnap.exists()) {
                             const activityData = activitySnap.data();
 
@@ -120,7 +131,7 @@ onAuthStateChanged(auth, (user) => {
                     console.log("no document found matching id");
                 }
             },
-            (error) => {
+            error => {
                 console.log("Error getting document:", error);
             },
         );
@@ -128,7 +139,7 @@ onAuthStateChanged(auth, (user) => {
         const communityRef = doc(db, "community", "totals");
 
         getDoc(communityRef)
-            .then((communitySnap) => {
+            .then(communitySnap => {
                 if (communitySnap.exists()) {
                     console.log("Community Data:", communitySnap.data());
                     const communityData = communitySnap.data();
@@ -147,7 +158,7 @@ onAuthStateChanged(auth, (user) => {
                     communityTodaySessionsText.value = communityTodaySessions;
                 }
             })
-            .catch((error) => {
+            .catch(error => {
                 console.error("Error getting community data:", error);
             });
     } else {
@@ -208,7 +219,6 @@ if (day < 10) {
 if (month < 10) {
     month = "0" + month;
 }
-
 
 const tryingButton = document.getElementById("yes-button");
 tryingButton.addEventListener("click", async () => {
@@ -315,61 +325,61 @@ function updateTrips() {
 }
 
 function albertaConditional() {
-    albertaTrips.forEach((input) => {
+    albertaTrips.forEach(input => {
         input.value = Math.min((myDistance / A) * 100, 100).toFixed(2);
     });
 }
 
 function britishColumbiaConditional() {
-    britishColumbiaTrips.forEach((input) => {
+    britishColumbiaTrips.forEach(input => {
         input.value = Math.min((myDistance / BC) * 100, 100).toFixed(2);
     });
 }
 
 function manitobaConditional() {
-    manitobaTrips.forEach((input) => {
+    manitobaTrips.forEach(input => {
         input.value = Math.min((myDistance / M) * 100, 100).toFixed(2);
     });
 }
 
 function newBrunswickConditional() {
-    newBrunswickTrips.forEach((input) => {
+    newBrunswickTrips.forEach(input => {
         input.value = Math.min((myDistance / NB) * 100, 100).toFixed(2);
     });
 }
 
 function newfoundlandAndLabradorConditional() {
-    newfoundlandAndLabradorTrips.forEach((input) => {
+    newfoundlandAndLabradorTrips.forEach(input => {
         input.value = Math.min((myDistance / NL) * 100, 100).toFixed(2);
     });
 }
 
 function novaScotiaConditional() {
-    novaScotiaTrips.forEach((input) => {
+    novaScotiaTrips.forEach(input => {
         input.value = Math.min((myDistance / NS) * 100, 100).toFixed(2);
     });
 }
 
 function ontarioConditional() {
-    ontarioTrips.forEach((input) => {
+    ontarioTrips.forEach(input => {
         input.value = Math.min((myDistance / O) * 100, 100).toFixed(2);
     });
 }
 
 function princeEdwardIslandConditional() {
-    princeEdwardIslandTrips.forEach((input) => {
+    princeEdwardIslandTrips.forEach(input => {
         input.value = Math.min((myDistance / PEI) * 100, 100).toFixed(2);
     });
 }
 
 function quebecConditional() {
-    quebecTrips.forEach((input) => {
+    quebecTrips.forEach(input => {
         input.value = Math.min((myDistance / Q) * 100, 100).toFixed(2);
     });
 }
 
 function saskatchewanConditional() {
-    saskatchewanTrips.forEach((input) => {
+    saskatchewanTrips.forEach(input => {
         input.value = Math.min((myDistance / S) * 100, 100).toFixed(2);
     });
 }
