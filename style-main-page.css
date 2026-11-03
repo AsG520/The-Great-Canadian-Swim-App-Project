@@ -9,7 +9,7 @@ body {
     font-style: normal;
     font-weight: 700;
     flex-direction: column;
-    background: #8e2de2;
+    background: linear-gradient(#4a00e0, #8e2de2);
     overflow-x: hidden;
     overflow-y: visible;
     animation-name: fadeIn;
