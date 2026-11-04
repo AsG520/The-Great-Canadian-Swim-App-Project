@@ -45,7 +45,7 @@ const distanceChart = new Chart(chartCanvas, {
         data: [0],
 
         backgroundColor: "rgba(0, 123, 255, 0.5)",
-        borderColor: "#f7f9fb",
+        borderColor: "white",
         borderWidth: 2,
         barPercentage: 0.7,
       },
@@ -64,7 +64,7 @@ const distanceChart = new Chart(chartCanvas, {
       title: {
         display: true,
         text: "Daily Distance",
-        color: "rgba(255, 255, 255)",
+        color: "white",
       },
     },
 
@@ -74,27 +74,26 @@ const distanceChart = new Chart(chartCanvas, {
         title: {
           display: true,
           text: "Distance (km)",
-          color: "rgba(255, 255, 255)",
+          color: "white",
           font: {
             size: 12,
             weight: "bold",
           },
         },
         grid: {
-          color: "rgba(255, 255, 255)",
+          color: "white",
         },
         ticks: {
-          color: "rgba(255, 255, 255)",
+          color: "white",
         },
       },
 
       x: {
         title: {
           display: false,
-          color: "rgba(255, 255, 255)",
         },
         ticks: {
-          color: "rgba(255, 255, 255)",
+          color: "white",
         },
       },
     },
