@@ -50,7 +50,7 @@ const durationChart = new Chart(chartCanvas, {
         data: [0],
 
         backgroundColor: "rgba(0, 123, 255, 0.5)",
-        borderColor: "#f7f9fb",
+        borderColor: "white",
         borderWidth: 2,
         barPercentage: 0.7,
       },
@@ -100,7 +100,6 @@ const durationChart = new Chart(chartCanvas, {
 
       x: {
         title: {
-          color: "white",
           display: false,
         },
 
