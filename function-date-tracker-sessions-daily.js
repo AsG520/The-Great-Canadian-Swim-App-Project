@@ -45,11 +45,8 @@ const sessionsChart = new Chart(chartCanvas, {
       {
         label: "Sessions",
         data: [0],
-        // Colour inside the bar
         backgroundColor: "rgba(0, 123, 255, 0.5)",
-        // Colour around the bar
-        borderColor: "#f7f9fb",
-        // Thickness of the border
+        borderColor: "white",
         borderWidth: 2,
         barPercentage: 0.7,
       },
@@ -84,7 +81,7 @@ const sessionsChart = new Chart(chartCanvas, {
         grid: { color: "white" },
       },
       x: {
-        title: { color: "white", display: false },
+        title: { display: false },
         ticks: { color: "white" },
       },
     },
