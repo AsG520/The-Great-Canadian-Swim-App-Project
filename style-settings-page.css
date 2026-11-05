@@ -320,7 +320,9 @@ input[type="text"] {
 #privacy-policy-word:hover,
 #terms-of-use-word:hover,
 #disclaimer-word:hover,
-#footer-details:hover {
+#footer-details:hover,
+#location-word:hover,
+#website-word:hover {
     text-decoration-line: underline;
 }
 
@@ -349,7 +351,9 @@ input[type="text"] {
 }
 
 #email-address,
-#phone-number {
+#phone-number,
+#location,
+#website {
     text-decoration-line: none;
     color: rgb(28, 60, 101);
 }
@@ -359,7 +363,9 @@ input[type="text"] {
 #twitter-picture:active,
 #tiktok-picture:active,
 #phone-number:active,
-#email-address:active {
+#email-address:active,
+#location:active,
+#website:active {
     transform: translateY(1px);
 }
 
