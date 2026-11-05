@@ -188,6 +188,13 @@ input[type="text"] {
     gap: 25px;
 }
 
+#waze-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
 #followers-layout,
 #following-layout {
     display: flexl;
@@ -208,7 +215,7 @@ input[type="text"] {
 #phone-details,
 #email-details {
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
     flex-direction: column;
     text-align: center;
@@ -217,6 +224,35 @@ input[type="text"] {
     border-radius: 20px;
     width: 230px;
     height: 70px;
+    margin: auto;
+}
+
+#website-details {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(28, 60, 101);
+    background: rgba(239, 240, 242, 0.5);
+    border-radius: 20px;
+    width: 230px;
+    height: 95px;
+    margin: auto;
+}
+
+#location-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(28, 60, 101);
+    background: rgba(239, 240, 242, 0.5);
+    border-radius: 20px;
+    width: 230px;
+    height: 100px;
+    margin: auto;
 }
 
 #social-details {
@@ -230,6 +266,7 @@ input[type="text"] {
     border-radius: 20px;
     width: 230px;
     height: 70px;
+    margin: auto;
 }
 
 #send {
