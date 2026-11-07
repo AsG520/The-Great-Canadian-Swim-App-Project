@@ -217,6 +217,7 @@ input[type="radio"]:checked + .whereswamlabel {
     transition: 0.2s;
     background: rgba(239, 240, 242, 0.5);
     color: rgb(28, 60, 101);
+    box-shadow: 0px 0px 20px 2px white;
 }
 
 .face-label:hover {
@@ -282,18 +283,10 @@ input[type="radio"]:checked + .face-label {
     color: white;
 }
 
-#great-picture:hover,
-#good-picture:hover,
-#okay-picture:hover,
-#tough-picture:hover,
-#log-swim-logo:hover,
-#footer-details:hover {
-    transform: scale(1.1);
-}
-
 #log-swim-logo {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
+    box-shadow: 0px 0px 20px 2px white;
 }
 
 #footer-details {

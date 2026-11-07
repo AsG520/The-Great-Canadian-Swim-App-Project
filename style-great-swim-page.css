@@ -86,6 +86,7 @@ label:hover {
     font-size: 18px;
     font-weight: 600;
     color: rgb(28, 60, 101);
+    box-shadow: 0px 0px 20px 2px white;
 }
 
 #total-days-details,

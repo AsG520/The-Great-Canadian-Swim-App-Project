@@ -193,6 +193,7 @@ input[type="text"] {
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+    box-shadow: 0px 0px 20px 2px white;
 }
 
 #followers-layout,
@@ -339,6 +340,7 @@ input[type="text"] {
 #contact-us-page-logo {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
+    box-shadow: 0px 0px 20px 2px white;
 }
 
 #footer-details:hover {
@@ -423,6 +425,17 @@ label:hover {
 
 #img-profile {
     border-radius: 50%;
+    box-shadow: 0px 0px 20px 2px white;
+    animation-name: rotateY;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+}
+
+#img-profile:hover {
+    animation-play-state: paused;
 }
 
 #footer-details {
@@ -507,5 +520,19 @@ label:hover {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes rotateY {
+    0% {
+        transform: rotateY(0deg);
+    }
+    
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
     }
 }

@@ -109,12 +109,20 @@ label:hover {
 #search-page-picture-2,
 #search-page-picture-3 {
     border-radius: 16px;
+    box-shadow: 0px 0px 20px 2px white;
+    animation-name: heartBeat;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 #search-page-picture-1:hover,
 #search-page-picture-2:hover,
 #search-page-picture-3:hover {
     transform: scale(1.1);
+    animation-play-state: paused;
 }
 
 #settings-box {
@@ -149,10 +157,22 @@ label:hover {
     gap: 10px;
 }
 
+#instagram-picture,
+#twitter-picture,
+#tiktok-picture {
+    animation-name: rotateY;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
 #instagram-picture:hover,
 #twitter-picture:hover,
 #tiktok-picture:hover {
     transform: scale(1.1);
+    animation-play-state: paused;
 }
 
 #instagram-picture:active,
@@ -178,5 +198,33 @@ label:hover {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes rotateY {
+    0% {
+        transform: rotateY(0deg);
+    }
+    
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+    
+    100% {
+        transform: scale(1);
     }
 }

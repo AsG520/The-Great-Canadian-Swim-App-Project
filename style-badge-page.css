@@ -163,6 +163,12 @@ h4 {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    animation-name: heartBeat;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
 }
 
 #one-row-badges,
@@ -237,6 +243,7 @@ h4 {
 #yukon-details:hover,
 #canada-details:hover {
     transform: scale(1.1);
+    animation-play-state: paused;
 }
 
 #title-and-subheading-details {
@@ -283,5 +290,19 @@ h4 {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
