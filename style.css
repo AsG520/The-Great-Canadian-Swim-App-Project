@@ -104,6 +104,7 @@ h4 {
 #main-logo {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
+    box-shadow: 0px 0px 20px 2px white;
 }
 
 #map-of-canada-picture:hover {
@@ -113,6 +114,7 @@ h4 {
 #map-of-canada-picture {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
+    box-shadow: 0px 0px 20px 2px white;
 }
 
 #the-great-canadian-swim-word:hover,
