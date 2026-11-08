@@ -119,6 +119,7 @@ input[type="text"]:hover {
     align-self: center;
     border-radius: 16px;
     gap: 50px;
+    box-shadow: 0px 0px 20px 2px navy;
 }
 
 #total-community-distance-details,
