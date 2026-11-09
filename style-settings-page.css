@@ -341,6 +341,12 @@ input[type="text"] {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
     box-shadow: 0px 0px 20px 2px white;
+    animation-name: rotateY;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
 }
 
 #footer-details:hover {
@@ -528,6 +534,20 @@ label:hover {
         transform: rotateY(0deg);
     }
     
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotateY {
+    0% {
+        transform: rotateY(0deg);
+    }
+
     50% {
         transform: rotateY(180deg);
     }

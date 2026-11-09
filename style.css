@@ -99,12 +99,19 @@ h4 {
 
 #main-logo:hover {
     transform: scale(1.1);
+    animation-play-state: paused;
 }
 
 #main-logo {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
     box-shadow: 0px 0px 20px 2px white;
+    animation-name: rotateY;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
 }
 
 #map-of-canada-picture:hover {
@@ -154,5 +161,19 @@ h4 {
 
     to {
         transform: rotate(1turn);
+    }
+}
+
+@keyframes rotateY {
+    0% {
+        transform: rotateY(0deg);
+    }
+    
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
     }
 }
