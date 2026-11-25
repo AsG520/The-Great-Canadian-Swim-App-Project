@@ -18,12 +18,13 @@ import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/
 
 const firebaseConfig = {
     // Identifies firebase project to link to
-    apiKey: "AIzaSyANYbFNAyk1fAaDXc7gPnkeRNTTgXyeViU",
-    authDomain: "testing-database-c0a2c.firebaseapp.com",
-    projectId: "testing-database-c0a2c",
-    storageBucket: "testing-database-c0a2c.firebasestorage.app",
-    messagingSenderId: "879740645963",
-    appId: "1:879740645963:web:f7419ce03565bf401fd3ce",
+  apiKey: "AIzaSyAg6x7b7ZsPylQ2CyRbiemLOr_txEv22Kk",
+  authDomain: "the-great-canadian-swim--ipots.firebaseapp.com",
+  projectId: "the-great-canadian-swim--ipots",
+  storageBucket: "the-great-canadian-swim--ipots.firebasestorage.app",
+  messagingSenderId: "159069607210",
+  appId: "1:159069607210:web:55c0efdb1b5ecac9cc7a53",
+  measurementId: "G-V6ZJ5CLM1W"
 };
 
 // Initialize firebase
