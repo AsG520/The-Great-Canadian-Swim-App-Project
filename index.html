@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="logo.png" />
+    <link rel="manifest" href="manifest.json" />
     <title>Home Page: The Great Canadian Swim App - 2026</title>
   </head>
   <body>
@@ -46,5 +47,10 @@
     </div>
     <div class="loader"></div>
     <script src="function.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
   </body>
 </html>
