@@ -78,7 +78,6 @@ Track your swims, watch your progress move across the country, unlock inspiring 
 - Google Cloud Console - https://console.cloud.google.com/getting-started?authuser=1
 - Build Infinite Carousel Animations in 4 Minutes - https://www.youtube.com/watch?v=KD1Yo8a_Qis
 - Emojipedia - https://emojipedia.org/
-- How to Add a Smart AI Agent to Your Website in 2025 - https://youtu.be/ASjITM7lVC8?si=WF4e5n4vXzE4q1hr
 - How to Create and Display a Loading Spinner on Page Load (without JQuery): HTML, CSS & JavaScript - https://youtu.be/q76TexbMXJg?si=JitXE3aN7-c0wNuS
 - Prettier: Opinionated Code Formatter - https://prettier.io/
 - Code Formatter | Code Beautifier - https://formatter.org/
